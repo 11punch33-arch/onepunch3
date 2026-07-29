@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5ecff">
+  <title>BOXROX by 원펀치쓰리칼로리</title>
+  <meta name="description" content="복싱 20분과 하이록스 20분을 결합한 초보 여성 친화 그룹 피트니스">
+  <style>:root {
+  --sage: #4a5c4e;
+  --sage-dark: #1c2d22;
+  --sage-black: #102017;
+  --lavender: #c9b8e8;
+  --cream: #f4f0e7;
+  --ink: #18221b;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--ink); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; word-break: keep-all; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; }
+.headline-line { display: block; }
+.accent-line { color: var(--sage); }
+
+.site-header {
+  position: absolute; z-index: 10; inset: 0 0 auto; height: 80px; display: flex;
+  align-items: center; justify-content: space-between; padding: 0 3.4vw; color: var(--cream);
+  border-bottom: 1px solid rgba(255,255,255,.18);
+}
+.brand { display: flex; align-items: baseline; gap: 16px; }
+.brand strong { font-size: clamp(24px, 2.4vw, 38px); letter-spacing: -.04em; }
+.brand span { font-size: 13px; font-weight: 700; }
+nav { display: flex; align-items: center; gap: 42px; font-size: 14px; font-weight: 700; }
+.nav-cta { border: 1px solid rgba(255,255,255,.75); padding: 14px 28px; }
+
+.hero { min-height: 900px; position: relative; display: flex; align-items: center; overflow: hidden; color: var(--cream); background: var(--sage-black); }
+.hero-bg { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,35,22,.99) 0%, rgba(21,45,29,.95) 35%, rgba(20,38,25,.15) 67%), url("images/site-image-01.jpg") center/cover; }
+.hero-content { position: relative; z-index: 2; width: min(680px, 55vw); margin-left: 3.5vw; padding-top: 55px; }
+.eyebrow, .section-tag { color: var(--lavender); letter-spacing: .19em; font-size: 15px; font-weight: 800; }
+.hero h1 { font-size: clamp(58px, 6.1vw, 102px); letter-spacing: -.075em; line-height: 1.09; margin: 32px 0; }
+.hero h1 span, .hero h1 em { display: block; white-space: nowrap; }
+.hero h1 em { font-style: normal; color: var(--cream); }
+.hero-sub { display: flex; align-items: center; gap: 12px; font-size: 25px; font-weight: 700; }
+.hero-sub i { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--lavender); color: var(--sage-black); font-style: normal; }
+.hero-deco { position: absolute; z-index: 1; display: none; }
+.mission { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; max-width: 520px; margin: 42px 0 34px; font-size: 12px; color: #b8c0b8; }
+.mission div { height: 2px; background: rgba(255,255,255,.28); position: relative; }
+.mission i { display: block; width: 45%; height: 100%; background: var(--lavender); }
+.mission i:after { content:""; position: absolute; left: 45%; top: 50%; width: 8px; height: 8px; border: 2px solid var(--cream); border-radius: 50%; transform: translate(-50%,-50%); background: var(--lavender); }
+.primary-btn { display: flex; align-items: center; justify-content: space-between; width: min(410px, 100%); padding: 22px 30px; color: #172019; background: var(--lavender); font-size: 22px; font-weight: 800; }
+.primary-btn span { font-size: 34px; line-height: .5; }
+.trust-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
+.trust-row span, .pill-list span { border: 1px solid rgba(255,255,255,.5); border-radius: 99px; padding: 9px 17px; font-size: 13px; font-weight: 700; }
+.vertical-label { position: absolute; right: 1.8vw; writing-mode: vertical-rl; letter-spacing: .16em; font-weight: 700; }
+
+.manifesto { padding: 130px 5vw 110px; text-align: center; }
+.manifesto h2, .section-heading h2, .dash-copy h2, .space-copy h2, .start h2, .founder h2, .faq h2 { font-size: clamp(42px, 5vw, 76px); line-height: 1.16; letter-spacing: -.035em; word-spacing: .11em; margin: 26px 0; }
+.manifesto h2 .accent-line { color: var(--sage); }
+.manifesto > p:not(.section-tag) { max-width: 660px; margin: 0 auto; color: #59635c; line-height: 1.8; }
+.stats { max-width: 960px; margin: 75px auto 0; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid #bfc4bb; border-bottom: 1px solid #bfc4bb; }
+.stats div { padding: 35px 20px; display: flex; flex-direction: column; border-right: 1px solid #bfc4bb; }
+.stats div:last-child { border: 0; }
+.stats strong { font-size: 48px; letter-spacing: -.06em; }
+.stats span { font-size: 12px; letter-spacing: .13em; margin-top: 8px; }
+
+.system-visuals { max-width:1180px; margin:78px auto 0; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; text-align:left; }
+.system-tile { position:relative; min-width:0; overflow:hidden; padding:20px; border:1px solid rgba(74,92,78,.18); background:#f5f0e8; box-shadow:0 18px 45px rgba(34,48,38,.08); }
+.system-tile:nth-child(2) { background:var(--lavender); }
+.system-tile:nth-child(3) { background:var(--sage-dark); color:var(--cream); }
+.tile-label { display:flex; align-items:center; justify-content:space-between; font-size:11px; font-weight:900; letter-spacing:.15em; }
+.tile-label span { width:28px; height:28px; display:grid; place-items:center; border:1px solid currentColor; border-radius:50%; letter-spacing:0; }
+.system-tile > svg { display:block; width:100%; margin:8px 0 2px; overflow:visible; }
+.boxing-tile .glove { fill:var(--lavender); stroke:var(--sage-dark); stroke-width:6; stroke-linejoin:round; }
+.boxing-tile .glove-cuff { fill:#f0a9ad; stroke:var(--sage-dark); stroke-width:6; stroke-linejoin:round; }
+.boxing-tile .glove-detail { fill:none; stroke:var(--sage-dark); stroke-width:5; stroke-linecap:round; opacity:.65; }
+.motion-line,.spark-stroke { fill:none; stroke:var(--sage); stroke-width:5; stroke-linecap:round; }
+.line-two { opacity:.45; }
+.spark { fill:#f0a9ad; }
+.spark-stroke { stroke:#f0a9ad; stroke-width:4; }
+.hyrox-tile .head { fill:#f0a9ad; stroke:var(--sage-dark); stroke-width:5; }
+.hyrox-tile .body,.hyrox-tile .sled,.hyrox-tile .floor-lines,.hyrox-tile .force { fill:none; stroke:var(--sage-dark); stroke-width:8; stroke-linecap:round; stroke-linejoin:round; }
+.hyrox-tile .sled { stroke-width:6; }
+.hyrox-tile .floor-lines,.hyrox-tile .force { stroke-width:5; }
+.hyrox-tile .force { stroke:#795fa7; }
+.hyrox-tile .weight { fill:var(--sage); stroke:var(--sage-dark); stroke-width:4; }
+.tile-result { min-height:74px; display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:12px; padding-top:15px; border-top:1px solid rgba(74,92,78,.3); }
+.tile-result strong { grid-row:1 / 3; font-size:55px; line-height:.9; letter-spacing:-.08em; }
+.tile-result span { align-self:end; font-size:10px; font-weight:900; line-height:1.15; letter-spacing:.11em; }
+.tile-result i { align-self:start; color:var(--sage); font-size:12px; font-style:normal; font-weight:800; }
+.data-tile .tile-result { border-color:rgba(255,255,255,.22); }
+.data-tile .tile-result strong { color:var(--lavender); }
+.data-tile .tile-result i { color:#bcd3c1; }
+.mini-dashboard { margin:22px 0 17px; padding:16px; border:1px solid rgba(255,255,255,.18); background:#102018; box-shadow:8px 8px 0 rgba(201,184,232,.2); }
+.heart-row { display:flex; justify-content:space-between; font-size:9px; letter-spacing:.12em; }
+.live-dot { color:#ff8d91; font-weight:900; }
+.heart-wave { position:relative; height:64px; margin:11px 0 5px; overflow:hidden; background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px); background-size:16px 16px; }
+.heart-wave svg { width:100%; height:100%; }
+.heart-wave path { fill:none; stroke:#f0a9ad; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
+.data-readout { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.data-readout div { display:grid; grid-template-columns:1fr auto; align-items:end; padding:10px; background:rgba(255,255,255,.05); }
+.data-readout small { grid-column:1 / 3; color:#aab9ad; font-size:7px; letter-spacing:.12em; }
+.data-readout strong { color:var(--lavender); font-size:30px; letter-spacing:-.06em; }
+.data-readout span { padding-bottom:4px; font-size:7px; }
+.mission-bar { position:relative; height:7px; margin-top:13px; background:rgba(255,255,255,.12); }
+.mission-bar i { display:block; width:69%; height:100%; background:var(--lavender); }
+.mission-bar b { position:absolute; right:0; top:-17px; font-size:8px; }
+
+.program, .results { background: var(--sage-dark); color: var(--cream); padding: 120px 4vw; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 65px; }
+.section-heading > p { width: 390px; color: #bbc3ba; line-height: 1.8; padding-bottom: 15px; }
+.step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.step-card { position: relative; min-height: 570px; overflow: hidden; background: #263a2c; }
+.step-card > img { width:100%; height: 100%; position: absolute; object-fit: cover; filter: saturate(.86) contrast(1.03); opacity: .88; transition: .5s; }
+.step-card:hover > img { transform: scale(1.035); opacity: 1; }
+.step-card:after { content:""; position:absolute; inset: 48% 0 0; background: linear-gradient(transparent, rgba(10,25,15,.98) 56%); }
+.step-copy { position: absolute; z-index: 1; left: 30px; right: 30px; bottom: 28px; }
+.step-copy > span { color: var(--lavender); font-weight: 800; }
+.step-copy h3 { font-size: 44px; margin: 8px 0 12px; }
+.step-copy p { line-height: 1.65; color: #d2d7d1; }
+.prove-card { background:#101f16; }
+.prove-card:after { inset:58% 0 0; }
+.prove-ui { position:absolute; inset:0 0 184px; padding:22px; background:linear-gradient(145deg,#efeafa,#d9d0ed); }
+.prove-main { height:68%; overflow:hidden; border-radius:8px; box-shadow:0 16px 34px rgba(24,12,54,.2); background:#fff; }
+.prove-main img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.prove-tabs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+.prove-tabs span { position:relative; height:92px; overflow:hidden; border-radius:7px; background:#fff; box-shadow:0 8px 20px rgba(24,12,54,.15); }
+.prove-tabs img { width:100%; height:100%; object-fit:cover; object-position:top center; }
+.prove-tabs b { position:absolute; left:7px; bottom:7px; padding:4px 7px; border-radius:99px; background:rgba(17,9,49,.88); color:#fff; font-size:9px; }
+.prove-live { position:absolute; top:31px; right:31px; padding:6px 9px; border-radius:99px; background:rgba(10,22,14,.9); color:#fff; font-size:8px; font-weight:850; letter-spacing:.1em; }
+.prove-live i { display:inline-block; width:6px; height:6px; margin-right:5px; border-radius:50%; background:#ff625d; box-shadow:0 0 0 4px rgba(255,98,93,.16); }
+
+.dashboard { padding: 120px 7vw; background: var(--lavender); display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; align-items: center; }
+.dashboard .section-tag { color: var(--sage); }
+.dash-copy > p:not(.section-tag) { line-height: 1.8; max-width: 440px; }
+.dash-copy ul { list-style: none; padding: 20px 0 0; }
+.dash-copy li { display:grid; grid-template-columns:42px 1fr; border-top:1px solid rgba(25,40,29,.25); padding:16px 0; }
+.dash-copy li span { grid-row:1 / 3; opacity:.55; font-weight:850; }
+.dash-copy li b { font-size:16px; line-height:1.45; }
+.dash-copy li small { margin-top:5px; color:#506155; font-size:13px; line-height:1.55; }
+.dash-copy li b { font-size: 18px; }
+.dash-copy li small { font-size: 14px; }
+.live-card { background: var(--sage-black); color: var(--cream); padding: 32px; box-shadow: 24px 24px 0 rgba(43,68,49,.25); }
+.live-top, .dash-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 13px; letter-spacing: .1em; }
+.live-top span { color: #ff746f; }
+.gauge { min-height: 300px; display: flex; justify-content: space-around; align-items: center; }
+.gauge-ring { width: 230px; height: 230px; border: 18px solid rgba(255,255,255,.12); border-top-color: var(--lavender); border-right-color: var(--lavender); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotate(-25deg); }
+.gauge-ring strong, .gauge-ring span { transform: rotate(25deg); }
+.gauge-ring strong { font-size: 64px; }
+.gauge-ring span { font-size: 12px; letter-spacing: .16em; }
+.gauge p { display: flex; flex-direction: column; }
+.gauge p b { font-size: 72px; color: var(--lavender); }
+.progress { height: 8px; background: rgba(255,255,255,.15); margin: 15px 0; }
+.progress i { display: block; width: 69%; height: 100%; background: var(--lavender); }
+
+.results { background: #f0ece3; color: var(--ink); }
+.results .section-heading > p { color: #5f685f; }
+.result-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+.result-grid figure { margin: 0; }
+.result-photo { position: relative; }
+.result-grid img { aspect-ratio: .78; object-fit: cover; filter: saturate(.8); }
+.result-photo b { position: absolute; right: 18px; top: 18px; padding: 10px 15px; background: var(--lavender); color: var(--sage-black); font-size: clamp(18px,2vw,28px); letter-spacing: -.03em; }
+.result-photo b small { display: block; font-size: 10px; letter-spacing: .18em; margin-bottom: 3px; }
+.result-grid figcaption { display: flex; justify-content: space-between; padding: 16px 0; font-weight: 700; border-bottom: 1px solid #aeb4ab; }
+.result-grid figcaption span { color: var(--sage); }
+.results-note { max-width: 780px; margin: 52px auto 0; text-align: center; font-size: 18px; line-height: 1.8; color: #4f5d52; }
+
+.reviews { padding: 120px 5vw; background: #e8e0f0; }
+.reviews .section-heading > p { color: #5d5864; }
+.review-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
+.review-badges span { padding: 12px 20px; border-radius: 99px; background: var(--sage); color: var(--cream); font-weight: 750; }
+.review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.review-grid blockquote { margin: 0; padding: 30px; background: rgba(255,255,255,.7); font-size: 18px; line-height: 1.75; }
+.review-grid cite { display: block; margin-top: 18px; font-size: 13px; font-style: normal; color: #716a78; }
+.review-photo { height: 500px; margin-top: 22px; object-fit: cover; object-position: center 55%; }
+
+.space { display: grid; grid-template-columns: 1.2fr .8fr; min-height: 750px; background: var(--sage); color: var(--cream); }
+.space-image img { height: 100%; object-fit: cover; }
+.space-copy { padding: 80px 5vw; align-self: center; }
+.space-copy > p:not(.section-tag) { line-height: 1.8; color: #d8ded7; }
+.pill-list { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 35px; }
+
+.community { padding: 120px 4vw; background: #171f19; color: var(--cream); }
+.community .section-heading > p { color: #b9c1b9; }
+.event-gallery { display: grid; grid-template-columns: 1.28fr .72fr; gap: 18px; }
+.event-gallery figure { position: relative; min-height: 590px; margin: 0; overflow: hidden; background: #253128; }
+.event-gallery img { position: absolute; inset: 0; height: 100%; object-fit: cover; filter: saturate(.72); transition: transform .55s ease, filter .55s ease; }
+.event-gallery figure:hover img { transform: scale(1.025); filter: saturate(.95); }
+.event-gallery figure:after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(8,18,11,.92)); }
+.event-gallery figcaption { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 27px; display: flex; flex-direction: column; gap: 8px; }
+.event-gallery figcaption span { color: var(--lavender); font-size: 12px; font-weight: 850; letter-spacing: .15em; }
+.event-gallery figcaption strong { font-size: clamp(22px, 2.1vw, 34px); letter-spacing: -.035em; }
+.community-line { display: grid; grid-template-columns: auto 1fr auto 1fr auto; align-items: center; gap: 22px; margin-top: 38px; color: #d1d7d1; font-size: 15px; font-weight: 750; }
+.community-line i { height: 1px; background: rgba(255,255,255,.25); }
+
+.founder { display: grid; grid-template-columns: .75fr 1.25fr; background: #141c17; color: var(--cream); }
+.founder-media { min-height: 760px; position: relative; overflow: hidden; background: var(--lavender); isolation: isolate; }
+.founder-media:before { content:""; position:absolute; inset: 7%; z-index:-1; border-radius: 52% 48% 45% 55% / 37% 43% 57% 63%; background: #f2b5ad; transform: rotate(-4deg); }
+.founder-media:after { content:""; position:absolute; width: 230px; height: 230px; right:-55px; top:38px; z-index:-2; border-radius:50%; background:#b9e0d3; }
+.founder-media img { height: 100%; object-fit: contain; object-position: center bottom; opacity: 1; filter: drop-shadow(0 18px 20px rgba(18,31,22,.16)); }
+.founder-media p { position: absolute; bottom: 24px; left: 28px; padding: 11px 16px; background: rgba(255,255,255,.9); color: var(--sage-black); font-size: 13px; transform: rotate(-1deg); }
+.founder-media p b { font-size: 17px; }
+.founder-scribble { position:absolute; z-index:2; color:var(--sage); font-weight:900; font-family:cursive; }
+.scribble-one { top:70px; left:35px; font-size:30px; transform:rotate(-9deg); }
+.scribble-two { right:35px; bottom:150px; font-size:70px; color:#ef7d88; transform:rotate(9deg); }
+.founder-letter { padding: 100px 7vw; align-self: center; }
+.founder-letter > p:not(.section-tag) { color: #cbd1cb; line-height: 1.85; font-size: 17px; margin: 0 0 24px; }
+.founder-letter strong { display: block; margin-top: 42px; padding-left: 20px; border-left: 4px solid var(--lavender); font-size: 22px; line-height: 1.6; }
+
+.faq { padding: 120px 8vw; background: #eee9df; }
+.faq-list { max-width: 980px; }
+.faq details { border-top: 1px solid #aeb5ad; }
+.faq details:last-child { border-bottom: 1px solid #aeb5ad; }
+.faq summary { position: relative; padding: 24px 50px 24px 0; cursor: pointer; font-size: 18px; font-weight: 800; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary:after { content: "+"; position: absolute; right: 10px; font-size: 28px; color: var(--sage); }
+.faq details[open] summary:after { content: "−"; }
+.faq details p { max-width: 780px; margin: 0; padding: 0 0 28px; line-height: 1.8; color: #59635c; }
+
+.instagram { padding: 120px 5vw; background: #f4d9df; overflow: hidden; }
+.insta-intro { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:55px; }
+.insta-intro h2 { font-size:clamp(42px,5vw,76px); line-height:1.12; letter-spacing:-.06em; margin:22px 0 0; }
+.insta-intro h2 span { color:var(--sage); }
+.insta-account { display:flex; align-items:center; gap:15px; padding:17px 20px; background:rgba(255,255,255,.72); border-radius:18px; transform:rotate(1deg); box-shadow:8px 8px 0 rgba(74,92,78,.13); }
+.insta-account p { margin:0; display:flex; flex-direction:column; }
+.insta-account b { font-size:18px; }
+.insta-account small { margin-top:4px; color:#6b6968; }
+.insta-logo { width:38px; height:38px; display:grid; place-items:center; border-radius:12px; color:#fff; font-size:29px; line-height:1; background:linear-gradient(145deg,#6a57c8,#d8488b 53%,#f3a347); }
+.insta-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.insta-grid a { position:relative; aspect-ratio:.84; overflow:hidden; border:10px solid rgba(255,255,255,.9); box-shadow:0 22px 45px rgba(77,57,68,.14); }
+.insta-grid a:nth-child(1) { transform:rotate(-1.5deg); }
+.insta-grid a:nth-child(2) { transform:translateY(22px) rotate(1.2deg); }
+.insta-grid a:nth-child(3) { transform:rotate(-.7deg); }
+.insta-grid img { width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .45s ease; }
+.insta-grid a:nth-child(2) img, .insta-grid a:nth-child(3) img { object-position:center 44%; transform:scale(1.04); }
+.insta-grid a:hover img { transform:scale(1.08); }
+.insta-grid a span { position:absolute; left:15px; bottom:15px; padding:9px 12px; background:var(--lavender); color:var(--sage-black); font-size:11px; font-weight:900; letter-spacing:.12em; }
+.insta-button { width:max-content; display:flex; align-items:center; gap:13px; margin:65px auto 0; padding:12px 18px 12px 12px; border:2px solid var(--sage); border-radius:18px; color:var(--sage); font-weight:850; background:rgba(255,255,255,.38); }
+.insta-button .insta-logo { width:34px; height:34px; font-size:25px; }
+.insta-button b { margin-left:14px; font-size:20px; }
+
+.locations { padding: 120px 5vw; background: var(--cream); }
+.locations .section-heading > p { color: #5f685f; }
+.branch-grid { display: grid; grid-template-columns: 1fr; gap: 22px; max-width:1100px; margin:0 auto; }
+.branch-card { overflow: hidden; background: white; border-top: 6px solid var(--sage); box-shadow: 0 20px 50px rgba(30,45,34,.08); }
+.branch-info { padding: 34px 38px 38px; }
+.mini-map { position:relative; height:470px; overflow:hidden; isolation:isolate; background:#e8ece5; border:14px solid #fff; }
+.map-grid { position:absolute; inset:0; opacity:.35; background-image:linear-gradient(rgba(74,92,78,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(74,92,78,.08) 1px,transparent 1px); background-size:28px 28px; }
+.map-block { position:absolute; z-index:2; display:flex; flex-direction:column; justify-content:center; border:1px solid rgba(74,92,78,.12); border-radius:12px; background:#cbd5c9; color:#536158; }
+.map-block small { font-size:9px; font-weight:900; letter-spacing:.13em; opacity:.62; }
+.map-block b { margin-top:5px; font-size:20px; color:var(--sage-dark); }
+.map-block span { margin-top:6px; font-size:11px; line-height:1.45; }
+.block-nw { left:3%; top:3%; width:47%; height:31%; padding:20px 24px; background:#d5ddd2; }
+.block-ne { left:63%; top:3%; width:34%; height:31%; padding:20px; background:#d7cfdf; }
+.block-ne b { color:#544369; }
+.block-ne span { color:#745b90; font-weight:800; }
+.block-sw { left:3%; bottom:3%; width:47%; height:29%; padding:20px; flex-direction:row; align-items:center; gap:12px; background:#d7ded4; }
+.block-sw i { display:block; width:28px; height:28px; border-radius:50%; background:#a9bca9; box-shadow:inset 0 0 0 7px #c7d4c5; }
+.block-se { left:63%; bottom:3%; width:34%; height:29%; padding:16px; justify-content:flex-end; background:#cbd6ca; }
+.map-road { position:absolute; z-index:1; background:#fff; color:#818b83; font-size:12px; font-weight:800; letter-spacing:.06em; }
+.map-road span { position:absolute; white-space:nowrap; }
+.road-main { left:0; right:0; top:42%; height:96px; border-top:1px solid #cfd4cb; border-bottom:1px solid #cfd4cb; box-shadow:0 4px 12px rgba(42,55,45,.04); }
+.road-main:before { content:""; position:absolute; left:0; right:0; top:50%; border-top:2px dashed #d2d6d0; }
+.road-main span { left:34px; top:13px; }
+.road-side { top:0; bottom:0; left:52%; width:96px; border-left:1px solid #cfd4cb; border-right:1px solid #cfd4cb; box-shadow:4px 0 12px rgba(42,55,45,.03); }
+.road-side span { left:61px; top:26px; writing-mode:vertical-rl; }
+.map-crosswalk { position:absolute; z-index:3; left:47.7%; top:47%; width:70px; height:24px; background:repeating-linear-gradient(90deg,transparent 0 6px,#c6cbc5 6px 10px); }
+.map-route { position:absolute; z-index:4; border-color:#8561c5; border-style:solid; filter:drop-shadow(0 2px 0 rgba(255,255,255,.9)); }
+.route-one { left:19%; top:68%; width:38%; border-width:0 0 5px; }
+.route-two { left:56.5%; top:21%; height:47.5%; border-width:0 5px 0 0; }
+.route-three { left:56.5%; top:20.5%; width:18%; border-width:5px 0 0; }
+.route-three:after { content:""; position:absolute; right:-2px; top:-8px; width:10px; height:10px; border-radius:50%; background:#8561c5; box-shadow:0 0 0 5px rgba(201,184,232,.65); }
+.map-step { position:absolute; z-index:7; width:24px; height:24px; display:grid; place-items:center; border-radius:50%; background:#8561c5; color:#fff; border:3px solid #fff; font-size:10px; font-weight:900; box-shadow:0 4px 10px rgba(83,61,122,.24); }
+.step-one { left:17%; top:65%; }
+.step-two { left:54.2%; top:49%; }
+.step-three { left:72.5%; top:17.8%; }
+.map-exit { position:absolute; z-index:6; left:6%; bottom:9%; display:flex; gap:11px; align-items:center; color:var(--sage); font-size:11px; line-height:1.35; }
+.map-exit b { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:#8561c5; color:#fff; font-size:20px; }
+.map-exit strong { font-size:14px; }
+.map-pin { position:absolute; z-index:6; left:68%; top:7%; display:flex; flex-direction:column; align-items:center; padding:14px 23px; border-radius:12px; background:var(--sage); color:#fff; box-shadow:7px 7px 0 var(--lavender); }
+.map-pin:after { content:""; position:absolute; bottom:-16px; border:9px solid transparent; border-top-color:var(--sage); }
+.map-pin i { width:34px; height:34px; display:grid; place-items:center; margin-bottom:5px; border-radius:50%; background:var(--lavender); color:var(--sage-black); font-style:normal; font-weight:900; }
+.map-pin b { font-size:24px; letter-spacing:-.03em; }
+.map-pin span { margin-top:3px; font-size:12px; opacity:.82; }
+.map-walk { position:absolute; z-index:6; left:24%; top:71%; display:flex; flex-direction:column; padding:8px 11px; border-radius:8px; background:rgba(255,255,255,.94); color:var(--sage); box-shadow:0 5px 12px rgba(41,57,45,.08); }
+.map-walk b { font-size:12px; }
+.map-walk span { margin-top:2px; font-size:10px; color:#7a847c; }
+.branch-name { color: var(--sage); font-weight: 850; letter-spacing: .14em; }
+.branch-card h3 { min-height: 66px; font-size: 23px; line-height: 1.45; }
+.branch-card dl { margin: 30px 0; }
+.branch-card dl div { display: grid; grid-template-columns: 90px 1fr; border-top: 1px solid #d4d7d1; padding: 15px 0; }
+.branch-card dt { color: #7b837d; }
+.branch-card dd { margin: 0; line-height: 1.6; }
+.map-action { display: inline-block; color: var(--sage); font-weight: 850; border-bottom: 1px solid var(--sage); padding-bottom: 3px; }
+
+.branch-tabs { max-width:1100px; margin:0 auto; }
+.branch-tabs > input { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
+.branch-tab-list { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:18px; padding:8px; border-radius:18px; background:#e3e5df; }
+.branch-tab-list label { display:flex; align-items:center; justify-content:center; gap:12px; min-height:70px; padding:14px 20px; border-radius:12px; color:#7a817b; font-size:20px; font-weight:900; cursor:pointer; transition:.25s ease; }
+.branch-tab-list label small { font-size:11px; font-weight:750; letter-spacing:.02em; opacity:.72; }
+#branch-0:checked ~ .branch-tab-list label[for="branch-0"],
+#branch-1:checked ~ .branch-tab-list label[for="branch-1"] { background:#fff; color:var(--sage); box-shadow:0 8px 24px rgba(40,54,43,.09); }
+.branch-panels .branch-card { display:none; grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr); min-height:560px; }
+#branch-0:checked ~ .branch-panels .branch-panel-0,
+#branch-1:checked ~ .branch-panels .branch-panel-1 { display:grid; }
+.kakao-map-frame { position:relative; display:block; min-height:560px; overflow:hidden; background:linear-gradient(135deg,#dfe8d9,#eee8f5); border:12px solid #fff; }
+.kakao-map-frame iframe { width:100%; height:100%; min-height:536px; border:0; pointer-events:none; background:#e8ece5; filter:saturate(.78) contrast(.96); }
+.map-place-label { position:absolute; left:50%; top:50%; z-index:2; display:flex; min-width:178px; flex-direction:column; align-items:center; padding:13px 18px 15px; border-radius:12px; background:var(--sage); color:#fff; box-shadow:0 10px 28px rgba(28,45,33,.24); transform:translate(-50%,-112%); }
+.map-place-label:after { content:""; position:absolute; left:50%; bottom:-15px; border:8px solid transparent; border-top-color:var(--sage); transform:translateX(-50%); }
+.map-place-label b { color:var(--lavender); font-size:9px; letter-spacing:.18em; }
+.map-place-label strong { margin-top:3px; font-size:21px; letter-spacing:-.02em; }
+.map-place-label small { margin-top:3px; font-size:10px; opacity:.78; }
+.map-open { position:absolute; right:22px; bottom:22px; z-index:2; padding:13px 17px; border-radius:999px; background:#fae100; color:#3c1e1e; box-shadow:0 10px 25px rgba(44,35,10,.2); font-size:13px; font-weight:900; }
+.branch-info { display:flex; flex-direction:column; justify-content:center; }
+.branch-name { display:flex; align-items:center; gap:10px; color:var(--sage); font-weight:900; letter-spacing:.12em; }
+.branch-name span { display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:var(--lavender); color:var(--sage-black); font-size:12px; letter-spacing:0; }
+.branch-card h3 { min-height:0; margin:18px 0 8px; font-size:25px; line-height:1.5; letter-spacing:-.025em; }
+.branch-card dl { margin:25px 0 28px; }
+.branch-card dd a { color:inherit; font-weight:800; }
+.branch-actions { display:flex; gap:10px; }
+.branch-actions .map-action, .branch-actions .call-action { display:flex; align-items:center; justify-content:space-between; min-height:52px; padding:0 18px; border:0; border-radius:10px; font-weight:900; }
+.branch-actions .map-action { flex:1; background:var(--sage); color:#fff; }
+.branch-actions .call-action { min-width:108px; background:var(--lavender); color:var(--sage-black); }
+
+.start { padding: 120px 20px; text-align: center; background: #18271d; color: var(--cream); }
+.start > p:not(.section-tag,.contact) { color: #c7cec6; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+.start .primary-btn { margin: 48px auto 26px; text-align: left; }
+.kakao-btn { background: #fae100; color: #3c1e1e; }
+.contact { font-size: 13px; letter-spacing: .08em; }
+.start-answer { color: var(--lavender); margin-top: .16em; }
+
+footer { padding: 55px 4vw; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; background: #0e1912; color: var(--cream); }
+footer p { text-align: right; }
+footer small { opacity: .55; }
+.kakao-float { position:fixed; right:24px; bottom:24px; z-index:30; display:flex; align-items:center; gap:11px; padding:10px 17px 10px 10px; border-radius:999px; background:#fae100; color:#3c1e1e; box-shadow:0 14px 35px rgba(34,28,10,.22); font-size:14px; font-weight:850; }
+.kakao-float b { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:#3c1e1e; color:#fae100; font-size:11px; }
+
+@media (max-width: 800px) {
+  .desktop-break { display: none; }
+  .site-header { position: absolute; height: 64px; padding: 0 18px; color: var(--sage-black); border-color: rgba(74,92,78,.16); }
+  .brand strong { font-size: 24px; }
+  .site-header .brand span, nav a:not(.nav-cta) { display: none; }
+  .nav-cta { padding: 9px 13px; border: 0; border-radius: 999px; background: var(--sage); color: #fff; font-size: 12px; }
+  .hero { min-height: 790px; align-items: end; padding: 310px 18px 34px; color: var(--sage-black); background: linear-gradient(150deg,#fffafc 0%,#f5ecff 55%,#eaf5ee 100%); }
+  .hero:after { content:""; position:absolute; left:18px; right:18px; top:79px; height:245px; border-radius:28px 28px 70px 28px; border:7px solid rgba(255,255,255,.9); box-shadow:0 18px 42px rgba(74,92,78,.16); pointer-events:none; }
+  .hero-bg { inset:79px 18px auto; height:245px; border-radius:28px 28px 70px 28px; background:url("images/site-image-01.jpg") center 48%/cover; }
+  .hero-content { width: 100%; margin: 0; padding: 36px 4px 0; }
+  .eyebrow { width:max-content; padding:8px 11px; border-radius:999px; background:#fff; color:var(--sage); font-size:10px; letter-spacing:.13em; box-shadow:0 7px 18px rgba(74,92,78,.08); }
+  .hero h1 { max-width:100%; font-size:clamp(37px, 10.8vw, 49px); line-height:1.12; letter-spacing:-.065em; margin:17px 0 18px; }
+  .hero h1 span, .hero h1 em { white-space:nowrap; }
+  .hero h1 em { color:var(--sage); }
+  .hero-sub { gap:7px; font-size:15px; }
+  .hero-sub b { padding:8px 11px; border-radius:12px; background:rgba(255,255,255,.75); }
+  .hero-sub i { width:26px; height:26px; font-size:14px; }
+  .mission { margin:24px 0 22px; color:#657169; }
+  .mission div { background:rgba(74,92,78,.2); }
+  .mission i:after { border-color:#fff; }
+  .hero .primary-btn { border-radius:17px; padding:17px 20px; background:var(--sage); color:#fff; font-size:17px; box-shadow:0 13px 28px rgba(74,92,78,.18); }
+  .hero .trust-row { margin-top:17px; gap:6px; }
+  .hero .trust-row span { padding:7px 10px; border-color:rgba(74,92,78,.25); background:rgba(255,255,255,.48); color:var(--sage); font-size:11px; }
+  .hero-deco { display:block; font-weight:900; }
+  .hero-deco-one { top:91px; left:24px; width:38px; height:38px; display:grid; place-items:center; border-radius:50%; background:#f3a9ae; color:#fff; transform:rotate(-8deg); }
+  .hero-deco-two { top:286px; right:29px; color:#fff; font-size:35px; transform:rotate(10deg); }
+  .hero-deco-three { top:300px; left:29px; padding:7px 10px; border-radius:9px; background:var(--lavender); color:var(--sage); font-size:11px; letter-spacing:.08em; transform:rotate(-4deg); }
+  .vertical-label { display: none; }
+  .manifesto, .program, .results, .reviews, .community, .instagram, .faq, .locations, .start { padding: 72px 18px; }
+  .manifesto h2, .section-heading h2, .dash-copy h2, .space-copy h2, .start h2, .founder h2, .faq h2 { font-size:clamp(32px, 9.2vw, 38px); line-height:1.24; letter-spacing:-.02em; word-spacing:.14em; }
+  .section-heading { margin-bottom:38px; }
+  .section-heading h2 br, .manifesto h2 br, .dash-copy h2 br, .space-copy h2 br, .start h2 br, .founder h2 br, .faq h2 br { display:none; }
+  .system-visuals { grid-template-columns:1fr; gap:14px; margin-top:46px; }
+  .system-tile { padding:18px; border-radius:22px; box-shadow:0 12px 30px rgba(34,48,38,.08); }
+  .system-tile > svg { max-height:220px; }
+  .mini-dashboard { margin-top:20px; }
+  .tile-result { min-height:68px; }
+  .tile-result strong { font-size:52px; }
+  .section-heading { display: block; }
+  .section-heading > p { width: auto; }
+  .step-grid, .result-grid, .review-grid, .event-gallery, .branch-grid, .insta-grid { grid-template-columns: 1fr; }
+  .step-card { min-height: 410px; border-radius:22px; }
+  .step-card > img { opacity:.94; filter:saturate(.92) contrast(1.03); }
+  .step-card:after { inset:52% 0 0; }
+  .prove-card { min-height:520px; }
+  .prove-card:after { inset:63% 0 0; }
+  .prove-ui { inset:0 0 178px; padding:14px; }
+  .prove-main { height:69%; border-radius:11px; }
+  .prove-tabs { gap:8px; margin-top:8px; }
+  .prove-tabs span { height:78px; border-radius:9px; }
+  .prove-live { top:22px; right:22px; }
+  .dashboard { grid-template-columns: 1fr; padding: 85px 20px; }
+  .live-card { padding: 22px; box-shadow: 12px 12px 0 rgba(43,68,49,.25); }
+  .gauge { min-height: 240px; }
+  .gauge-ring { width: 170px; height: 170px; border-width: 13px; }
+  .gauge-ring strong { font-size: 46px; }
+  .gauge p b { font-size: 48px; }
+  .space { grid-template-columns: 1fr; }
+  .space-image { height: 320px; }
+  .space-copy { padding: 70px 20px; }
+  .event-gallery figure { min-height: 330px; border-radius:22px; }
+  .event-gallery .event-main { min-height: 390px; }
+  .community-line { grid-template-columns: 1fr; gap: 10px; text-align: center; }
+  .community-line i { width: 44px; margin: 0 auto; }
+  .founder { grid-template-columns: 1fr; }
+  .founder-media { min-height: 460px; }
+  .founder-letter { padding: 70px 20px; }
+  .insta-intro { display:block; }
+  .insta-account { margin-top:32px; }
+  .insta-grid { gap:18px; }
+  .insta-grid a, .insta-grid a:nth-child(1), .insta-grid a:nth-child(2), .insta-grid a:nth-child(3) { transform:none; aspect-ratio:.94; border-width:7px; border-radius:22px; }
+  .mini-map { height:390px; border-width:7px; }
+  .block-nw, .block-sw { width:46%; }
+  .block-nw { padding:12px 13px; }
+  .block-nw b { font-size:16px; }
+  .block-ne, .block-se { left:67%; width:30%; padding:10px; }
+  .block-ne b { font-size:14px; }
+  .block-ne span { font-size:9px; }
+  .block-sw { gap:6px; padding:10px; }
+  .block-sw i { width:20px; height:20px; box-shadow:inset 0 0 0 5px #c7d4c5; }
+  .road-main { top:42%; height:78px; }
+  .road-side { left:49%; width:66px; }
+  .road-side span { left:40px; font-size:10px; }
+  .map-crosswalk { left:45%; top:48%; width:56px; }
+  .route-one { left:20%; top:69%; width:38%; }
+  .route-two { left:57%; top:22%; height:47.5%; }
+  .route-three { left:57%; top:21.5%; width:18%; }
+  .map-pin { left:66%; top:7%; padding:10px 12px; box-shadow:5px 5px 0 var(--lavender); }
+  .map-pin i { width:29px; height:29px; font-size:12px; }
+  .map-pin b { font-size:17px; }
+  .map-pin span { font-size:10px; }
+  .map-exit { left:4%; bottom:8%; }
+  .map-exit b { width:36px; height:36px; }
+  .map-walk { left:21%; top:72%; }
+  .step-one { left:17%; top:66%; }
+  .step-two { left:53.5%; top:49%; }
+  .step-three { left:72%; top:18.5%; }
+  .kakao-float { right:12px; bottom:12px; padding:8px 13px 8px 8px; }
+  .kakao-float b { width:34px; height:34px; }
+  .review-photo { height: 360px; }
+  .branch-info { padding: 28px 22px; }
+  .map-frame { height: 300px; }
+  .branch-card h3 { min-height: 0; }
+  .branch-tab-list { gap:6px; padding:6px; border-radius:14px; }
+  .branch-tab-list label { min-height:62px; flex-direction:column; gap:2px; padding:10px 8px; font-size:18px; }
+  .branch-tab-list label small { font-size:10px; }
+  .branch-panels .branch-card { grid-template-columns:1fr; min-height:0; }
+  .kakao-map-frame { min-height:360px; border-width:7px; }
+  .kakao-map-frame iframe { min-height:346px; }
+  .map-place-label { min-width:145px; padding:10px 14px 12px; }
+  .map-place-label strong { font-size:18px; }
+  .map-open { right:14px; bottom:14px; padding:11px 14px; font-size:12px; }
+  .branch-card h3 { margin-top:16px; font-size:20px; }
+  .branch-card dl { margin:20px 0 22px; }
+  .branch-card dl div { grid-template-columns:78px 1fr; padding:13px 0; font-size:14px; }
+  .branch-actions { flex-direction:column; }
+  .branch-actions .call-action { min-width:0; }
+  footer { grid-template-columns: 1fr; }
+  footer p { text-align: left; }
+}
+</style>
+</head>
+<body><link rel="preload" as="image" href="/images/site-image-02.jpg"/><link rel="preload" as="image" href="/images/site-image-03.jpg"/><link rel="preload" as="image" href="/images/site-image-04.png"/><link rel="preload" as="image" href="/images/site-image-05.png"/><link rel="preload" as="image" href="/images/site-image-06.png"/><link rel="preload" as="image" href="/images/site-image-07.jpg"/><link rel="preload" as="image" href="/images/site-image-08.jpg"/><link rel="preload" as="image" href="/images/site-image-09.jpg"/><link rel="preload" as="image" href="/images/site-image-10.jpg"/><link rel="preload" as="image" href="/images/site-image-11.jpg"/><link rel="preload" as="image" href="/images/site-image-12.jpg"/><link rel="preload" as="image" href="/images/site-image-13.jpg"/><link rel="preload" as="image" href="/images/site-image-14.png"/><link rel="preload" as="image" href="/images/site-image-15.jpg"/><link rel="preload" as="image" href="/images/site-image-16.png"/><link rel="preload" as="image" href="/images/site-image-17.png"/><main><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"HealthClub","name":"원펀치쓰리칼로리 범계점","alternateName":"BOXROX","address":{"@type":"PostalAddress","streetAddress":"경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층","addressLocality":"안양시","addressRegion":"경기도","addressCountry":"KR"},"telephone":"031-385-8288","email":"11punch33@gmail.com","openingHours":["Mo-Fr 09:00-23:00","Sa 09:00-16:00"]},{"@type":"HealthClub","name":"원펀치쓰리칼로리 안양점","alternateName":"BOXROX","address":{"@type":"PostalAddress","streetAddress":"경기도 안양시 만안구 만안로 201 두하빌딩 3층","addressLocality":"안양시","addressRegion":"경기도","addressCountry":"KR"},"telephone":"031-385-9713","email":"11punch33@gmail.com","openingHours":["Mo-Fr 09:00-23:00","Sa 09:00-16:00"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"BOXROX는 어떤 운동인가요?","acceptedAnswer":{"@type":"Answer","text":"복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과 하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다."}},{"@type":"Question","name":"복싱을 한 번도 안 해봤는데 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을 안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지 않습니다."}},{"@type":"Question","name":"여자 혼자 등록해도 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음 오시는 날부터 수업이 끝날 때까지 코치가 안내합니다."}},{"@type":"Question","name":"칼로리를 돌려받는다는 게 무슨 뜻인가요?","acceptedAnswer":{"@type":"Answer","text":"수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로 표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인 방법은 카카오톡 상담에서 안내합니다."}},{"@type":"Question","name":"가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다. 운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을 설명드립니다."}},{"@type":"Question","name":"위치와 운영시간은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번 출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일 09:00–16:00이며 일요일과 공휴일은 쉽니다."}}]}]}</script><header class="site-header"><a class="brand" href="#top" aria-label="BOXROX 홈"><strong>BOXROX</strong><span>by 원펀치쓰리칼로리</span></a><nav aria-label="주요 메뉴"><a href="#program">PROGRAM</a><a href="#results">RESULTS</a><a href="#instagram">INSTAGRAM</a><a href="#location">LOCATION</a><a class="nav-cta" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">카톡 상담</a></nav></header><section class="hero" id="top"><div class="hero-bg" aria-hidden="true"></div><div class="hero-deco hero-deco-one" aria-hidden="true">✦</div><div class="hero-deco hero-deco-two" aria-hidden="true">♡</div><div class="hero-deco hero-deco-three" aria-hidden="true">MOVE!</div><div class="hero-content"><p class="eyebrow">BEGINNER-FRIENDLY FITNESS</p><h1><span>운동시간 말고,</span><em>칼로리를 채워라.</em></h1><p class="hero-sub"><b>복싱 20분</b><i>+</i><b>하이록스 20분</b></p><div class="mission" aria-label="700킬로칼로리 미션 진행 표시"><span>MISSION<br/>0</span><div><i></i></div><span>700<br/>KCAL</span></div><a class="primary-btn kakao-btn" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">내게 맞는 수업 물어보기<span>→</span></a><div class="trust-row"><span>범계역 2번 출구</span><span>초보자 중심</span><span>스파링 없음</span></div></div><p class="vertical-label">MISSION 700</p></section><section class="manifesto"><p class="section-tag">WHY BOXROX</p><h2><span class="headline-line">다이어트는 의지가 아니라</span><span class="headline-line accent-line">다시 오고 싶은 재미입니다.</span></h2><p>혼자 버티는 운동은 오래가지 않습니다. BOXROX는 오늘 할 일이 보이고, 함께 움직이며, 끝나면 결과가 남는 그룹 피트니스입니다.</p><div class="system-visuals" aria-label="복싱, 하이록스, 심박수 결과 데이터로 구성된 BOXROX 시스템"><article class="system-tile boxing-tile"><div class="tile-label"><span>01</span><b>BOXING</b></div><svg viewBox="0 0 360 230" role="img" aria-label="칼로리를 태우는 복싱 글러브"><path class="motion-line line-one" d="M24 70 C77 55 105 61 135 80"></path><path class="motion-line line-two" d="M10 101 C69 94 91 99 124 111"></path><path class="glove" d="M153 52c17-22 54-25 78-8l43 31c17 12 22 36 12 54l-21 38c-8 15-25 23-42 20l-54-11c-25-5-41-30-34-55l8-29c4-15 2-28 10-40Z"></path><path class="glove-cuff" d="m139 133 59 39-28 43-63-42Z"></path><path class="glove-detail" d="M196 50c-7 24 1 47 24 67M241 61c-9 22-4 40 15 55"></path><circle class="spark" cx="303" cy="49" r="7"></circle><path class="spark-stroke" d="m311 27 7-13m13 29 16-5m-24 24 12 11"></path></svg><div class="tile-result"><strong>20</strong><span>MIN<br/>PUNCH</span><i>칼로리 점화</i></div></article><article class="system-tile hyrox-tile"><div class="tile-label"><span>02</span><b>HYROX</b></div><svg viewBox="0 0 360 230" role="img" aria-label="전신 출력으로 슬레드를 미는 사람"><circle class="head" cx="110" cy="47" r="21"></circle><path class="body" d="m105 74 38 28 31 15m-66-40-24 55 39 23m17-50-18 49 29 37m-61-55-25 45"></path><path class="sled" d="M176 116h100l13 71H160m14-71 16-25m86 25-8-28m-93 99h132"></path><path class="weight" d="M202 99h45l9 17h-63Z"></path><path class="floor-lines" d="M34 202h84m202 0h23"></path><path class="force force-one" d="m69 89-36 15"></path><path class="force force-two" d="m76 111-50 22"></path></svg><div class="tile-result"><strong>20</strong><span>MIN<br/>PUSH</span><i>전신 출력 상승</i></div></article><article class="system-tile data-tile"><div class="tile-label"><span>03</span><b>LIVE RESULT</b></div><div class="mini-dashboard"><div class="heart-row"><span class="live-dot">LIVE</span><b>MISSION 700</b></div><div class="heart-wave" aria-hidden="true"><i></i><svg viewBox="0 0 300 70"><path d="M0 39h54l14-22 22 42 20-31 18 11h40l17-29 25 49 20-32 17 12h53"></path></svg></div><div class="data-readout"><div><small>HEART RATE</small><strong>148</strong><span>BPM</span></div><div><small>CALORIES</small><strong>483</strong><span>KCAL</span></div></div><div class="mission-bar"><i></i><b>69%</b></div></div><div class="tile-result"><strong>700</strong><span>KCAL<br/>MISSION</span><i>오늘의 결과 증명</i></div></article></div></section><section class="program" id="program"><div class="section-heading"><div><p class="section-tag">THE PROGRAM</p><h2><span class="headline-line">한 번의 수업이</span><span class="headline-line">하나의 미션이 됩니다.</span></h2></div><p>복싱과 기능성 운동을 따로 배울 필요 없이, 코치의 안내에 따라 40분을 완성하세요.</p></div><div class="step-grid"><article class="step-card"><img src="images/site-image-02.jpg" alt=""/><div class="step-copy"><span>01</span><h3>PUNCH</h3><p>리듬을 따라 움직이는 20분. 지루할 틈 없이 칼로리가 쌓이고 몸이 먼저 깨어납니다.</p></div></article><article class="step-card"><img src="images/site-image-03.jpg" alt=""/><div class="step-copy"><span>02</span><h3>PUSH</h3><p>움직임이 커질수록 전신 출력도 올라갑니다. 내 수준에 맞춰 무리 없이 충분히 태웁니다.</p></div></article><article class="step-card prove-card"><div class="prove-ui"><div class="prove-main"><img src="images/site-image-04.png" alt="회원별 심박수와 칼로리가 실시간으로 표시되는 화면"/></div><div class="prove-tabs" aria-label="BOXROX 기록 화면 종류"><span><img src="images/site-image-05.png" alt="누적 포인트 순위 화면"/><b>누적 포인트</b></span><span><img src="images/site-image-06.png" alt="오늘의 최강자 화면"/><b>오늘의 최강자</b></span></div><div class="prove-live"><i></i> ACTUAL LIVE UI</div></div><div class="step-copy"><span>03</span><h3>PROVE</h3><p>심박·칼로리·포인트가 실시간으로 보입니다. 힘들었다는 느낌 대신, 오늘 해낸 숫자가 남습니다.</p></div></article></div></section><section class="dashboard"><div class="dash-copy"><p class="section-tag">LIVE PERFORMANCE · PROVE</p><h2><span class="headline-line">힘들었다는 느낌보다,</span><span class="headline-line">해냈다는 숫자가 남습니다.</span></h2><p>심박이 페이스를 잡고, 칼로리가 쌓이고, 남은 숫자가 한 세트를 더 움직이게 합니다.</p><ul><li><span>01</span><b>내 페이스를 놓치지 않게</b><small>심박이 움직일 때와 낮출 때를 알려줍니다.</small></li><li><span>02</span><b>움직인 만큼 정직하게</b><small>오늘 태운 칼로리와 쌓인 리워드가 보입니다.</small></li><li><span>03</span><b>끝까지 해내고 싶게</b><small>700에 가까워질수록 한 세트를 더 하게 됩니다.</small></li></ul></div><div class="live-card"><div class="live-top"><span>LIVE</span><b>MISSION 700</b></div><div class="gauge"><div class="gauge-ring"><strong>483</strong><span>KCAL</span></div><p><small>HEART RATE</small><b>148</b> BPM</p></div><div class="progress"><i></i></div><div class="dash-bottom"><span>ZONE 4</span><b>69% COMPLETE</b></div></div></section><section class="results" id="results"><div class="section-heading"><div><p class="section-tag">REAL RESULTS</p><h2>몇 명의 기적이 아니라,<br/>수업 안에 쌓이는 변화.</h2></div><p>두 장의 대표 사례만 특별한 게 아닙니다. 벽을 채운 기록처럼, 꾸준히 나온 회원들의 변화가 계속 쌓이고 있습니다.</p></div><div class="result-grid"><figure><div class="result-photo"><img src="images/site-image-07.jpg" alt="23kg 감량 회원의 변화"/><b><small>AFTER</small>−23kg</b></div><figcaption><span>01</span>꾸준함으로 만든 변화 · 23kg 감량</figcaption></figure><figure><div class="result-photo"><img src="images/site-image-08.jpg" alt="35kg 감량 회원의 변화"/><b><small>AFTER</small>−35kg</b></div><figcaption><span>02</span>꾸준함으로 만든 변화 · 35kg 감량</figcaption></figure><figure><div class="result-photo"><img src="images/site-image-09.jpg" alt="센터에 쌓인 여러 회원의 변화 기록"/><b>MANY MORE</b></div><figcaption><span>03</span>그리고 수업 안의 수많은 변화</figcaption></figure></div><p class="results-note">보여드린 두 사례만의 이야기가 아닙니다. 이런 변화가 수업 안에서 계속 쌓이고 있습니다.</p></section><section class="reviews"><div class="section-heading"><div><p class="section-tag">WHY THEY STAY</p><h2>리뷰에서 자꾸 보이는 말,<br/>“벌써”</h2></div><p>처음부터 운동을 좋아한 사람들이 아닙니다. 계속 나오다 보니 어느새 습관이 된 사람들입니다.</p></div><div class="review-badges"><span>“벌써 3개월째”</span><span>“2년째 다니고 있는데”</span><span>“몇 년째 꾸준히”</span></div><div class="review-grid"><blockquote>“땀 진짜 미친 듯이 나는데 스트레스 풀리고 운동효과 제대로임. 다이어트 목적이었는데 체력도 많이 올라서 만족!”<cite>네이버 리뷰 원문</cite></blockquote><blockquote>“복싱 + 하이록스로 체지방 태우는데 효과적이에요. 쌤들이 친절하고 맞춤형 지도를 잘해주세요.”<cite>네이버 리뷰 원문</cite></blockquote></div><img class="review-photo" src="images/site-image-10.jpg" alt="수업 후 함께 웃는 회원들"/></section><section class="space" id="space"><div class="space-image"><img src="images/site-image-11.jpg" alt="밝고 편안한 BOXROX 운동 공간"/></div><div class="space-copy"><p class="section-tag">BEGINNER FIRST</p><h2><span class="headline-line">원펀치는 처음부터</span><span class="headline-line">그렇게 설계했습니다.</span></h2><p>낡고 거친 체육관 분위기도, 맞아야 배우는 스파링도 없습니다. 밝은 공간에서 코치와 함께 내 페이스로 시작하세요.</p><div class="pill-list"><span>혼자 와도 어색하지 않게</span><span>처음이어도 헤매지 않게</span><span>땀 흘린 뒤 바로 일상으로</span></div></div></section><section class="community" id="community"><div class="section-heading"><div><p class="section-tag">BEYOND THE GYM</p><h2>센터 밖에서도,<br/>함께 움직입니다.</h2></div><p>운동을 오래 이어가게 만드는 건 의지만이 아닙니다. 함께 웃고 움직인 기억이 다음 출석을 기다리게 합니다.</p></div><div class="event-gallery"><figure class="event-main"><img src="images/site-image-12.jpg" alt="BOXROX 회원들이 함께한 야간 체육대회"/><figcaption><span>SPORTS DAY</span><strong>회원들과 함께한 체육대회</strong></figcaption></figure><figure><img src="images/site-image-13.jpg" alt="BOXROX 회원들이 풋살장에서 함께하는 외부 활동"/><figcaption><span>OUTDOOR ACTIVITY</span><strong>수업 밖에서 이어지는 팀워크</strong></figcaption></figure></div><div class="community-line"><span>같이 시작하고</span><i></i><span>같이 땀 흘리고</span><i></i><span>같이 오래갑니다</span></div></section><section class="founder"><div class="founder-media"><div class="founder-scribble scribble-one">MOVE</div><div class="founder-scribble scribble-two">♡</div><img src="images/site-image-14.png" alt="원펀치쓰리칼로리 대표 이준우"/><p><b>이준우</b> · 원펀치쓰리칼로리 대표</p></div><div class="founder-letter"><p class="section-tag">FROM THE FOUNDER</p><h2><span class="headline-line">운동이 싫은 사람을</span><span class="headline-line">습관까지 데려가는 일.</span></h2><p>저는 복싱 선수였습니다. 하지만 원펀치는 치열한 복싱이나 스파링을 위한 곳이 아닙니다. 다이어트를 재미있게 이어가고 싶은 사람을 위해 만든 곳입니다.</p><p>코치가 눈을 맞추고 미트를 받아주고, 심박과 리워드가 남은 한 세트를 움직이게 합니다. 그러다 어느 날, 운동은 결심이 아니라 습관이 됩니다.</p><strong>운동이 싫은 사람을, 다시 오고 싶은 사람으로 만드는 것.<br/>그 목적으로 원펀치를 만들었습니다.</strong></div></section><section class="instagram" id="instagram"><div class="insta-intro"><div><p class="section-tag">FOLLOW THE ENERGY</p><h2>운동하는 순간도<br/><span>우리답게, 예쁘게.</span></h2></div><div class="insta-account"><span class="insta-logo" aria-hidden="true">◎</span><p><b>@one.punch3</b><small>수업 분위기와 회원들의 오늘을 만나보세요.</small></p></div></div><div class="insta-grid"><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-15.jpg" alt="BOXROX 여성 코치의 복싱 콘텐츠"/><span>REAL CLASS</span></a><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-16.png" alt="원펀치쓰리칼로리 인스타그램 콘텐츠"/><span>OUR TOWN</span></a><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-17.png" alt="BOXROX 슬레드 운동 콘텐츠"/><span>MOVE BETTER</span></a></div><a class="insta-button" href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><span class="insta-logo">◎</span> Instagram 보러가기 <b>↗</b></a></section><section class="faq" id="faq"><p class="section-tag">FAQ</p><h2>궁금한 것부터 확인하세요.</h2><div class="faq-list"><details><summary>BOXROX는 어떤 운동인가요?</summary><p>복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과 하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다.</p></details><details><summary>복싱을 한 번도 안 해봤는데 괜찮나요?</summary><p>회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을 안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지 않습니다.</p></details><details><summary>여자 혼자 등록해도 괜찮나요?</summary><p>네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음 오시는 날부터 수업이 끝날 때까지 코치가 안내합니다.</p></details><details><summary>칼로리를 돌려받는다는 게 무슨 뜻인가요?</summary><p>수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로 표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인 방법은 카카오톡 상담에서 안내합니다.</p></details><details><summary>가격은 얼마인가요?</summary><p>현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다. 운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을 설명드립니다.</p></details><details><summary>위치와 운영시간은 어떻게 되나요?</summary><p>범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번 출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일 09:00–16:00이며 일요일과 공휴일은 쉽니다.</p></details></div></section><section class="locations" id="location"><div class="section-heading"><div><p class="section-tag">VISIT ONE PUNCH</p><h2>가까운 원펀치에서 시작하세요.</h2></div><p>범계점과 안양점의 위치·교통·운영시간을 확인하세요.</p></div><div class="branch-tabs"><input type="radio" id="branch-0" name="branch" checked=""/><input type="radio" id="branch-1" name="branch"/><div class="branch-tab-list" role="tablist" aria-label="지점 선택"><label for="branch-0" role="tab">범계점<small>범계역 2번 출구</small></label><label for="branch-1" role="tab">안양점<small>안양역 1번 출구</small></label></div><div class="branch-panels"><article class="branch-card branch-panel-0"><a class="kakao-map-frame" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4" target="_blank" rel="noreferrer" aria-label="범계점 카카오맵에서 보기"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=126.9498%2C37.3868%2C126.9612%2C37.3944&amp;layer=mapnik&amp;marker=37.3906%2C126.9555" title="범계점 위치 지도" loading="lazy" tabindex="-1"></iframe><span class="map-place-label"><b>ONE PUNCH</b><strong>범계점</strong><small>범계역 도보 2분</small></span><span class="map-open">카카오맵에서 보기 ↗</span></a><div class="branch-info"><p class="branch-name"><span>01</span>범계점</p><h3>경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층</h3><dl><div><dt>대중교통</dt><dd>4호선 범계역 2번 출구에서 직진 · 도보 2분</dd></div><div><dt>운영시간</dt><dd>평일 월–금 09:00–23:00<br/>토요일 09:00–16:00 · 일요일/공휴일 휴무</dd></div><div><dt>전화번호</dt><dd><a href="tel:031-385-8288">031-385-8288</a></dd></div><div><dt>이메일</dt><dd><a href="mailto:11punch33@gmail.com">11punch33@gmail.com</a></dd></div></dl><div class="branch-actions"><a class="map-action" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4" target="_blank" rel="noreferrer">카카오맵 길찾기 <span>↗</span></a><a class="call-action" href="tel:031-385-8288">전화하기</a></div></div></article><article class="branch-card branch-panel-1"><a class="kakao-map-frame" href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201" target="_blank" rel="noreferrer" aria-label="안양점 카카오맵에서 보기"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=126.9174%2C37.3953%2C126.9289%2C37.4030&amp;layer=mapnik&amp;marker=37.399159%2C126.923157" title="안양점 위치 지도" loading="lazy" tabindex="-1"></iframe><span class="map-place-label"><b>ONE PUNCH</b><strong>안양점</strong><small>안양역 도보 5분</small></span><span class="map-open">카카오맵에서 보기 ↗</span></a><div class="branch-info"><p class="branch-name"><span>02</span>안양점</p><h3>경기도 안양시 만안구 만안로 201 두하빌딩 3층</h3><dl><div><dt>대중교통</dt><dd>1호선 안양역 1번 출구 · 도보 5분</dd></div><div><dt>운영시간</dt><dd>평일 월–금 09:00–23:00<br/>토요일 09:00–16:00 · 일요일/공휴일 휴무</dd></div><div><dt>전화번호</dt><dd><a href="tel:031-385-9713">031-385-9713</a></dd></div></dl><div class="branch-actions"><a class="map-action" href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201" target="_blank" rel="noreferrer">카카오맵 길찾기 <span>↗</span></a><a class="call-action" href="tel:031-385-9713">전화하기</a></div></div></article></div></div></section><section class="start" id="start"><p class="section-tag">START BOXROX</p><h2><span class="headline-line">운동을 좋아해야</span><span class="headline-line">살이 빠지는 건 아닙니다.</span><span class="headline-line start-answer">재미있게 빼고 싶다면, 원펀치가 맞습니다.</span></h2><p>복싱·하이록스를 처음 해도 괜찮은지,<br class="desktop-break"/> 심박 리워드는 어떻게 쌓이는지 편하게 물어보세요.</p><a class="primary-btn kakao-btn" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">내 체력으로 가능한지 물어보기<span>→</span></a><p class="contact">범계점·안양점 상담으로 바로 연결됩니다.</p></section><footer><div class="brand"><strong>BOXROX</strong><span>by 원펀치쓰리칼로리</span></div><p>복싱은 무서운 운동이 아니다. 즐거운 운동이다.</p><small>11punch33@gmail.com · © 2026 BOXROX</small></footer><a class="kakao-float" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer" aria-label="카카오톡으로 상담하기"><b>talk</b><span>카카오톡 상담</span></a></main><script>
+document.querySelectorAll('.kakao-map-frame iframe').forEach(function(frame) {
+  frame.setAttribute('aria-hidden', 'true');
+});
+</script></body>
+</html>
