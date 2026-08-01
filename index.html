@@ -1,474 +1,3323 @@
-<!DOCTYPE html><html lang="ko"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="images/site-image-02.jpg" as="image"/><link rel="preload" href="images/site-image-03.jpg" as="image"/><link rel="preload" href="images/site-image-04.png" as="image"/><link rel="preload" href="images/site-image-05.png" as="image"/><link rel="preload" href="images/site-image-06.png" as="image"/><link rel="preload" href="images/site-image-07.jpg" as="image"/><link rel="preload" href="images/site-image-08.jpg" as="image"/><link rel="preload" href="images/site-image-09.jpg" as="image"/><link rel="preload" href="images/site-image-10.jpg" as="image"/><link rel="preload" href="images/site-image-11.jpg" as="image"/><link rel="preload" href="images/site-image-12.jpg" as="image"/><link rel="preload" href="images/site-image-13.jpg" as="image"/><link rel="preload" href="images/site-image-14.png" as="image"/><link rel="preload" href="images/site-image-15.jpg" as="image"/><link rel="preload" href="images/site-image-16.png" as="image"/><link rel="preload" href="images/site-image-17.png" as="image"/><title>BOXROX | 운동시간 말고, 칼로리를 채워라</title><meta name="description" content="안양 범계·안양역에서 복싱과 하이록스로 완성하는 40분 다이어트 운동 BOXROX."/>
-<style>
-@import "tailwindcss";
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preload" href="images/site-image-02.jpg" as="image" />
+    <link rel="preload" href="images/site-image-03.jpg" as="image" />
+    <link rel="preload" href="images/site-image-04.png" as="image" />
+    <link rel="preload" href="images/site-image-05.png" as="image" />
+    <link rel="preload" href="images/site-image-06.png" as="image" />
+    <link rel="preload" href="images/site-image-07.jpg" as="image" />
+    <link rel="preload" href="images/site-image-08.jpg" as="image" />
+    <link rel="preload" href="images/site-image-09.jpg" as="image" />
+    <link rel="preload" href="images/site-image-10.jpg" as="image" />
+    <link rel="preload" href="images/site-image-11.jpg" as="image" />
+    <link rel="preload" href="images/site-image-12.jpg" as="image" />
+    <link rel="preload" href="images/site-image-13.jpg" as="image" />
+    <link rel="preload" href="images/site-image-14.png" as="image" />
+    <title>BOXROX | 운동시간 말고, 칼로리를 채워라</title>
+    <meta
+      name="description"
+      content="안양 범계·안양역에서 복싱과 하이록스로 완성하는 40분 다이어트 운동 BOXROX."
+    />
+    <style>
+      @import "tailwindcss";
+      @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 
-:root {
-  --sage: #4a5c4e;
-  --sage-dark: #1c2d22;
-  --sage-black: #102017;
-  --lavender: #c9b8e8;
-  --cream: #f4f0e7;
-  --ink: #18221b;
-  --action: #fee500;
-}
+      :root {
+        --sage: #4a5c4e;
+        --sage-dark: #1c2d22;
+        --sage-black: #102017;
+        --lavender: #c9b8e8;
+        --cream: #f4f0e7;
+        --ink: #18221b;
+        --action: #fee500;
+      }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; background: var(--cream); color: var(--ink); font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; word-break: keep-all; }
-a { color: inherit; text-decoration: none; }
-img { display: block; width: 100%; }
-.headline-line { display: block; }
-.accent-line { color: var(--sage); }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--cream);
+        color: var(--ink);
+        font-family:
+          "Pretendard Variable",
+          Pretendard,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        word-break: keep-all;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+      .headline-line {
+        display: block;
+      }
+      .accent-line {
+        color: var(--sage);
+      }
 
-.site-header {
-  position: fixed; z-index: 40; inset: 0 0 auto; height: 80px; display: flex;
-  align-items: center; justify-content: space-between; padding: 0 3.4vw; color: var(--cream);
-  border-bottom: 1px solid rgba(255,255,255,.18); background:rgba(16,32,23,.92); backdrop-filter:blur(12px);
-}
-.brand { display: flex; align-items: baseline; gap: 16px; }
-.brand strong { font-size: clamp(24px, 2.4vw, 38px); letter-spacing: -.04em; }
-.brand span { font-size: 13px; font-weight: 700; }
-.brand-logo { align-items:center; gap:13px; }
-.brand-logo img { width:clamp(210px,20vw,310px); height:auto; }
-.brand-logo .logo-dark, .hero-brand .logo-dark { display:none; }
-.brand-logo span { padding-left:12px; border-left:1px solid rgba(255,255,255,.35); letter-spacing:.12em; }
-.hero-brand { display:flex; align-items:center; margin-bottom:24px; }
-.hero-brand span { padding:8px 12px; border:1px solid rgba(255,255,255,.45); border-radius:999px; font-size:11px; font-weight:850; letter-spacing:.08em; white-space:nowrap; }
-nav { display: flex; align-items: center; gap: 42px; font-size: 14px; font-weight: 700; }
-.nav-cta { border: 0; padding: 14px 28px; background:var(--action); color:#241f00; }
+      .site-header {
+        position: fixed;
+        z-index: 40;
+        inset: 0 0 auto;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 3.4vw;
+        color: var(--cream);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(16, 32, 23, 0.92);
+        backdrop-filter: blur(12px);
+      }
+      .brand {
+        display: flex;
+        align-items: baseline;
+        gap: 16px;
+      }
+      .brand strong {
+        font-size: clamp(24px, 2.4vw, 38px);
+        letter-spacing: -0.04em;
+      }
+      .brand span {
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .brand-logo {
+        align-items: center;
+        gap: 13px;
+      }
+      .brand-logo img {
+        width: clamp(210px, 20vw, 310px);
+        height: auto;
+      }
+      .brand-logo strong {
+        display: block;
+        width: clamp(210px, 20vw, 310px);
+        aspect-ratio: 1600/230;
+        font-size: 0;
+        background: url("data:image/webp;base64,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")
+          center/contain no-repeat;
+      }
+      .brand-logo .logo-dark,
+      .hero-brand .logo-dark {
+        display: none;
+      }
+      .brand-logo strong {
+        font-size: 0 !important;
+      }
+      .brand-logo span {
+        padding-left: 12px;
+        border-left: 1px solid rgba(255, 255, 255, 0.35);
+        letter-spacing: 0.12em;
+      }
+      .hero-brand {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+      .hero-brand span {
+        padding: 8px 12px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 999px;
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 42px;
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .nav-cta {
+        border: 0;
+        padding: 14px 28px;
+        background: var(--action);
+        color: #241f00;
+      }
 
-.hero { min-height: 900px; position: relative; display: flex; align-items: center; overflow: hidden; color: var(--cream); background: var(--sage-black); }
-.hero-bg { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,35,22,.99) 0%, rgba(21,45,29,.95) 35%, rgba(20,38,25,.15) 67%), url("images/site-image-01.jpg") center/cover; }
-.hero-content { position: relative; z-index: 2; width: min(680px, 55vw); margin-left: 3.5vw; padding-top: 55px; }
-.eyebrow, .section-tag { color: var(--lavender); letter-spacing: .19em; font-size: 15px; font-weight: 800; }
-.hero h1 { font-size: clamp(58px, 6.1vw, 102px); letter-spacing: -.075em; line-height: 1.09; margin: 32px 0; }
-.hero h1 span, .hero h1 em { display: block; white-space: nowrap; }
-.hero h1 em { font-style: normal; color: var(--cream); }
-.hero-sub { display: flex; align-items: center; gap: 12px; font-size: 25px; font-weight: 700; }
-.hero-sub i { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 50%; background: var(--lavender); color: var(--sage-black); font-style: normal; }
-.hero-deco { position: absolute; z-index: 1; display: none; }
-.hero-proof { display:flex; max-width:620px; margin:38px 0 30px; border-block:1px solid rgba(255,255,255,.22); }
-.hero-proof span { flex:1; padding:15px 14px; border-right:1px solid rgba(255,255,255,.18); color:#d7ddd7; font-size:13px; }
-.hero-proof span:first-child { padding-left:0; }
-.hero-proof span:last-child { border-right:0; }
-.hero-proof b { display:block; margin-bottom:3px; color:var(--cream); font-size:18px; }
-.primary-btn { display: flex; align-items: center; justify-content: space-between; width: min(410px, 100%); padding: 22px 30px; color: #241f00; background: var(--action); font-size: 22px; font-weight: 800; }
-.primary-btn span { font-size: 34px; line-height: .5; }
-.trust-row { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
-.trust-row span, .pill-list span { border: 1px solid rgba(255,255,255,.5); border-radius: 99px; padding: 9px 17px; font-size: 13px; font-weight: 700; }
-.vertical-label { position: absolute; right: 1.8vw; writing-mode: vertical-rl; letter-spacing: .16em; font-weight: 700; }
+      .hero {
+        min-height: 900px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: var(--cream);
+        background: var(--sage-black);
+      }
+      .hero-bg {
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(12, 35, 22, 0.99) 0%,
+            rgba(21, 45, 29, 0.95) 35%,
+            rgba(20, 38, 25, 0.15) 67%
+          ),
+          url("images/site-image-01.jpg") center/cover;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        width: min(680px, 55vw);
+        margin-left: 3.5vw;
+        padding-top: 55px;
+      }
+      .eyebrow,
+      .section-tag {
+        color: var(--lavender);
+        letter-spacing: 0.19em;
+        font-size: 15px;
+        font-weight: 800;
+      }
+      .hero h1 {
+        font-size: clamp(58px, 6.1vw, 102px);
+        letter-spacing: -0.075em;
+        line-height: 1.09;
+        margin: 32px 0;
+      }
+      .hero h1 span,
+      .hero h1 em {
+        display: block;
+        white-space: nowrap;
+      }
+      .hero h1 em {
+        font-style: normal;
+        color: var(--cream);
+      }
+      .hero-sub {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-size: 25px;
+        font-weight: 700;
+      }
+      .hero-sub i {
+        display: grid;
+        place-items: center;
+        width: 31px;
+        height: 31px;
+        border-radius: 50%;
+        background: var(--lavender);
+        color: var(--sage-black);
+        font-style: normal;
+      }
+      .hero-deco {
+        position: absolute;
+        z-index: 1;
+        display: none;
+      }
+      .hero-proof {
+        display: flex;
+        max-width: 620px;
+        margin: 38px 0 30px;
+        border-block: 1px solid rgba(255, 255, 255, 0.22);
+      }
+      .hero-proof span {
+        flex: 1;
+        padding: 15px 14px;
+        border-right: 1px solid rgba(255, 255, 255, 0.18);
+        color: #d7ddd7;
+        font-size: 13px;
+      }
+      .hero-proof span:first-child {
+        padding-left: 0;
+      }
+      .hero-proof span:last-child {
+        border-right: 0;
+      }
+      .hero-proof b {
+        display: block;
+        margin-bottom: 3px;
+        color: var(--cream);
+        font-size: 18px;
+      }
+      .primary-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: min(410px, 100%);
+        padding: 22px 30px;
+        color: #241f00;
+        background: var(--action);
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .primary-btn span {
+        font-size: 34px;
+        line-height: 0.5;
+      }
+      .trust-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 9px;
+        margin-top: 28px;
+      }
+      .trust-row span,
+      .pill-list span {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 99px;
+        padding: 9px 17px;
+        font-size: 13px;
+        font-weight: 700;
+      }
+      .vertical-label {
+        position: absolute;
+        right: 1.8vw;
+        writing-mode: vertical-rl;
+        letter-spacing: 0.16em;
+        font-weight: 700;
+      }
 
-.manifesto { padding: 130px 5vw 110px; text-align: center; }
-.manifesto h2, .section-heading h2, .dash-copy h2, .space-copy h2, .start h2, .founder h2, .faq h2 { font-size: clamp(42px, 5vw, 76px); line-height: 1.16; letter-spacing: -.035em; word-spacing: .11em; margin: 26px 0; }
-.manifesto h2 .accent-line { color: var(--sage); }
-.manifesto > p:not(.section-tag) { max-width: 660px; margin: 0 auto; color: #59635c; line-height: 1.8; }
-.stats { max-width: 960px; margin: 75px auto 0; display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid #bfc4bb; border-bottom: 1px solid #bfc4bb; }
-.stats div { padding: 35px 20px; display: flex; flex-direction: column; border-right: 1px solid #bfc4bb; }
-.stats div:last-child { border: 0; }
-.stats strong { font-size: 48px; letter-spacing: -.06em; }
-.stats span { font-size: 12px; letter-spacing: .13em; margin-top: 8px; }
+      .manifesto {
+        padding: 130px 5vw 110px;
+        text-align: center;
+      }
+      .manifesto h2,
+      .section-heading h2,
+      .dash-copy h2,
+      .space-copy h2,
+      .start h2,
+      .founder h2,
+      .faq h2 {
+        font-size: clamp(42px, 5vw, 76px);
+        line-height: 1.16;
+        letter-spacing: -0.035em;
+        word-spacing: 0.11em;
+        margin: 26px 0;
+      }
+      .manifesto h2 .accent-line {
+        color: var(--sage);
+      }
+      .manifesto > p:not(.section-tag) {
+        max-width: 660px;
+        margin: 0 auto;
+        color: #59635c;
+        line-height: 1.8;
+      }
+      .stats {
+        max-width: 960px;
+        margin: 75px auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        border-top: 1px solid #bfc4bb;
+        border-bottom: 1px solid #bfc4bb;
+      }
+      .stats div {
+        padding: 35px 20px;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #bfc4bb;
+      }
+      .stats div:last-child {
+        border: 0;
+      }
+      .stats strong {
+        font-size: 48px;
+        letter-spacing: -0.06em;
+      }
+      .stats span {
+        font-size: 12px;
+        letter-spacing: 0.13em;
+        margin-top: 8px;
+      }
 
-.system-visuals { max-width:1180px; margin:78px auto 0; display:grid; grid-template-columns:repeat(3,1fr); gap:16px; text-align:left; }
-.system-tile { position:relative; min-width:0; overflow:hidden; padding:20px; border:1px solid rgba(74,92,78,.18); background:#f5f0e8; box-shadow:0 18px 45px rgba(34,48,38,.08); }
-.system-tile:nth-child(2) { background:var(--lavender); }
-.system-tile:nth-child(3) { background:var(--sage-dark); color:var(--cream); }
-.tile-label { display:flex; align-items:center; justify-content:space-between; font-size:11px; font-weight:900; letter-spacing:.15em; }
-.tile-label span { width:28px; height:28px; display:grid; place-items:center; border:1px solid currentColor; border-radius:50%; letter-spacing:0; }
-.tile-label b { display:flex; align-items:baseline; gap:8px; font-size:20px; letter-spacing:-.03em; }
-.tile-label b small { font-size:9px; letter-spacing:.14em; opacity:.62; }
-.system-tile > svg { display:block; width:100%; margin:8px 0 2px; overflow:visible; }
-.boxing-tile .glove { fill:var(--lavender); stroke:var(--sage-dark); stroke-width:6; stroke-linejoin:round; }
-.boxing-tile .glove-cuff { fill:#f0a9ad; stroke:var(--sage-dark); stroke-width:6; stroke-linejoin:round; }
-.boxing-tile .glove-detail { fill:none; stroke:var(--sage-dark); stroke-width:5; stroke-linecap:round; opacity:.65; }
-.motion-line,.spark-stroke { fill:none; stroke:var(--sage); stroke-width:5; stroke-linecap:round; }
-.line-two { opacity:.45; }
-.spark { fill:#f0a9ad; }
-.spark-stroke { stroke:#f0a9ad; stroke-width:4; }
-.hyrox-tile .head { fill:#f0a9ad; stroke:var(--sage-dark); stroke-width:5; }
-.hyrox-tile .body,.hyrox-tile .sled,.hyrox-tile .floor-lines,.hyrox-tile .force { fill:none; stroke:var(--sage-dark); stroke-width:8; stroke-linecap:round; stroke-linejoin:round; }
-.hyrox-tile .sled { stroke-width:6; }
-.hyrox-tile .floor-lines,.hyrox-tile .force { stroke-width:5; }
-.hyrox-tile .force { stroke:#795fa7; }
-.hyrox-tile .weight { fill:var(--sage); stroke:var(--sage-dark); stroke-width:4; }
-.tile-result { min-height:74px; display:grid; grid-template-columns:auto 1fr; align-items:center; column-gap:12px; padding-top:15px; border-top:1px solid rgba(74,92,78,.3); }
-.tile-result strong { grid-row:1 / 3; font-size:55px; line-height:.9; letter-spacing:-.08em; }
-.tile-result span { align-self:end; font-size:10px; font-weight:900; line-height:1.15; letter-spacing:.11em; }
-.tile-result i { align-self:start; color:var(--sage); font-size:12px; font-style:normal; font-weight:800; }
-.data-tile .tile-result { border-color:rgba(255,255,255,.22); }
-.data-tile .tile-result strong { color:var(--lavender); }
-.data-tile .tile-result i { color:#bcd3c1; }
-.mini-dashboard { margin:22px 0 17px; padding:16px; border:1px solid rgba(255,255,255,.18); background:#102018; box-shadow:8px 8px 0 rgba(201,184,232,.2); }
-.heart-row { display:flex; justify-content:space-between; font-size:9px; letter-spacing:.12em; }
-.live-dot { color:#ff8d91; font-weight:900; }
-.heart-wave { position:relative; height:64px; margin:11px 0 5px; overflow:hidden; background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px); background-size:16px 16px; }
-.heart-wave svg { width:100%; height:100%; }
-.heart-wave path { fill:none; stroke:#f0a9ad; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
-.data-readout { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
-.data-readout div { display:grid; grid-template-columns:1fr auto; align-items:end; padding:10px; background:rgba(255,255,255,.05); }
-.data-readout small { grid-column:1 / 3; color:#aab9ad; font-size:7px; letter-spacing:.12em; }
-.data-readout strong { color:var(--lavender); font-size:30px; letter-spacing:-.06em; }
-.data-readout span { padding-bottom:4px; font-size:7px; }
-.mission-bar { position:relative; height:7px; margin-top:13px; background:rgba(255,255,255,.12); }
-.mission-bar i { display:block; width:69%; height:100%; background:var(--lavender); }
-.mission-bar b { position:absolute; right:0; top:-17px; font-size:8px; }
+      .system-visuals {
+        max-width: 1180px;
+        margin: 78px auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        text-align: left;
+      }
+      .system-tile {
+        position: relative;
+        min-width: 0;
+        overflow: hidden;
+        padding: 20px;
+        border: 1px solid rgba(74, 92, 78, 0.18);
+        background: #f5f0e8;
+        box-shadow: 0 18px 45px rgba(34, 48, 38, 0.08);
+      }
+      .system-tile:nth-child(2) {
+        background: var(--lavender);
+      }
+      .system-tile:nth-child(3) {
+        background: var(--sage-dark);
+        color: var(--cream);
+      }
+      .tile-label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.15em;
+      }
+      .tile-label span {
+        width: 28px;
+        height: 28px;
+        display: grid;
+        place-items: center;
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        letter-spacing: 0;
+      }
+      .tile-label b {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        font-size: 20px;
+        letter-spacing: -0.03em;
+      }
+      .tile-label b small {
+        font-size: 9px;
+        letter-spacing: 0.14em;
+        opacity: 0.62;
+      }
+      .system-tile > svg {
+        display: block;
+        width: 100%;
+        margin: 8px 0 2px;
+        overflow: visible;
+      }
+      .boxing-tile .glove {
+        fill: var(--lavender);
+        stroke: var(--sage-dark);
+        stroke-width: 6;
+        stroke-linejoin: round;
+      }
+      .boxing-tile .glove-cuff {
+        fill: #f0a9ad;
+        stroke: var(--sage-dark);
+        stroke-width: 6;
+        stroke-linejoin: round;
+      }
+      .boxing-tile .glove-detail {
+        fill: none;
+        stroke: var(--sage-dark);
+        stroke-width: 5;
+        stroke-linecap: round;
+        opacity: 0.65;
+      }
+      .motion-line,
+      .spark-stroke {
+        fill: none;
+        stroke: var(--sage);
+        stroke-width: 5;
+        stroke-linecap: round;
+      }
+      .line-two {
+        opacity: 0.45;
+      }
+      .spark {
+        fill: #f0a9ad;
+      }
+      .spark-stroke {
+        stroke: #f0a9ad;
+        stroke-width: 4;
+      }
+      .hyrox-tile .head {
+        fill: #f0a9ad;
+        stroke: var(--sage-dark);
+        stroke-width: 5;
+      }
+      .hyrox-tile .body,
+      .hyrox-tile .sled,
+      .hyrox-tile .floor-lines,
+      .hyrox-tile .force {
+        fill: none;
+        stroke: var(--sage-dark);
+        stroke-width: 8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .hyrox-tile .sled {
+        stroke-width: 6;
+      }
+      .hyrox-tile .floor-lines,
+      .hyrox-tile .force {
+        stroke-width: 5;
+      }
+      .hyrox-tile .force {
+        stroke: #795fa7;
+      }
+      .hyrox-tile .weight {
+        fill: var(--sage);
+        stroke: var(--sage-dark);
+        stroke-width: 4;
+      }
+      .tile-result {
+        min-height: 74px;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        column-gap: 12px;
+        padding-top: 15px;
+        border-top: 1px solid rgba(74, 92, 78, 0.3);
+      }
+      .tile-result strong {
+        grid-row: 1 / 3;
+        font-size: 55px;
+        line-height: 0.9;
+        letter-spacing: -0.08em;
+      }
+      .tile-result span {
+        align-self: end;
+        font-size: 10px;
+        font-weight: 900;
+        line-height: 1.15;
+        letter-spacing: 0.11em;
+      }
+      .tile-result i {
+        align-self: start;
+        color: var(--sage);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 800;
+      }
+      .data-tile .tile-result {
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+      .data-tile .tile-result strong {
+        color: var(--lavender);
+      }
+      .data-tile .tile-result i {
+        color: #bcd3c1;
+      }
+      .mini-dashboard {
+        margin: 22px 0 17px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: #102018;
+        box-shadow: 8px 8px 0 rgba(201, 184, 232, 0.2);
+      }
+      .heart-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 9px;
+        letter-spacing: 0.12em;
+      }
+      .live-dot {
+        color: #ff8d91;
+        font-weight: 900;
+      }
+      .heart-wave {
+        position: relative;
+        height: 64px;
+        margin: 11px 0 5px;
+        overflow: hidden;
+        background:
+          linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.035) 1px,
+            transparent 1px
+          ),
+          linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        background-size: 16px 16px;
+      }
+      .heart-wave svg {
+        width: 100%;
+        height: 100%;
+      }
+      .heart-wave path {
+        fill: none;
+        stroke: #f0a9ad;
+        stroke-width: 4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .data-readout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .data-readout div {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: end;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .data-readout small {
+        grid-column: 1 / 3;
+        color: #aab9ad;
+        font-size: 7px;
+        letter-spacing: 0.12em;
+      }
+      .data-readout strong {
+        color: var(--lavender);
+        font-size: 30px;
+        letter-spacing: -0.06em;
+      }
+      .data-readout span {
+        padding-bottom: 4px;
+        font-size: 7px;
+      }
+      .mission-bar {
+        position: relative;
+        height: 7px;
+        margin-top: 13px;
+        background: rgba(255, 255, 255, 0.12);
+      }
+      .mission-bar i {
+        display: block;
+        width: 69%;
+        height: 100%;
+        background: var(--lavender);
+      }
+      .mission-bar b {
+        position: absolute;
+        right: 0;
+        top: -17px;
+        font-size: 8px;
+      }
 
-.program, .results { background: var(--sage-dark); color: var(--cream); padding: 120px 4vw; }
-.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 65px; }
-.section-heading > p { width: 390px; color: #bbc3ba; line-height: 1.8; padding-bottom: 15px; }
-.step-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.step-card { position: relative; min-height: 570px; overflow: hidden; background: #263a2c; }
-.step-card > img { width:100%; height: 100%; position: absolute; object-fit: cover; filter: saturate(.86) contrast(1.03); opacity: .88; transition: .5s; }
-.step-card:hover > img { transform: scale(1.035); opacity: 1; }
-.step-card:after { content:""; position:absolute; inset: 48% 0 0; background: linear-gradient(transparent, rgba(10,25,15,.98) 56%); }
-.step-copy { position: absolute; z-index: 1; left: 30px; right: 30px; bottom: 28px; }
-.step-copy > span { color: var(--lavender); font-weight: 800; }
-.step-copy h3 { font-size: 44px; margin: 8px 0 12px; }
-.step-copy p { line-height: 1.65; color: #d2d7d1; }
-.prove-card { background:#101f16; }
-.prove-card:after { inset:58% 0 0; }
-.prove-ui { position:absolute; inset:0 0 184px; padding:22px; background:linear-gradient(145deg,#efeafa,#d9d0ed); }
-.prove-main { height:68%; overflow:hidden; border-radius:8px; box-shadow:0 16px 34px rgba(24,12,54,.2); background:#fff; }
-.prove-main img { width:100%; height:100%; object-fit:cover; object-position:center; }
-.prove-tabs { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
-.prove-tabs span { position:relative; height:92px; overflow:hidden; border-radius:7px; background:#fff; box-shadow:0 8px 20px rgba(24,12,54,.15); }
-.prove-tabs img { width:100%; height:100%; object-fit:cover; object-position:top center; }
-.prove-tabs b { position:absolute; left:7px; bottom:7px; padding:4px 7px; border-radius:99px; background:rgba(17,9,49,.88); color:#fff; font-size:9px; }
-.prove-live { position:absolute; top:31px; right:31px; padding:6px 9px; border-radius:99px; background:rgba(10,22,14,.9); color:#fff; font-size:8px; font-weight:850; letter-spacing:.1em; }
-.prove-live i { display:inline-block; width:6px; height:6px; margin-right:5px; border-radius:50%; background:#ff625d; box-shadow:0 0 0 4px rgba(255,98,93,.16); }
+      .program,
+      .results {
+        background: var(--sage-dark);
+        color: var(--cream);
+        padding: 120px 4vw;
+      }
+      .section-heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 40px;
+        margin-bottom: 65px;
+      }
+      .section-heading > p {
+        width: 390px;
+        color: #bbc3ba;
+        line-height: 1.8;
+        padding-bottom: 15px;
+      }
+      .step-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .step-card {
+        position: relative;
+        min-height: 570px;
+        overflow: hidden;
+        background: #263a2c;
+      }
+      .step-card > img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        filter: saturate(0.86) contrast(1.03);
+        opacity: 0.88;
+        transition: 0.5s;
+      }
+      .step-card:hover > img {
+        transform: scale(1.035);
+        opacity: 1;
+      }
+      .step-card:after {
+        content: "";
+        position: absolute;
+        inset: 48% 0 0;
+        background: linear-gradient(transparent, rgba(10, 25, 15, 0.98) 56%);
+      }
+      .step-copy {
+        position: absolute;
+        z-index: 1;
+        left: 30px;
+        right: 30px;
+        bottom: 28px;
+      }
+      .step-copy > span {
+        color: var(--lavender);
+        font-weight: 800;
+      }
+      .step-copy h3 {
+        font-size: 44px;
+        margin: 8px 0 12px;
+      }
+      .step-copy p {
+        line-height: 1.65;
+        color: #d2d7d1;
+      }
+      .prove-card {
+        background: #101f16;
+      }
+      .prove-card:after {
+        inset: 58% 0 0;
+      }
+      .prove-ui {
+        position: absolute;
+        inset: 0 0 184px;
+        padding: 22px;
+        background: linear-gradient(145deg, #efeafa, #d9d0ed);
+      }
+      .prove-main {
+        height: 68%;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 16px 34px rgba(24, 12, 54, 0.2);
+        background: #fff;
+      }
+      .prove-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .prove-tabs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .prove-tabs span {
+        position: relative;
+        height: 92px;
+        overflow: hidden;
+        border-radius: 7px;
+        background: #fff;
+        box-shadow: 0 8px 20px rgba(24, 12, 54, 0.15);
+      }
+      .prove-tabs img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+      }
+      .prove-tabs b {
+        position: absolute;
+        left: 7px;
+        bottom: 7px;
+        padding: 4px 7px;
+        border-radius: 99px;
+        background: rgba(17, 9, 49, 0.88);
+        color: #fff;
+        font-size: 9px;
+      }
+      .prove-live {
+        position: absolute;
+        top: 31px;
+        right: 31px;
+        padding: 6px 9px;
+        border-radius: 99px;
+        background: rgba(10, 22, 14, 0.9);
+        color: #fff;
+        font-size: 8px;
+        font-weight: 850;
+        letter-spacing: 0.1em;
+      }
+      .prove-live i {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background: #ff625d;
+        box-shadow: 0 0 0 4px rgba(255, 98, 93, 0.16);
+      }
 
-.dashboard { padding: 120px 7vw; background: var(--lavender); display: grid; grid-template-columns: .8fr 1.2fr; gap: 8vw; align-items: center; }
-.dashboard .section-tag { color: var(--sage); }
-.dash-copy > p:not(.section-tag) { line-height: 1.8; max-width: 440px; }
-.dash-copy ul { list-style: none; padding: 20px 0 0; }
-.dash-copy li { display:grid; grid-template-columns:42px 1fr; border-top:1px solid rgba(25,40,29,.25); padding:16px 0; }
-.dash-copy li span { grid-row:1 / 3; opacity:.55; font-weight:850; }
-.dash-copy li b { font-size:16px; line-height:1.45; }
-.dash-copy li small { margin-top:5px; color:#506155; font-size:13px; line-height:1.55; }
-.dash-copy li b { font-size: 18px; }
-.dash-copy li small { font-size: 14px; }
-.live-card { background: var(--sage-black); color: var(--cream); padding: 32px; box-shadow: 24px 24px 0 rgba(43,68,49,.25); }
-.live-top, .dash-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 13px; letter-spacing: .1em; }
-.live-top span { color: #ff746f; }
-.gauge { min-height: 300px; display: flex; justify-content: space-around; align-items: center; }
-.gauge-ring { width: 230px; height: 230px; border: 18px solid rgba(255,255,255,.12); border-top-color: var(--lavender); border-right-color: var(--lavender); border-radius: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: rotate(-25deg); }
-.gauge-ring strong, .gauge-ring span { transform: rotate(25deg); }
-.gauge-ring strong { font-size: 64px; }
-.gauge-ring span { font-size: 12px; letter-spacing: .16em; }
-.gauge p { display: flex; flex-direction: column; }
-.gauge p b { font-size: 72px; color: var(--lavender); }
-.progress { height: 8px; background: rgba(255,255,255,.15); margin: 15px 0; }
-.progress i { display: block; width: 69%; height: 100%; background: var(--lavender); }
+      .dashboard {
+        padding: 120px 7vw;
+        background: var(--lavender);
+        display: grid;
+        grid-template-columns: 0.8fr 1.2fr;
+        gap: 8vw;
+        align-items: center;
+      }
+      .dashboard .section-tag {
+        color: var(--sage);
+      }
+      .dash-copy > p:not(.section-tag) {
+        line-height: 1.8;
+        max-width: 440px;
+      }
+      .dash-copy ul {
+        list-style: none;
+        padding: 20px 0 0;
+      }
+      .dash-copy li {
+        display: grid;
+        grid-template-columns: 42px 1fr;
+        border-top: 1px solid rgba(25, 40, 29, 0.25);
+        padding: 16px 0;
+      }
+      .dash-copy li span {
+        grid-row: 1 / 3;
+        opacity: 0.55;
+        font-weight: 850;
+      }
+      .dash-copy li b {
+        font-size: 16px;
+        line-height: 1.45;
+      }
+      .dash-copy li small {
+        margin-top: 5px;
+        color: #506155;
+        font-size: 13px;
+        line-height: 1.55;
+      }
+      .dash-copy li b {
+        font-size: 18px;
+      }
+      .dash-copy li small {
+        font-size: 14px;
+      }
+      .live-card {
+        background: var(--sage-black);
+        color: var(--cream);
+        padding: 32px;
+        box-shadow: 24px 24px 0 rgba(43, 68, 49, 0.25);
+      }
+      .live-top,
+      .dash-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        letter-spacing: 0.1em;
+      }
+      .live-top span {
+        color: #ff746f;
+      }
+      .gauge {
+        min-height: 300px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .gauge-ring {
+        width: 230px;
+        height: 230px;
+        border: 18px solid rgba(255, 255, 255, 0.12);
+        border-top-color: var(--lavender);
+        border-right-color: var(--lavender);
+        border-radius: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(-25deg);
+      }
+      .gauge-ring strong,
+      .gauge-ring span {
+        transform: rotate(25deg);
+      }
+      .gauge-ring strong {
+        font-size: 64px;
+      }
+      .gauge-ring span {
+        font-size: 12px;
+        letter-spacing: 0.16em;
+      }
+      .gauge p {
+        display: flex;
+        flex-direction: column;
+      }
+      .gauge p b {
+        font-size: 72px;
+        color: var(--lavender);
+      }
+      .progress {
+        height: 8px;
+        background: rgba(255, 255, 255, 0.15);
+        margin: 15px 0;
+      }
+      .progress i {
+        display: block;
+        width: 69%;
+        height: 100%;
+        background: var(--lavender);
+      }
 
-.results { background: #f0ece3; color: var(--ink); }
-.results .section-heading > p { color: #5f685f; }
-.result-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
-.result-grid figure { margin: 0; }
-.result-photo { position: relative; }
-.result-grid img { aspect-ratio: .78; object-fit: cover; filter: saturate(.8); }
-.result-photo b { position: absolute; right: 18px; top: 18px; padding: 10px 15px; background: var(--lavender); color: var(--sage-black); font-size: clamp(18px,2vw,28px); letter-spacing: -.03em; }
-.result-photo b small { display: block; font-size: 10px; letter-spacing: .18em; margin-bottom: 3px; }
-.result-grid figcaption { display: flex; justify-content: space-between; padding: 16px 0; font-weight: 700; border-bottom: 1px solid #aeb4ab; }
-.result-grid figcaption span { color: var(--sage); }
-.results-note { max-width: 780px; margin: 52px auto 0; text-align: center; font-size: 18px; line-height: 1.8; color: #4f5d52; }
+      .results {
+        background: #f0ece3;
+        color: var(--ink);
+      }
+      .results .section-heading > p {
+        color: #5f685f;
+      }
+      .result-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .result-grid figure {
+        margin: 0;
+      }
+      .result-photo {
+        position: relative;
+      }
+      .result-grid img {
+        aspect-ratio: 0.78;
+        object-fit: cover;
+        filter: saturate(0.8);
+      }
+      .result-photo b {
+        position: absolute;
+        right: 18px;
+        top: 18px;
+        padding: 10px 15px;
+        background: var(--lavender);
+        color: var(--sage-black);
+        font-size: clamp(18px, 2vw, 28px);
+        letter-spacing: -0.03em;
+      }
+      .result-photo b small {
+        display: block;
+        font-size: 10px;
+        letter-spacing: 0.18em;
+        margin-bottom: 3px;
+      }
+      .result-grid figcaption {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 0;
+        font-weight: 700;
+        border-bottom: 1px solid #aeb4ab;
+      }
+      .result-grid figcaption span {
+        color: var(--sage);
+      }
+      .results-note {
+        max-width: 780px;
+        margin: 52px auto 0;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.8;
+        color: #4f5d52;
+      }
 
-.reviews { padding: 120px 5vw; background: #e8e0f0; }
-.reviews .section-heading > p { color: #5d5864; }
-.review-badges { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; }
-.review-badges span { padding: 12px 20px; border-radius: 99px; background: var(--sage); color: var(--cream); font-weight: 750; }
-.review-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-.review-grid blockquote { margin: 0; padding: 30px; background: rgba(255,255,255,.7); font-size: 18px; line-height: 1.75; }
-.review-grid cite { display: block; margin-top: 18px; font-size: 13px; font-style: normal; color: #716a78; }
-.review-photo { height: 500px; margin-top: 22px; object-fit: cover; object-position: center 55%; }
+      .reviews {
+        padding: 120px 5vw;
+        background: #e8e0f0;
+      }
+      .reviews .section-heading > p {
+        color: #5d5864;
+      }
+      .review-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-bottom: 30px;
+      }
+      .review-badges span {
+        padding: 12px 20px;
+        border-radius: 99px;
+        background: var(--sage);
+        color: var(--cream);
+        font-weight: 750;
+      }
+      .review-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+      .review-grid blockquote {
+        margin: 0;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 18px;
+        line-height: 1.75;
+      }
+      .review-grid cite {
+        display: block;
+        margin-top: 18px;
+        font-size: 13px;
+        font-style: normal;
+        color: #716a78;
+      }
+      .review-photo {
+        height: 500px;
+        margin-top: 22px;
+        object-fit: cover;
+        object-position: center 55%;
+      }
 
-.space { display: grid; grid-template-columns: 1.2fr .8fr; min-height: 750px; background: var(--sage); color: var(--cream); }
-.space-image img { height: 100%; object-fit: cover; }
-.space-copy { padding: 80px 5vw; align-self: center; }
-.space-copy > p:not(.section-tag) { line-height: 1.8; color: #d8ded7; }
-.pill-list { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 35px; }
+      .space {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        min-height: 750px;
+        background: var(--sage);
+        color: var(--cream);
+      }
+      .space-image img {
+        height: 100%;
+        object-fit: cover;
+      }
+      .space-copy {
+        padding: 80px 5vw;
+        align-self: center;
+      }
+      .space-copy > p:not(.section-tag) {
+        line-height: 1.8;
+        color: #d8ded7;
+      }
+      .pill-list {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 35px;
+      }
 
-.community { padding: 120px 4vw; background: #171f19; color: var(--cream); }
-.community .section-heading > p { color: #b9c1b9; }
-.event-gallery { display: grid; grid-template-columns: 1.28fr .72fr; gap: 18px; }
-.event-gallery figure { position: relative; min-height: 590px; margin: 0; overflow: hidden; background: #253128; }
-.event-gallery img { position: absolute; inset: 0; height: 100%; object-fit: cover; filter: saturate(.72); transition: transform .55s ease, filter .55s ease; }
-.event-gallery figure:hover img { transform: scale(1.025); filter: saturate(.95); }
-.event-gallery figure:after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(8,18,11,.92)); }
-.event-gallery figcaption { position: absolute; z-index: 1; left: 28px; right: 28px; bottom: 27px; display: flex; flex-direction: column; gap: 8px; }
-.event-gallery figcaption span { color: var(--lavender); font-size: 12px; font-weight: 850; letter-spacing: .15em; }
-.event-gallery figcaption strong { font-size: clamp(22px, 2.1vw, 34px); letter-spacing: -.035em; }
-.community-line { display: grid; grid-template-columns: auto 1fr auto 1fr auto; align-items: center; gap: 22px; margin-top: 38px; color: #d1d7d1; font-size: 15px; font-weight: 750; }
-.community-line i { height: 1px; background: rgba(255,255,255,.25); }
+      .community {
+        padding: 120px 4vw;
+        background: #171f19;
+        color: var(--cream);
+      }
+      .community .section-heading > p {
+        color: #b9c1b9;
+      }
+      .event-gallery {
+        display: grid;
+        grid-template-columns: 1.28fr 0.72fr;
+        gap: 18px;
+      }
+      .event-gallery figure {
+        position: relative;
+        min-height: 590px;
+        margin: 0;
+        overflow: hidden;
+        background: #253128;
+      }
+      .event-gallery img {
+        position: absolute;
+        inset: 0;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.72);
+        transition:
+          transform 0.55s ease,
+          filter 0.55s ease;
+      }
+      .event-gallery figure:hover img {
+        transform: scale(1.025);
+        filter: saturate(0.95);
+      }
+      .event-gallery figure:after {
+        content: "";
+        position: absolute;
+        inset: 45% 0 0;
+        background: linear-gradient(transparent, rgba(8, 18, 11, 0.92));
+      }
+      .event-gallery figcaption {
+        position: absolute;
+        z-index: 1;
+        left: 28px;
+        right: 28px;
+        bottom: 27px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .event-gallery figcaption span {
+        color: var(--lavender);
+        font-size: 12px;
+        font-weight: 850;
+        letter-spacing: 0.15em;
+      }
+      .event-gallery figcaption strong {
+        font-size: clamp(22px, 2.1vw, 34px);
+        letter-spacing: -0.035em;
+      }
+      .community-line {
+        display: grid;
+        grid-template-columns: auto 1fr auto 1fr auto;
+        align-items: center;
+        gap: 22px;
+        margin-top: 38px;
+        color: #d1d7d1;
+        font-size: 15px;
+        font-weight: 750;
+      }
+      .community-line i {
+        height: 1px;
+        background: rgba(255, 255, 255, 0.25);
+      }
 
-.founder { display: grid; grid-template-columns: .75fr 1.25fr; background: #141c17; color: var(--cream); }
-.founder-media { min-height: 760px; position: relative; overflow: hidden; background: var(--lavender); isolation: isolate; }
-.founder-media:before { content:""; position:absolute; inset: 7%; z-index:-1; border-radius: 52% 48% 45% 55% / 37% 43% 57% 63%; background: #f2b5ad; transform: rotate(-4deg); }
-.founder-media:after { content:""; position:absolute; width: 230px; height: 230px; right:-55px; top:38px; z-index:-2; border-radius:50%; background:#b9e0d3; }
-.founder-media img { height: 100%; object-fit: contain; object-position: center bottom; opacity: 1; filter: drop-shadow(0 18px 20px rgba(18,31,22,.16)); }
-.founder-media p { position: absolute; bottom: 24px; left: 28px; padding: 11px 16px; background: rgba(255,255,255,.9); color: var(--sage-black); font-size: 13px; transform: rotate(-1deg); }
-.founder-media p b { font-size: 17px; }
-.founder-scribble { position:absolute; z-index:2; color:var(--sage); font-weight:900; font-family:cursive; }
-.scribble-one { top:70px; left:35px; font-size:30px; transform:rotate(-9deg); }
-.scribble-two { right:35px; bottom:150px; font-size:70px; color:#ef7d88; transform:rotate(9deg); }
-.founder-letter { padding: 100px 7vw; align-self: center; }
-.founder-letter > p:not(.section-tag) { color: #cbd1cb; line-height: 1.85; font-size: 17px; margin: 0 0 24px; }
-.founder-letter strong { display: block; margin-top: 42px; padding-left: 20px; border-left: 4px solid var(--lavender); font-size: 22px; line-height: 1.6; }
+      .founder {
+        display: grid;
+        grid-template-columns: 0.75fr 1.25fr;
+        background: #141c17;
+        color: var(--cream);
+      }
+      .founder-media {
+        min-height: 760px;
+        position: relative;
+        overflow: hidden;
+        background: var(--lavender);
+        isolation: isolate;
+      }
+      .founder-media:before {
+        content: "";
+        position: absolute;
+        inset: 7%;
+        z-index: -1;
+        border-radius: 52% 48% 45% 55% / 37% 43% 57% 63%;
+        background: #f2b5ad;
+        transform: rotate(-4deg);
+      }
+      .founder-media:after {
+        content: "";
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        right: -55px;
+        top: 38px;
+        z-index: -2;
+        border-radius: 50%;
+        background: #b9e0d3;
+      }
+      .founder-media img {
+        height: 100%;
+        object-fit: contain;
+        object-position: center bottom;
+        opacity: 1;
+        filter: drop-shadow(0 18px 20px rgba(18, 31, 22, 0.16));
+      }
+      .founder-media p {
+        position: absolute;
+        bottom: 24px;
+        left: 28px;
+        padding: 11px 16px;
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--sage-black);
+        font-size: 13px;
+        transform: rotate(-1deg);
+      }
+      .founder-media p b {
+        font-size: 17px;
+      }
+      .founder-scribble {
+        position: absolute;
+        z-index: 2;
+        color: var(--sage);
+        font-weight: 900;
+        font-family: cursive;
+      }
+      .scribble-one {
+        top: 70px;
+        left: 35px;
+        font-size: 30px;
+        transform: rotate(-9deg);
+      }
+      .scribble-two {
+        right: 35px;
+        bottom: 150px;
+        font-size: 70px;
+        color: #ef7d88;
+        transform: rotate(9deg);
+      }
+      .founder-letter {
+        padding: 100px 7vw;
+        align-self: center;
+      }
+      .founder-letter > p:not(.section-tag) {
+        color: #cbd1cb;
+        line-height: 1.85;
+        font-size: 17px;
+        margin: 0 0 24px;
+      }
+      .founder-letter strong {
+        display: block;
+        margin-top: 42px;
+        padding-left: 20px;
+        border-left: 4px solid var(--lavender);
+        font-size: 22px;
+        line-height: 1.6;
+      }
 
-.faq { padding: 120px 8vw; background: #eee9df; }
-.faq-list { max-width: 980px; }
-.faq details { border-top: 1px solid #aeb5ad; }
-.faq details:last-child { border-bottom: 1px solid #aeb5ad; }
-.faq summary { position: relative; padding: 24px 50px 24px 0; cursor: pointer; font-size: 18px; font-weight: 800; list-style: none; }
-.faq summary::-webkit-details-marker { display: none; }
-.faq summary:after { content: "+"; position: absolute; right: 10px; font-size: 28px; color: var(--sage); }
-.faq details[open] summary:after { content: "−"; }
-.faq details p { max-width: 780px; margin: 0; padding: 0 0 28px; line-height: 1.8; color: #59635c; }
+      .faq {
+        padding: 120px 8vw;
+        background: #eee9df;
+      }
+      .faq-list {
+        max-width: 980px;
+      }
+      .faq details {
+        border-top: 1px solid #aeb5ad;
+      }
+      .faq details:last-child {
+        border-bottom: 1px solid #aeb5ad;
+      }
+      .faq summary {
+        position: relative;
+        padding: 24px 50px 24px 0;
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 800;
+        list-style: none;
+      }
+      .faq summary::-webkit-details-marker {
+        display: none;
+      }
+      .faq summary:after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+        font-size: 28px;
+        color: var(--sage);
+      }
+      .faq details[open] summary:after {
+        content: "−";
+      }
+      .faq details p {
+        max-width: 780px;
+        margin: 0;
+        padding: 0 0 28px;
+        line-height: 1.8;
+        color: #59635c;
+      }
 
-.instagram { padding: 120px 5vw; background: #f4d9df; overflow: hidden; }
-.insta-intro { display:flex; justify-content:space-between; align-items:end; gap:40px; margin-bottom:55px; }
-.insta-intro h2 { font-size:clamp(42px,5vw,76px); line-height:1.12; letter-spacing:-.06em; margin:22px 0 0; }
-.insta-intro h2 span { color:var(--sage); }
-.insta-account { display:flex; align-items:center; gap:15px; padding:17px 20px; background:rgba(255,255,255,.72); border-radius:18px; transform:rotate(1deg); box-shadow:8px 8px 0 rgba(74,92,78,.13); }
-.insta-account p { margin:0; display:flex; flex-direction:column; }
-.insta-account b { font-size:18px; }
-.insta-account small { margin-top:4px; color:#6b6968; }
-.insta-logo { width:38px; height:38px; display:grid; place-items:center; border-radius:12px; color:#fff; font-size:29px; line-height:1; background:linear-gradient(145deg,#6a57c8,#d8488b 53%,#f3a347); }
-.insta-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-.insta-grid a { position:relative; aspect-ratio:.84; overflow:hidden; border:10px solid rgba(255,255,255,.9); box-shadow:0 22px 45px rgba(77,57,68,.14); }
-.insta-grid a:nth-child(1) { transform:rotate(-1.5deg); }
-.insta-grid a:nth-child(2) { transform:translateY(22px) rotate(1.2deg); }
-.insta-grid a:nth-child(3) { transform:rotate(-.7deg); }
-.insta-grid img { width:100%; height:100%; object-fit:cover; object-position:center; transition:transform .45s ease; }
-.insta-grid a:nth-child(2) img, .insta-grid a:nth-child(3) img { object-position:center 44%; transform:scale(1.04); }
-.insta-grid a:hover img { transform:scale(1.08); }
-.insta-grid a span { position:absolute; left:15px; bottom:15px; padding:9px 12px; background:var(--lavender); color:var(--sage-black); font-size:11px; font-weight:900; letter-spacing:.12em; }
-.insta-button { width:max-content; display:flex; align-items:center; gap:13px; margin:65px auto 0; padding:12px 18px 12px 12px; border:2px solid var(--sage); border-radius:18px; color:var(--sage); font-weight:850; background:rgba(255,255,255,.38); }
-.insta-button .insta-logo { width:34px; height:34px; font-size:25px; }
-.insta-button b { margin-left:14px; font-size:20px; }
+      .instagram {
+        padding: 120px 5vw;
+        background: #f4d9df;
+        overflow: hidden;
+      }
+      .insta-intro {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 40px;
+        margin-bottom: 55px;
+      }
+      .insta-intro h2 {
+        font-size: clamp(42px, 5vw, 76px);
+        line-height: 1.12;
+        letter-spacing: -0.06em;
+        margin: 22px 0 0;
+      }
+      .insta-intro h2 span {
+        color: var(--sage);
+      }
+      .insta-account {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 17px 20px;
+        background: rgba(255, 255, 255, 0.72);
+        border-radius: 18px;
+        transform: rotate(1deg);
+        box-shadow: 8px 8px 0 rgba(74, 92, 78, 0.13);
+      }
+      .insta-account p {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      .insta-account b {
+        font-size: 18px;
+      }
+      .insta-account small {
+        margin-top: 4px;
+        color: #6b6968;
+      }
+      .insta-logo {
+        width: 38px;
+        height: 38px;
+        display: grid;
+        place-items: center;
+        border-radius: 12px;
+        color: #fff;
+        font-size: 29px;
+        line-height: 1;
+        background: linear-gradient(145deg, #6a57c8, #d8488b 53%, #f3a347);
+      }
+      .insta-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .insta-grid a {
+        position: relative;
+        aspect-ratio: 0.84;
+        overflow: hidden;
+        border: 10px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 22px 45px rgba(77, 57, 68, 0.14);
+      }
+      .insta-grid a:nth-child(1) {
+        transform: rotate(-1.5deg);
+      }
+      .insta-grid a:nth-child(2) {
+        transform: translateY(22px) rotate(1.2deg);
+      }
+      .insta-grid a:nth-child(3) {
+        transform: rotate(-0.7deg);
+      }
+      .insta-grid img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.45s ease;
+      }
+      .insta-grid a:nth-child(2) img,
+      .insta-grid a:nth-child(3) img {
+        object-position: center 44%;
+        transform: scale(1.04);
+      }
+      .insta-grid a:hover img {
+        transform: scale(1.08);
+      }
+      .insta-grid a span {
+        position: absolute;
+        left: 15px;
+        bottom: 15px;
+        padding: 9px 12px;
+        background: var(--lavender);
+        color: var(--sage-black);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+      .insta-button {
+        width: max-content;
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin: 65px auto 0;
+        padding: 12px 18px 12px 12px;
+        border: 2px solid var(--sage);
+        border-radius: 18px;
+        color: var(--sage);
+        font-weight: 850;
+        background: rgba(255, 255, 255, 0.38);
+      }
+      .insta-button .insta-logo {
+        width: 34px;
+        height: 34px;
+        font-size: 25px;
+      }
+      .insta-button b {
+        margin-left: 14px;
+        font-size: 20px;
+      }
 
-.locations { padding: 120px 5vw; background: var(--cream); }
-.locations .section-heading > p { color: #5f685f; }
-.branch-grid { display: grid; grid-template-columns: 1fr; gap: 22px; max-width:1100px; margin:0 auto; }
-.branch-card { overflow: hidden; background: white; border-top: 6px solid var(--sage); box-shadow: 0 20px 50px rgba(30,45,34,.08); }
-.branch-info { padding: 34px 38px 38px; }
-.mini-map { position:relative; height:470px; overflow:hidden; isolation:isolate; background:#e8ece5; border:14px solid #fff; }
-.map-grid { position:absolute; inset:0; opacity:.35; background-image:linear-gradient(rgba(74,92,78,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(74,92,78,.08) 1px,transparent 1px); background-size:28px 28px; }
-.map-block { position:absolute; z-index:2; display:flex; flex-direction:column; justify-content:center; border:1px solid rgba(74,92,78,.12); border-radius:12px; background:#cbd5c9; color:#536158; }
-.map-block small { font-size:9px; font-weight:900; letter-spacing:.13em; opacity:.62; }
-.map-block b { margin-top:5px; font-size:20px; color:var(--sage-dark); }
-.map-block span { margin-top:6px; font-size:11px; line-height:1.45; }
-.block-nw { left:3%; top:3%; width:47%; height:31%; padding:20px 24px; background:#d5ddd2; }
-.block-ne { left:63%; top:3%; width:34%; height:31%; padding:20px; background:#d7cfdf; }
-.block-ne b { color:#544369; }
-.block-ne span { color:#745b90; font-weight:800; }
-.block-sw { left:3%; bottom:3%; width:47%; height:29%; padding:20px; flex-direction:row; align-items:center; gap:12px; background:#d7ded4; }
-.block-sw i { display:block; width:28px; height:28px; border-radius:50%; background:#a9bca9; box-shadow:inset 0 0 0 7px #c7d4c5; }
-.block-se { left:63%; bottom:3%; width:34%; height:29%; padding:16px; justify-content:flex-end; background:#cbd6ca; }
-.map-road { position:absolute; z-index:1; background:#fff; color:#818b83; font-size:12px; font-weight:800; letter-spacing:.06em; }
-.map-road span { position:absolute; white-space:nowrap; }
-.road-main { left:0; right:0; top:42%; height:96px; border-top:1px solid #cfd4cb; border-bottom:1px solid #cfd4cb; box-shadow:0 4px 12px rgba(42,55,45,.04); }
-.road-main:before { content:""; position:absolute; left:0; right:0; top:50%; border-top:2px dashed #d2d6d0; }
-.road-main span { left:34px; top:13px; }
-.road-side { top:0; bottom:0; left:52%; width:96px; border-left:1px solid #cfd4cb; border-right:1px solid #cfd4cb; box-shadow:4px 0 12px rgba(42,55,45,.03); }
-.road-side span { left:61px; top:26px; writing-mode:vertical-rl; }
-.map-crosswalk { position:absolute; z-index:3; left:47.7%; top:47%; width:70px; height:24px; background:repeating-linear-gradient(90deg,transparent 0 6px,#c6cbc5 6px 10px); }
-.map-route { position:absolute; z-index:4; border-color:#8561c5; border-style:solid; filter:drop-shadow(0 2px 0 rgba(255,255,255,.9)); }
-.route-one { left:19%; top:68%; width:38%; border-width:0 0 5px; }
-.route-two { left:56.5%; top:21%; height:47.5%; border-width:0 5px 0 0; }
-.route-three { left:56.5%; top:20.5%; width:18%; border-width:5px 0 0; }
-.route-three:after { content:""; position:absolute; right:-2px; top:-8px; width:10px; height:10px; border-radius:50%; background:#8561c5; box-shadow:0 0 0 5px rgba(201,184,232,.65); }
-.map-step { position:absolute; z-index:7; width:24px; height:24px; display:grid; place-items:center; border-radius:50%; background:#8561c5; color:#fff; border:3px solid #fff; font-size:10px; font-weight:900; box-shadow:0 4px 10px rgba(83,61,122,.24); }
-.step-one { left:17%; top:65%; }
-.step-two { left:54.2%; top:49%; }
-.step-three { left:72.5%; top:17.8%; }
-.map-exit { position:absolute; z-index:6; left:6%; bottom:9%; display:flex; gap:11px; align-items:center; color:var(--sage); font-size:11px; line-height:1.35; }
-.map-exit b { width:40px; height:40px; border-radius:50%; display:grid; place-items:center; background:#8561c5; color:#fff; font-size:20px; }
-.map-exit strong { font-size:14px; }
-.map-pin { position:absolute; z-index:6; left:68%; top:7%; display:flex; flex-direction:column; align-items:center; padding:14px 23px; border-radius:12px; background:var(--sage); color:#fff; box-shadow:7px 7px 0 var(--lavender); }
-.map-pin:after { content:""; position:absolute; bottom:-16px; border:9px solid transparent; border-top-color:var(--sage); }
-.map-pin i { width:34px; height:34px; display:grid; place-items:center; margin-bottom:5px; border-radius:50%; background:var(--lavender); color:var(--sage-black); font-style:normal; font-weight:900; }
-.map-pin b { font-size:24px; letter-spacing:-.03em; }
-.map-pin span { margin-top:3px; font-size:12px; opacity:.82; }
-.map-walk { position:absolute; z-index:6; left:24%; top:71%; display:flex; flex-direction:column; padding:8px 11px; border-radius:8px; background:rgba(255,255,255,.94); color:var(--sage); box-shadow:0 5px 12px rgba(41,57,45,.08); }
-.map-walk b { font-size:12px; }
-.map-walk span { margin-top:2px; font-size:10px; color:#7a847c; }
-.branch-name { color: var(--sage); font-weight: 850; letter-spacing: .14em; }
-.branch-card h3 { min-height: 66px; font-size: 23px; line-height: 1.45; }
-.branch-card dl { margin: 30px 0; }
-.branch-card dl div { display: grid; grid-template-columns: 90px 1fr; border-top: 1px solid #d4d7d1; padding: 15px 0; }
-.branch-card dt { color: #7b837d; }
-.branch-card dd { margin: 0; line-height: 1.6; }
-.map-action { display: inline-block; color: var(--sage); font-weight: 850; border-bottom: 1px solid var(--sage); padding-bottom: 3px; }
+      .locations {
+        padding: 120px 5vw;
+        background: var(--cream);
+      }
+      .locations .section-heading > p {
+        color: #5f685f;
+      }
+      .branch-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 22px;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .branch-card {
+        overflow: hidden;
+        background: white;
+        border-top: 6px solid var(--sage);
+        box-shadow: 0 20px 50px rgba(30, 45, 34, 0.08);
+      }
+      .branch-info {
+        padding: 34px 38px 38px;
+      }
+      .mini-map {
+        position: relative;
+        height: 470px;
+        overflow: hidden;
+        isolation: isolate;
+        background: #e8ece5;
+        border: 14px solid #fff;
+      }
+      .map-grid {
+        position: absolute;
+        inset: 0;
+        opacity: 0.35;
+        background-image:
+          linear-gradient(rgba(74, 92, 78, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(74, 92, 78, 0.08) 1px, transparent 1px);
+        background-size: 28px 28px;
+      }
+      .map-block {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid rgba(74, 92, 78, 0.12);
+        border-radius: 12px;
+        background: #cbd5c9;
+        color: #536158;
+      }
+      .map-block small {
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0.13em;
+        opacity: 0.62;
+      }
+      .map-block b {
+        margin-top: 5px;
+        font-size: 20px;
+        color: var(--sage-dark);
+      }
+      .map-block span {
+        margin-top: 6px;
+        font-size: 11px;
+        line-height: 1.45;
+      }
+      .block-nw {
+        left: 3%;
+        top: 3%;
+        width: 47%;
+        height: 31%;
+        padding: 20px 24px;
+        background: #d5ddd2;
+      }
+      .block-ne {
+        left: 63%;
+        top: 3%;
+        width: 34%;
+        height: 31%;
+        padding: 20px;
+        background: #d7cfdf;
+      }
+      .block-ne b {
+        color: #544369;
+      }
+      .block-ne span {
+        color: #745b90;
+        font-weight: 800;
+      }
+      .block-sw {
+        left: 3%;
+        bottom: 3%;
+        width: 47%;
+        height: 29%;
+        padding: 20px;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        background: #d7ded4;
+      }
+      .block-sw i {
+        display: block;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: #a9bca9;
+        box-shadow: inset 0 0 0 7px #c7d4c5;
+      }
+      .block-se {
+        left: 63%;
+        bottom: 3%;
+        width: 34%;
+        height: 29%;
+        padding: 16px;
+        justify-content: flex-end;
+        background: #cbd6ca;
+      }
+      .map-road {
+        position: absolute;
+        z-index: 1;
+        background: #fff;
+        color: #818b83;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+      }
+      .map-road span {
+        position: absolute;
+        white-space: nowrap;
+      }
+      .road-main {
+        left: 0;
+        right: 0;
+        top: 42%;
+        height: 96px;
+        border-top: 1px solid #cfd4cb;
+        border-bottom: 1px solid #cfd4cb;
+        box-shadow: 0 4px 12px rgba(42, 55, 45, 0.04);
+      }
+      .road-main:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        border-top: 2px dashed #d2d6d0;
+      }
+      .road-main span {
+        left: 34px;
+        top: 13px;
+      }
+      .road-side {
+        top: 0;
+        bottom: 0;
+        left: 52%;
+        width: 96px;
+        border-left: 1px solid #cfd4cb;
+        border-right: 1px solid #cfd4cb;
+        box-shadow: 4px 0 12px rgba(42, 55, 45, 0.03);
+      }
+      .road-side span {
+        left: 61px;
+        top: 26px;
+        writing-mode: vertical-rl;
+      }
+      .map-crosswalk {
+        position: absolute;
+        z-index: 3;
+        left: 47.7%;
+        top: 47%;
+        width: 70px;
+        height: 24px;
+        background: repeating-linear-gradient(
+          90deg,
+          transparent 0 6px,
+          #c6cbc5 6px 10px
+        );
+      }
+      .map-route {
+        position: absolute;
+        z-index: 4;
+        border-color: #8561c5;
+        border-style: solid;
+        filter: drop-shadow(0 2px 0 rgba(255, 255, 255, 0.9));
+      }
+      .route-one {
+        left: 19%;
+        top: 68%;
+        width: 38%;
+        border-width: 0 0 5px;
+      }
+      .route-two {
+        left: 56.5%;
+        top: 21%;
+        height: 47.5%;
+        border-width: 0 5px 0 0;
+      }
+      .route-three {
+        left: 56.5%;
+        top: 20.5%;
+        width: 18%;
+        border-width: 5px 0 0;
+      }
+      .route-three:after {
+        content: "";
+        position: absolute;
+        right: -2px;
+        top: -8px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #8561c5;
+        box-shadow: 0 0 0 5px rgba(201, 184, 232, 0.65);
+      }
+      .map-step {
+        position: absolute;
+        z-index: 7;
+        width: 24px;
+        height: 24px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #8561c5;
+        color: #fff;
+        border: 3px solid #fff;
+        font-size: 10px;
+        font-weight: 900;
+        box-shadow: 0 4px 10px rgba(83, 61, 122, 0.24);
+      }
+      .step-one {
+        left: 17%;
+        top: 65%;
+      }
+      .step-two {
+        left: 54.2%;
+        top: 49%;
+      }
+      .step-three {
+        left: 72.5%;
+        top: 17.8%;
+      }
+      .map-exit {
+        position: absolute;
+        z-index: 6;
+        left: 6%;
+        bottom: 9%;
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        color: var(--sage);
+        font-size: 11px;
+        line-height: 1.35;
+      }
+      .map-exit b {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: #8561c5;
+        color: #fff;
+        font-size: 20px;
+      }
+      .map-exit strong {
+        font-size: 14px;
+      }
+      .map-pin {
+        position: absolute;
+        z-index: 6;
+        left: 68%;
+        top: 7%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 23px;
+        border-radius: 12px;
+        background: var(--sage);
+        color: #fff;
+        box-shadow: 7px 7px 0 var(--lavender);
+      }
+      .map-pin:after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        border: 9px solid transparent;
+        border-top-color: var(--sage);
+      }
+      .map-pin i {
+        width: 34px;
+        height: 34px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 5px;
+        border-radius: 50%;
+        background: var(--lavender);
+        color: var(--sage-black);
+        font-style: normal;
+        font-weight: 900;
+      }
+      .map-pin b {
+        font-size: 24px;
+        letter-spacing: -0.03em;
+      }
+      .map-pin span {
+        margin-top: 3px;
+        font-size: 12px;
+        opacity: 0.82;
+      }
+      .map-walk {
+        position: absolute;
+        z-index: 6;
+        left: 24%;
+        top: 71%;
+        display: flex;
+        flex-direction: column;
+        padding: 8px 11px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.94);
+        color: var(--sage);
+        box-shadow: 0 5px 12px rgba(41, 57, 45, 0.08);
+      }
+      .map-walk b {
+        font-size: 12px;
+      }
+      .map-walk span {
+        margin-top: 2px;
+        font-size: 10px;
+        color: #7a847c;
+      }
+      .branch-name {
+        color: var(--sage);
+        font-weight: 850;
+        letter-spacing: 0.14em;
+      }
+      .branch-card h3 {
+        min-height: 66px;
+        font-size: 23px;
+        line-height: 1.45;
+      }
+      .branch-card dl {
+        margin: 30px 0;
+      }
+      .branch-card dl div {
+        display: grid;
+        grid-template-columns: 90px 1fr;
+        border-top: 1px solid #d4d7d1;
+        padding: 15px 0;
+      }
+      .branch-card dt {
+        color: #7b837d;
+      }
+      .branch-card dd {
+        margin: 0;
+        line-height: 1.6;
+      }
+      .map-action {
+        display: inline-block;
+        color: var(--sage);
+        font-weight: 850;
+        border-bottom: 1px solid var(--sage);
+        padding-bottom: 3px;
+      }
 
-.branch-tabs { max-width:1100px; margin:0 auto; }
-.branch-tabs > input { position:absolute; width:1px; height:1px; opacity:0; pointer-events:none; }
-.branch-tab-list { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin-bottom:18px; padding:8px; border-radius:18px; background:#e3e5df; }
-.branch-tab-list label { display:flex; align-items:center; justify-content:center; gap:12px; min-height:70px; padding:14px 20px; border-radius:12px; color:#7a817b; font-size:20px; font-weight:900; cursor:pointer; transition:.25s ease; }
-.branch-tab-list label small { font-size:11px; font-weight:750; letter-spacing:.02em; opacity:.72; }
-#branch-0:checked ~ .branch-tab-list label[for="branch-0"],
-#branch-1:checked ~ .branch-tab-list label[for="branch-1"] { background:#fff; color:var(--sage); box-shadow:0 8px 24px rgba(40,54,43,.09); }
-.branch-panels .branch-card { display:none; grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr); min-height:560px; }
-#branch-0:checked ~ .branch-panels .branch-panel-0,
-#branch-1:checked ~ .branch-panels .branch-panel-1 { display:grid; }
-.kakao-map-frame { position:relative; display:block; min-height:560px; overflow:hidden; background:linear-gradient(135deg,#dfe8d9,#eee8f5); border:12px solid #fff; }
-.kakao-map-frame iframe { width:100%; height:100%; min-height:536px; border:0; pointer-events:none; background:#e8ece5; filter:saturate(.78) contrast(.96); }
-.map-place-label { position:absolute; left:50%; top:50%; z-index:2; display:flex; min-width:178px; flex-direction:column; align-items:center; padding:13px 18px 15px; border-radius:12px; background:var(--sage); color:#fff; box-shadow:0 10px 28px rgba(28,45,33,.24); transform:translate(-50%,-112%); }
-.map-place-label:after { content:""; position:absolute; left:50%; bottom:-15px; border:8px solid transparent; border-top-color:var(--sage); transform:translateX(-50%); }
-.map-place-label b { color:var(--lavender); font-size:9px; letter-spacing:.18em; }
-.map-place-label strong { margin-top:3px; font-size:21px; letter-spacing:-.02em; }
-.map-place-label small { margin-top:3px; font-size:10px; opacity:.78; }
-.map-open { position:absolute; right:22px; bottom:22px; z-index:2; padding:13px 17px; border-radius:999px; background:#fae100; color:#3c1e1e; box-shadow:0 10px 25px rgba(44,35,10,.2); font-size:13px; font-weight:900; }
-.branch-info { display:flex; flex-direction:column; justify-content:center; }
-.branch-name { display:flex; align-items:center; gap:10px; color:var(--sage); font-weight:900; letter-spacing:.12em; }
-.branch-name span { display:grid; place-items:center; width:34px; height:34px; border-radius:50%; background:var(--lavender); color:var(--sage-black); font-size:12px; letter-spacing:0; }
-.branch-card h3 { min-height:0; margin:18px 0 8px; font-size:25px; line-height:1.5; letter-spacing:-.025em; }
-.branch-card dl { margin:25px 0 28px; }
-.branch-card dd a { color:inherit; font-weight:800; }
-.branch-actions { display:flex; gap:10px; }
-.branch-actions .map-action, .branch-actions .call-action { display:flex; align-items:center; justify-content:space-between; min-height:52px; padding:0 18px; border:0; border-radius:10px; font-weight:900; }
-.branch-actions .map-action { flex:1; background:var(--sage); color:#fff; }
-.branch-actions .call-action { min-width:108px; background:var(--lavender); color:var(--sage-black); }
+      .branch-tabs {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .branch-tabs > input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .branch-tab-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 18px;
+        padding: 8px;
+        border-radius: 18px;
+        background: #e3e5df;
+      }
+      .branch-tab-list label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 70px;
+        padding: 14px 20px;
+        border-radius: 12px;
+        color: #7a817b;
+        font-size: 20px;
+        font-weight: 900;
+        cursor: pointer;
+        transition: 0.25s ease;
+      }
+      .branch-tab-list label small {
+        font-size: 11px;
+        font-weight: 750;
+        letter-spacing: 0.02em;
+        opacity: 0.72;
+      }
+      #branch-0:checked ~ .branch-tab-list label[for="branch-0"],
+      #branch-1:checked ~ .branch-tab-list label[for="branch-1"] {
+        background: #fff;
+        color: var(--sage);
+        box-shadow: 0 8px 24px rgba(40, 54, 43, 0.09);
+      }
+      .branch-panels .branch-card {
+        display: none;
+        grid-template-columns: minmax(0, 1.18fr) minmax(360px, 0.82fr);
+        min-height: 560px;
+      }
+      #branch-0:checked ~ .branch-panels .branch-panel-0,
+      #branch-1:checked ~ .branch-panels .branch-panel-1 {
+        display: grid;
+      }
+      .kakao-map-frame {
+        position: relative;
+        display: block;
+        min-height: 560px;
+        overflow: hidden;
+        background: linear-gradient(135deg, #dfe8d9, #eee8f5);
+        border: 12px solid #fff;
+      }
+      .kakao-map-frame iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 536px;
+        border: 0;
+        pointer-events: none;
+        background: #e8ece5;
+        filter: saturate(0.78) contrast(0.96);
+      }
+      .map-place-label {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        display: flex;
+        min-width: 178px;
+        flex-direction: column;
+        align-items: center;
+        padding: 13px 18px 15px;
+        border-radius: 12px;
+        background: var(--sage);
+        color: #fff;
+        box-shadow: 0 10px 28px rgba(28, 45, 33, 0.24);
+        transform: translate(-50%, -112%);
+      }
+      .map-place-label:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -15px;
+        border: 8px solid transparent;
+        border-top-color: var(--sage);
+        transform: translateX(-50%);
+      }
+      .map-place-label b {
+        color: var(--lavender);
+        font-size: 9px;
+        letter-spacing: 0.18em;
+      }
+      .map-place-label strong {
+        margin-top: 3px;
+        font-size: 21px;
+        letter-spacing: -0.02em;
+      }
+      .map-place-label small {
+        margin-top: 3px;
+        font-size: 10px;
+        opacity: 0.78;
+      }
+      .map-open {
+        position: absolute;
+        right: 22px;
+        bottom: 22px;
+        z-index: 2;
+        padding: 13px 17px;
+        border-radius: 999px;
+        background: #fae100;
+        color: #3c1e1e;
+        box-shadow: 0 10px 25px rgba(44, 35, 10, 0.2);
+        font-size: 13px;
+        font-weight: 900;
+      }
+      .branch-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .branch-name {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--sage);
+        font-weight: 900;
+        letter-spacing: 0.12em;
+      }
+      .branch-name span {
+        display: grid;
+        place-items: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--lavender);
+        color: var(--sage-black);
+        font-size: 12px;
+        letter-spacing: 0;
+      }
+      .branch-card h3 {
+        min-height: 0;
+        margin: 18px 0 8px;
+        font-size: 25px;
+        line-height: 1.5;
+        letter-spacing: -0.025em;
+      }
+      .branch-card dl {
+        margin: 25px 0 28px;
+      }
+      .branch-card dd a {
+        color: inherit;
+        font-weight: 800;
+      }
+      .branch-actions {
+        display: flex;
+        gap: 10px;
+      }
+      .branch-actions .map-action,
+      .branch-actions .call-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 52px;
+        padding: 0 18px;
+        border: 0;
+        border-radius: 10px;
+        font-weight: 900;
+      }
+      .branch-actions .map-action {
+        flex: 1;
+        background: var(--sage);
+        color: #fff;
+      }
+      .branch-actions .call-action {
+        min-width: 108px;
+        background: var(--lavender);
+        color: var(--sage-black);
+      }
 
-.start { padding: 120px 20px; text-align: center; background: #18271d; color: var(--cream); }
-.start > p:not(.section-tag,.contact) { color: #c7cec6; max-width: 700px; margin: 0 auto; line-height: 1.8; }
-.start .primary-btn { margin: 48px auto 26px; text-align: left; }
-.kakao-btn { background: #fae100; color: #3c1e1e; }
-.contact { font-size: 13px; letter-spacing: .08em; }
-.start-answer { color: var(--lavender); margin-top: .16em; }
+      .start {
+        padding: 120px 20px;
+        text-align: center;
+        background: #18271d;
+        color: var(--cream);
+      }
+      .start > p:not(.section-tag, .contact) {
+        color: #c7cec6;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+      .start .primary-btn {
+        margin: 48px auto 26px;
+        text-align: left;
+      }
+      .kakao-btn {
+        background: #fae100;
+        color: #3c1e1e;
+      }
+      .contact {
+        font-size: 13px;
+        letter-spacing: 0.08em;
+      }
+      .start-answer {
+        color: var(--lavender);
+        margin-top: 0.16em;
+      }
 
-footer { padding: 55px 4vw; display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: center; background: #0e1912; color: var(--cream); }
-footer p { text-align: right; }
-footer small { opacity: .55; }
-.kakao-float { position:fixed; right:24px; bottom:24px; z-index:30; display:flex; align-items:center; gap:11px; padding:10px 17px 10px 10px; border-radius:999px; background:#fae100; color:#3c1e1e; box-shadow:0 14px 35px rgba(34,28,10,.22); font-size:14px; font-weight:850; }
-.kakao-float b { width:40px; height:40px; display:grid; place-items:center; border-radius:50%; background:#3c1e1e; color:#fae100; font-size:11px; }
+      footer {
+        padding: 55px 4vw;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+        background: #0e1912;
+        color: var(--cream);
+      }
+      footer p {
+        text-align: right;
+      }
+      footer small {
+        opacity: 0.55;
+      }
+      .kakao-float {
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        padding: 10px 17px 10px 10px;
+        border-radius: 999px;
+        background: #fae100;
+        color: #3c1e1e;
+        box-shadow: 0 14px 35px rgba(34, 28, 10, 0.22);
+        font-size: 14px;
+        font-weight: 850;
+      }
+      .kakao-float b {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        background: #3c1e1e;
+        color: #fae100;
+        font-size: 11px;
+      }
 
-@media (max-width: 800px) {
-  .desktop-break { display: none; }
-  .site-header { height: 64px; padding: 0 14px; color: var(--cream); border-color: rgba(255,255,255,.16); }
-  .brand strong { font-size: 24px; }
-  .site-header .brand-logo img { width:184px; }
-  .hero-brand .logo-light { display:none; }
-  .hero-brand .logo-dark { display:block; }
-  .site-header .brand span, nav a:not(.nav-cta) { display: none; }
-  .nav-cta { padding: 9px 13px; border: 0; border-radius: 999px; background: var(--action); color:#241f00; font-size: 12px; }
-  .hero { min-height: 790px; align-items: end; padding: 310px 18px 34px; color: var(--sage-black); background: linear-gradient(150deg,#fffafc 0%,#f5ecff 55%,#eaf5ee 100%); }
-  .hero:after { content:""; position:absolute; left:18px; right:18px; top:79px; height:245px; border-radius:28px 28px 70px 28px; border:7px solid rgba(255,255,255,.9); box-shadow:0 18px 42px rgba(74,92,78,.16); pointer-events:none; }
-  .hero-bg { inset:79px 18px auto; height:245px; border-radius:28px 28px 70px 28px; background:url("images/site-image-01.jpg") center 48%/cover; }
-  .hero-content { width: 100%; margin: 0; padding: 30px 4px 0; }
-  .hero-brand { margin-bottom:14px; }
-  .hero-brand span { padding:6px 9px; border-color:rgba(74,92,78,.3); font-size:9px; }
-  .eyebrow { width:max-content; padding:8px 11px; border-radius:999px; background:#fff; color:var(--sage); font-size:10px; letter-spacing:.13em; box-shadow:0 7px 18px rgba(74,92,78,.08); }
-  .hero h1 { max-width:100%; font-size:clamp(37px, 10.8vw, 49px); line-height:1.12; letter-spacing:-.065em; margin:17px 0 18px; }
-  .hero h1 span, .hero h1 em { white-space:nowrap; }
-  .hero h1 em { color:var(--sage); }
-  .hero-sub { gap:7px; font-size:15px; }
-  .hero-sub b { padding:8px 11px; border-radius:12px; background:rgba(255,255,255,.75); }
-  .hero-sub i { width:26px; height:26px; font-size:14px; }
-  .hero-proof { margin:24px 0 22px; border-color:rgba(74,92,78,.2); }
-  .hero-proof span { padding:11px 8px; border-color:rgba(74,92,78,.16); color:#5f6c63; font-size:10px; }
-  .hero-proof b { color:var(--sage-dark); font-size:14px; }
-  .hero .primary-btn { border-radius:17px; padding:17px 20px; background:var(--action); color:#241f00; font-size:17px; box-shadow:0 13px 28px rgba(74,92,78,.18); }
-  .hero .trust-row { margin-top:17px; gap:6px; }
-  .hero .trust-row span { padding:7px 10px; border-color:rgba(74,92,78,.25); background:rgba(255,255,255,.48); color:var(--sage); font-size:11px; }
-  .hero-deco { display:block; font-weight:900; }
-  .hero-deco-one { top:91px; left:24px; width:38px; height:38px; display:grid; place-items:center; border-radius:50%; background:#f3a9ae; color:#fff; transform:rotate(-8deg); }
-  .hero-deco-two { top:286px; right:29px; color:#fff; font-size:35px; transform:rotate(10deg); }
-  .hero-deco-three { top:300px; left:29px; padding:7px 10px; border-radius:9px; background:var(--lavender); color:var(--sage); font-size:11px; letter-spacing:.08em; transform:rotate(-4deg); }
-  .vertical-label { display: none; }
-  .manifesto, .program, .results, .reviews, .community, .instagram, .faq, .locations, .start { padding: 72px 18px; }
-  .manifesto h2, .section-heading h2, .dash-copy h2, .space-copy h2, .start h2, .founder h2, .faq h2 { font-size:clamp(32px, 9.2vw, 38px); line-height:1.24; letter-spacing:-.02em; word-spacing:.14em; }
-  .section-heading { margin-bottom:38px; }
-  .section-heading h2 br, .manifesto h2 br, .dash-copy h2 br, .space-copy h2 br, .start h2 br, .founder h2 br, .faq h2 br { display:none; }
-  .system-visuals { grid-template-columns:1fr; gap:14px; margin-top:46px; }
-  .system-tile { padding:18px; border-radius:22px; box-shadow:0 12px 30px rgba(34,48,38,.08); }
-  .system-tile > svg { max-height:220px; }
-  .tile-label b { font-size:24px; }
-  .tile-label b small { font-size:10px; }
-  .mini-dashboard { margin-top:20px; }
-  .tile-result { min-height:68px; }
-  .tile-result strong { font-size:52px; }
-  .section-heading { display: block; }
-  .section-heading > p { width: auto; }
-  .step-grid, .result-grid, .review-grid, .event-gallery, .branch-grid, .insta-grid { grid-template-columns: 1fr; }
-  .step-card { min-height: 410px; border-radius:22px; }
-  .step-card > img { opacity:.94; filter:saturate(.92) contrast(1.03); }
-  .step-card:after { inset:52% 0 0; }
-  .prove-card { min-height:520px; }
-  .prove-card:after { inset:63% 0 0; }
-  .prove-ui { inset:0 0 178px; padding:14px; }
-  .prove-main { height:69%; border-radius:11px; }
-  .prove-tabs { gap:8px; margin-top:8px; }
-  .prove-tabs span { height:78px; border-radius:9px; }
-  .prove-live { top:22px; right:22px; }
-  .dashboard { grid-template-columns: 1fr; padding: 85px 20px; }
-  .live-card { padding: 22px; box-shadow: 12px 12px 0 rgba(43,68,49,.25); }
-  .gauge { min-height: 240px; }
-  .gauge-ring { width: 170px; height: 170px; border-width: 13px; }
-  .gauge-ring strong { font-size: 46px; }
-  .gauge p b { font-size: 48px; }
-  .space { grid-template-columns: 1fr; }
-  .space-image { height: 320px; }
-  .space-copy { padding: 70px 20px; }
-  .event-gallery figure { min-height: 330px; border-radius:22px; }
-  .event-gallery .event-main { min-height: 390px; }
-  .community-line { grid-template-columns: 1fr; gap: 10px; text-align: center; }
-  .community-line i { width: 44px; margin: 0 auto; }
-  .founder { grid-template-columns: 1fr; }
-  .founder-media { min-height: 460px; }
-  .founder-letter { padding: 70px 20px; }
-  .insta-intro { display:block; }
-  .insta-account { margin-top:32px; }
-  .insta-grid { gap:18px; }
-  .insta-grid a, .insta-grid a:nth-child(1), .insta-grid a:nth-child(2), .insta-grid a:nth-child(3) { transform:none; aspect-ratio:.94; border-width:7px; border-radius:22px; }
-  .mini-map { height:390px; border-width:7px; }
-  .block-nw, .block-sw { width:46%; }
-  .block-nw { padding:12px 13px; }
-  .block-nw b { font-size:16px; }
-  .block-ne, .block-se { left:67%; width:30%; padding:10px; }
-  .block-ne b { font-size:14px; }
-  .block-ne span { font-size:9px; }
-  .block-sw { gap:6px; padding:10px; }
-  .block-sw i { width:20px; height:20px; box-shadow:inset 0 0 0 5px #c7d4c5; }
-  .road-main { top:42%; height:78px; }
-  .road-side { left:49%; width:66px; }
-  .road-side span { left:40px; font-size:10px; }
-  .map-crosswalk { left:45%; top:48%; width:56px; }
-  .route-one { left:20%; top:69%; width:38%; }
-  .route-two { left:57%; top:22%; height:47.5%; }
-  .route-three { left:57%; top:21.5%; width:18%; }
-  .map-pin { left:66%; top:7%; padding:10px 12px; box-shadow:5px 5px 0 var(--lavender); }
-  .map-pin i { width:29px; height:29px; font-size:12px; }
-  .map-pin b { font-size:17px; }
-  .map-pin span { font-size:10px; }
-  .map-exit { left:4%; bottom:8%; }
-  .map-exit b { width:36px; height:36px; }
-  .map-walk { left:21%; top:72%; }
-  .step-one { left:17%; top:66%; }
-  .step-two { left:53.5%; top:49%; }
-  .step-three { left:72%; top:18.5%; }
-  .kakao-float { right:12px; bottom:12px; padding:8px 13px 8px 8px; }
-  .kakao-float b { width:34px; height:34px; }
-  .review-photo { height: 360px; }
-  .branch-info { padding: 28px 22px; }
-  .map-frame { height: 300px; }
-  .branch-card h3 { min-height: 0; }
-  .branch-tab-list { gap:6px; padding:6px; border-radius:14px; }
-  .branch-tab-list label { min-height:62px; flex-direction:column; gap:2px; padding:10px 8px; font-size:18px; }
-  .branch-tab-list label small { font-size:10px; }
-  .branch-panels .branch-card { grid-template-columns:1fr; min-height:0; }
-  .kakao-map-frame { min-height:360px; border-width:7px; }
-  .kakao-map-frame iframe { min-height:346px; }
-  .map-place-label { min-width:145px; padding:10px 14px 12px; }
-  .map-place-label strong { font-size:18px; }
-  .map-open { right:14px; bottom:14px; padding:11px 14px; font-size:12px; }
-  .branch-card h3 { margin-top:16px; font-size:20px; }
-  .branch-card dl { margin:20px 0 22px; }
-  .branch-card dl div { grid-template-columns:78px 1fr; padding:13px 0; font-size:14px; }
-  .branch-actions { flex-direction:column; }
-  .branch-actions .call-action { min-width:0; }
-  footer { grid-template-columns: 1fr; }
-  footer .brand-logo img { width:235px; }
-  footer p { text-align: left; }
-}
-
-</style></head><body><main><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"HealthClub","name":"원펀치쓰리칼로리 범계점","alternateName":"BOXROX","address":{"@type":"PostalAddress","streetAddress":"경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층","addressLocality":"안양시","addressRegion":"경기도","addressCountry":"KR"},"telephone":"031-385-8288","email":"11punch33@gmail.com","openingHours":["Mo-Fr 09:00-23:00","Sa 09:00-16:00"]},{"@type":"HealthClub","name":"원펀치쓰리칼로리 안양점","alternateName":"BOXROX","address":{"@type":"PostalAddress","streetAddress":"경기도 안양시 만안구 만안로 201 두하빌딩 3층","addressLocality":"안양시","addressRegion":"경기도","addressCountry":"KR"},"telephone":"031-385-9713","email":"11punch33@gmail.com","openingHours":["Mo-Fr 09:00-23:00","Sa 09:00-16:00"]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"BOXROX는 어떤 운동인가요?","acceptedAnswer":{"@type":"Answer","text":"복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과 하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다."}},{"@type":"Question","name":"복싱을 한 번도 안 해봤는데 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을 안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지 않습니다."}},{"@type":"Question","name":"여자 혼자 등록해도 괜찮나요?","acceptedAnswer":{"@type":"Answer","text":"네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음 오시는 날부터 수업이 끝날 때까지 코치가 안내합니다."}},{"@type":"Question","name":"칼로리를 돌려받는다는 게 무슨 뜻인가요?","acceptedAnswer":{"@type":"Answer","text":"수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로 표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인 방법은 카카오톡 상담에서 안내합니다."}},{"@type":"Question","name":"가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다. 운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을 설명드립니다."}},{"@type":"Question","name":"위치와 운영시간은 어떻게 되나요?","acceptedAnswer":{"@type":"Answer","text":"범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번 출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일 09:00–16:00이며 일요일과 공휴일은 쉽니다."}}]}]}</script><header class="site-header"><a class="brand brand-logo" href="#top" aria-label="원펀치쓰리칼로리 홈"><strong>원펀치쓰리칼로리</strong><span>BOXROX</span></a><nav aria-label="주요 메뉴"><a href="#program">운동 방식</a><a href="#results">회원 변화</a><a href="#instagram">인스타그램</a><a href="#location">지점 안내</a><a class="nav-cta" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">카톡 상담</a></nav></header><section class="hero" id="top"><div class="hero-bg" aria-hidden="true"></div><div class="hero-deco hero-deco-one" aria-hidden="true">✦</div><div class="hero-deco hero-deco-two" aria-hidden="true">♡</div><div class="hero-deco hero-deco-three" aria-hidden="true">MOVE!</div><div class="hero-content"><div class="hero-brand"><span>원펀치쓰리칼로리의 BOXROX 프로그램</span></div><p class="eyebrow">복싱과 하이록스로 완성하는 다이어트 운동</p><h1><span>운동시간 말고,</span><em>칼로리를 채워라.</em></h1><p class="hero-sub"><b>복싱 20분</b><i>+</i><b>하이록스 20분</b></p><div class="hero-proof" aria-label="원펀치 수업의 핵심 특징"><span><b>40분</b> 코치와 함께</span><span><b>실시간</b> 심박·칼로리</span><span><b>700kcal</b> 미션 도전</span></div><a class="primary-btn kakao-btn" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">내 체력으로 가능한지 물어보기<span>→</span></a><div class="trust-row"><span>범계역 2번 출구</span><span>처음이어도 가능</span><span>스파링 없음</span></div></div><p class="vertical-label">MISSION 700</p></section><section class="manifesto"><p class="section-tag">WHY BOXROX</p><h2><span class="headline-line">다이어트는 의지가 아니라</span><span class="headline-line accent-line">다시 오고 싶은 재미입니다.</span></h2><p>혼자 버티는 운동은 오래가지 않습니다. BOXROX는 오늘 할 일이 보이고, 함께 움직이며, 끝나면 결과가 남는 40분 그룹운동입니다.</p><div class="system-visuals" aria-label="복싱, 하이록스, 심박수 결과 데이터로 구성된 BOXROX 시스템"><article class="system-tile boxing-tile"><div class="tile-label"><span>01</span><b>복싱 <small>BOXING</small></b></div><svg viewBox="0 0 360 230" role="img" aria-label="칼로리를 태우는 복싱 글러브"><path class="motion-line line-one" d="M24 70 C77 55 105 61 135 80"></path><path class="motion-line line-two" d="M10 101 C69 94 91 99 124 111"></path><path class="glove" d="M153 52c17-22 54-25 78-8l43 31c17 12 22 36 12 54l-21 38c-8 15-25 23-42 20l-54-11c-25-5-41-30-34-55l8-29c4-15 2-28 10-40Z"></path><path class="glove-cuff" d="m139 133 59 39-28 43-63-42Z"></path><path class="glove-detail" d="M196 50c-7 24 1 47 24 67M241 61c-9 22-4 40 15 55"></path><circle class="spark" cx="303" cy="49" r="7"></circle><path class="spark-stroke" d="m311 27 7-13m13 29 16-5m-24 24 12 11"></path></svg><div class="tile-result"><strong>20</strong><span>MIN<br/>PUNCH</span><i>칼로리 점화</i></div></article><article class="system-tile hyrox-tile"><div class="tile-label"><span>02</span><b>하이록스 <small>HYROX</small></b></div><svg viewBox="0 0 360 230" role="img" aria-label="전신 출력으로 슬레드를 미는 사람"><circle class="head" cx="110" cy="47" r="21"></circle><path class="body" d="m105 74 38 28 31 15m-66-40-24 55 39 23m17-50-18 49 29 37m-61-55-25 45"></path><path class="sled" d="M176 116h100l13 71H160m14-71 16-25m86 25-8-28m-93 99h132"></path><path class="weight" d="M202 99h45l9 17h-63Z"></path><path class="floor-lines" d="M34 202h84m202 0h23"></path><path class="force force-one" d="m69 89-36 15"></path><path class="force force-two" d="m76 111-50 22"></path></svg><div class="tile-result"><strong>20</strong><span>MIN<br/>PUSH</span><i>전신 출력 상승</i></div></article><article class="system-tile data-tile"><div class="tile-label"><span>03</span><b>실시간 기록 <small>LIVE</small></b></div><div class="mini-dashboard"><div class="heart-row"><span class="live-dot">LIVE</span><b>MISSION 700</b></div><div class="heart-wave" aria-hidden="true"><i></i><svg viewBox="0 0 300 70"><path d="M0 39h54l14-22 22 42 20-31 18 11h40l17-29 25 49 20-32 17 12h53"></path></svg></div><div class="data-readout"><div><small>HEART RATE</small><strong>148</strong><span>BPM</span></div><div><small>CALORIES</small><strong>483</strong><span>KCAL</span></div></div><div class="mission-bar"><i></i><b>69%</b></div></div><div class="tile-result"><strong>700</strong><span>KCAL<br/>MISSION</span><i>내 운동이 숫자로 보입니다</i></div></article></div></section><section class="program" id="program"><div class="section-heading"><div><p class="section-tag">THE PROGRAM</p><h2><span class="headline-line">한 번의 수업이</span><span class="headline-line">하나의 미션이 됩니다.</span></h2></div><p>복싱과 기능성 운동을 따로 배울 필요 없이, 코치의 안내에 따라 40분을 완성하세요.</p></div><div class="step-grid"><article class="step-card"><img src="images/site-image-02.jpg" alt=""/><div class="step-copy"><span>01</span><h3>복싱 20분</h3><p>리듬을 따라 움직이는 20분. 지루할 틈 없이 칼로리가 쌓이고 몸이 먼저 깨어납니다.</p></div></article><article class="step-card"><img src="images/site-image-03.jpg" alt=""/><div class="step-copy"><span>02</span><h3>하이록스 20분</h3><p>움직임이 커질수록 전신 출력도 올라갑니다. 내 수준에 맞춰 무리 없이 충분히 태웁니다.</p></div></article><article class="step-card prove-card"><div class="prove-ui"><div class="prove-main"><img src="images/site-image-04.png" alt="회원별 심박수와 칼로리가 실시간으로 표시되는 화면"/></div><div class="prove-tabs" aria-label="BOXROX 기록 화면 종류"><span><img src="images/site-image-05.png" alt="누적 포인트 순위 화면"/><b>누적 포인트</b></span><span><img src="images/site-image-06.png" alt="오늘의 최강자 화면"/><b>오늘의 최강자</b></span></div><div class="prove-live"><i></i> ACTUAL LIVE UI</div></div><div class="step-copy"><span>03</span><h3>숫자로 확인</h3><p>심박·칼로리·포인트가 실시간으로 보입니다. 힘들었다는 느낌 대신, 오늘 해낸 숫자가 남습니다.</p></div></article></div></section><section class="dashboard"><div class="dash-copy"><p class="section-tag">실시간 운동 기록</p><h2><span class="headline-line">힘들었다는 느낌보다,</span><span class="headline-line">해냈다는 숫자가 남습니다.</span></h2><p>심박이 페이스를 잡고, 칼로리가 쌓이고, 남은 숫자가 한 세트를 더 움직이게 합니다.</p><ul><li><span>01</span><b>내 페이스를 놓치지 않게</b><small>심박이 움직일 때와 낮출 때를 알려줍니다.</small></li><li><span>02</span><b>움직인 만큼 정직하게</b><small>오늘 태운 칼로리와 쌓인 리워드가 보입니다.</small></li><li><span>03</span><b>끝까지 해내고 싶게</b><small>700에 가까워질수록 한 세트를 더 하게 됩니다.</small></li></ul></div><div class="live-card"><div class="live-top"><span>실시간</span><b>오늘의 700kcal 미션</b></div><div class="gauge"><div class="gauge-ring"><strong>483</strong><span>KCAL</span></div><p><small>현재 심박수</small><b>148</b> BPM</p></div><div class="progress"><i></i></div><div class="dash-bottom"><span>심박 구간 4</span><b>700kcal의 69% 달성</b></div></div></section><section class="results" id="results"><div class="section-heading"><div><p class="section-tag">REAL RESULTS</p><h2>몇 명의 기적이 아니라,<br/>수업 안에 쌓이는 변화.</h2></div><p>두 장의 대표 사례만 특별한 게 아닙니다. 벽을 채운 기록처럼, 꾸준히 나온 회원들의 변화가 계속 쌓이고 있습니다.</p></div><div class="result-grid"><figure><div class="result-photo"><img src="images/site-image-07.jpg" alt="23kg 감량 회원의 변화"/><b><small>AFTER</small>−23kg</b></div><figcaption><span>01</span>꾸준함으로 만든 변화 · 23kg 감량</figcaption></figure><figure><div class="result-photo"><img src="images/site-image-08.jpg" alt="35kg 감량 회원의 변화"/><b><small>AFTER</small>−35kg</b></div><figcaption><span>02</span>꾸준함으로 만든 변화 · 35kg 감량</figcaption></figure><figure><div class="result-photo"><img src="images/site-image-09.jpg" alt="센터에 쌓인 여러 회원의 변화 기록"/><b>MANY MORE</b></div><figcaption><span>03</span>그리고 수업 안의 수많은 변화</figcaption></figure></div><p class="results-note">보여드린 두 사례만의 이야기가 아닙니다. 이런 변화가 수업 안에서 계속 쌓이고 있습니다.</p></section><section class="reviews"><div class="section-heading"><div><p class="section-tag">WHY THEY STAY</p><h2>리뷰에서 자꾸 보이는 말,<br/>“벌써”</h2></div><p>처음부터 운동을 좋아한 사람들이 아닙니다. 계속 나오다 보니 어느새 습관이 된 사람들입니다.</p></div><div class="review-badges"><span>“벌써 3개월째”</span><span>“2년째 다니고 있는데”</span><span>“몇 년째 꾸준히”</span></div><div class="review-grid"><blockquote>“땀 진짜 미친 듯이 나는데 스트레스 풀리고 운동효과 제대로임. 다이어트 목적이었는데 체력도 많이 올라서 만족!”<cite>네이버 리뷰 원문</cite></blockquote><blockquote>“복싱 + 하이록스로 체지방 태우는데 효과적이에요. 쌤들이 친절하고 맞춤형 지도를 잘해주세요.”<cite>네이버 리뷰 원문</cite></blockquote></div><img class="review-photo" src="images/site-image-10.jpg" alt="수업 후 함께 웃는 회원들"/></section><section class="space" id="space"><div class="space-image"><img src="images/site-image-11.jpg" alt="밝고 편안한 BOXROX 운동 공간"/></div><div class="space-copy"><p class="section-tag">BEGINNER FIRST</p><h2><span class="headline-line">원펀치는 처음부터</span><span class="headline-line">그렇게 설계했습니다.</span></h2><p>낡고 거친 체육관 분위기도, 맞아야 배우는 스파링도 없습니다. 밝은 공간에서 코치와 함께 내 페이스로 시작하세요.</p><div class="pill-list"><span>혼자 와도 어색하지 않게</span><span>처음이어도 헤매지 않게</span><span>땀 흘린 뒤 바로 일상으로</span></div></div></section><section class="community" id="community"><div class="section-heading"><div><p class="section-tag">BEYOND THE GYM</p><h2>센터 밖에서도,<br/>함께 움직입니다.</h2></div><p>운동을 오래 이어가게 만드는 건 의지만이 아닙니다. 함께 웃고 움직인 기억이 다음 출석을 기다리게 합니다.</p></div><div class="event-gallery"><figure class="event-main"><img src="images/site-image-12.jpg" alt="BOXROX 회원들이 함께한 야간 체육대회"/><figcaption><span>SPORTS DAY</span><strong>회원들과 함께한 체육대회</strong></figcaption></figure><figure><img src="images/site-image-13.jpg" alt="BOXROX 회원들이 풋살장에서 함께하는 외부 활동"/><figcaption><span>OUTDOOR ACTIVITY</span><strong>수업 밖에서 이어지는 팀워크</strong></figcaption></figure></div><div class="community-line"><span>같이 시작하고</span><i></i><span>같이 땀 흘리고</span><i></i><span>같이 오래갑니다</span></div></section><section class="founder"><div class="founder-media"><div class="founder-scribble scribble-one">MOVE</div><div class="founder-scribble scribble-two">♡</div><img src="images/site-image-14.png" alt="원펀치쓰리칼로리 대표 이준우"/><p><b>이준우</b> · 원펀치쓰리칼로리 대표</p></div><div class="founder-letter"><p class="section-tag">FROM THE FOUNDER</p><h2><span class="headline-line">운동이 싫은 사람을</span><span class="headline-line">습관까지 데려가는 일.</span></h2><p>저는 복싱 선수였습니다. 하지만 원펀치는 치열한 복싱이나 스파링을 위한 곳이 아닙니다. 다이어트를 재미있게 이어가고 싶은 사람을 위해 만든 곳입니다.</p><p>코치가 눈을 맞추고 미트를 받아주고, 심박과 리워드가 남은 한 세트를 움직이게 합니다. 그러다 어느 날, 운동은 결심이 아니라 습관이 됩니다.</p><strong>운동이 싫은 사람을, 다시 오고 싶은 사람으로 만드는 것.<br/>그 목적으로 원펀치를 만들었습니다.</strong></div></section><section class="instagram" id="instagram"><div class="insta-intro"><div><p class="section-tag">FOLLOW THE ENERGY</p><h2>운동하는 순간도<br/><span>우리답게, 예쁘게.</span></h2></div><div class="insta-account"><span class="insta-logo" aria-hidden="true">◎</span><p><b>@one.punch3</b><small>수업 분위기와 회원들의 오늘을 만나보세요.</small></p></div></div><div class="insta-grid"><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-15.jpg" alt="BOXROX 여성 코치의 복싱 콘텐츠"/><span>REAL CLASS</span></a><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-16.png" alt="원펀치쓰리칼로리의 복싱, 하이록스, 실시간 운동 기록을 소개하는 만화"/><span>ONE PUNCH STORY</span></a><a href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><img src="images/site-image-17.png" alt="BOXROX 슬레드 운동 콘텐츠"/><span>MOVE BETTER</span></a></div><a class="insta-button" href="https://www.instagram.com/one.punch3" target="_blank" rel="noreferrer"><span class="insta-logo">◎</span> Instagram 보러가기 <b>↗</b></a></section><section class="faq" id="faq"><p class="section-tag">FAQ</p><h2>궁금한 것부터 확인하세요.</h2><div class="faq-list"><details><summary>BOXROX는 어떤 운동인가요?</summary><p>복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과 하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다.</p></details><details><summary>복싱을 한 번도 안 해봤는데 괜찮나요?</summary><p>회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을 안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지 않습니다.</p></details><details><summary>여자 혼자 등록해도 괜찮나요?</summary><p>네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음 오시는 날부터 수업이 끝날 때까지 코치가 안내합니다.</p></details><details><summary>칼로리를 돌려받는다는 게 무슨 뜻인가요?</summary><p>수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로 표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인 방법은 카카오톡 상담에서 안내합니다.</p></details><details><summary>가격은 얼마인가요?</summary><p>현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다. 운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을 설명드립니다.</p></details><details><summary>위치와 운영시간은 어떻게 되나요?</summary><p>범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번 출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일 09:00–16:00이며 일요일과 공휴일은 쉽니다.</p></details></div></section><section class="locations" id="location"><div class="section-heading"><div><p class="section-tag">VISIT ONE PUNCH</p><h2>가까운 원펀치에서 시작하세요.</h2></div><p>범계점과 안양점의 위치·교통·운영시간을 확인하세요.</p></div><div class="branch-tabs"><input type="radio" id="branch-0" name="branch" checked=""/><input type="radio" id="branch-1" name="branch"/><div class="branch-tab-list" role="tablist" aria-label="지점 선택"><label for="branch-0" role="tab">범계점<small>범계역 2번 출구</small></label><label for="branch-1" role="tab">안양점<small>안양역 1번 출구</small></label></div><div class="branch-panels"><article class="branch-card branch-panel-0"><a class="kakao-map-frame" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4" target="_blank" rel="noreferrer" aria-label="범계점 카카오맵에서 보기"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=126.9498%2C37.3868%2C126.9612%2C37.3944&amp;layer=mapnik&amp;marker=37.3906%2C126.9555" title="범계점 위치 지도" loading="lazy" tabindex="-1"></iframe><span class="map-place-label"><b>ONE PUNCH</b><strong>범계점</strong><small>범계역 도보 2분</small></span><span class="map-open">카카오맵에서 보기 ↗</span></a><div class="branch-info"><p class="branch-name"><span>01</span>범계점</p><h3>경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층</h3><dl><div><dt>대중교통</dt><dd>4호선 범계역 2번 출구에서 직진 · 도보 2분</dd></div><div><dt>운영시간</dt><dd>평일 월–금 09:00–23:00<br/>토요일 09:00–16:00 · 일요일/공휴일 휴무</dd></div><div><dt>전화번호</dt><dd><a href="tel:031-385-8288">031-385-8288</a></dd></div><div><dt>이메일</dt><dd><a href="mailto:11punch33@gmail.com">11punch33@gmail.com</a></dd></div></dl><div class="branch-actions"><a class="map-action" href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4" target="_blank" rel="noreferrer">카카오맵 길찾기 <span>↗</span></a><a class="call-action" href="tel:031-385-8288">전화하기</a></div></div></article><article class="branch-card branch-panel-1"><a class="kakao-map-frame" href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201" target="_blank" rel="noreferrer" aria-label="안양점 카카오맵에서 보기"><iframe src="https://www.openstreetmap.org/export/embed.html?bbox=126.9174%2C37.3953%2C126.9289%2C37.4030&amp;layer=mapnik&amp;marker=37.399159%2C126.923157" title="안양점 위치 지도" loading="lazy" tabindex="-1"></iframe><span class="map-place-label"><b>ONE PUNCH</b><strong>안양점</strong><small>안양역 도보 5분</small></span><span class="map-open">카카오맵에서 보기 ↗</span></a><div class="branch-info"><p class="branch-name"><span>02</span>안양점</p><h3>경기도 안양시 만안구 만안로 201 두하빌딩 3층</h3><dl><div><dt>대중교통</dt><dd>1호선 안양역 1번 출구 · 도보 5분</dd></div><div><dt>운영시간</dt><dd>평일 월–금 09:00–23:00<br/>토요일 09:00–16:00 · 일요일/공휴일 휴무</dd></div><div><dt>전화번호</dt><dd><a href="tel:031-385-9713">031-385-9713</a></dd></div></dl><div class="branch-actions"><a class="map-action" href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201" target="_blank" rel="noreferrer">카카오맵 길찾기 <span>↗</span></a><a class="call-action" href="tel:031-385-9713">전화하기</a></div></div></article></div></div></section><section class="start" id="start"><p class="section-tag">START BOXROX</p><h2><span class="headline-line">운동을 좋아해야</span><span class="headline-line">살이 빠지는 건 아닙니다.</span><span class="headline-line start-answer">재미있게 빼고 싶다면, 원펀치가 맞습니다.</span></h2><p>복싱·하이록스를 처음 해도 괜찮은지,<br class="desktop-break"/> 심박 리워드는 어떻게 쌓이는지 편하게 물어보세요.</p><a class="primary-btn kakao-btn" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer">내 체력으로 가능한지 물어보기<span>→</span></a><p class="contact">범계점·안양점 상담으로 바로 연결됩니다.</p></section><footer><div class="brand brand-logo"><strong>원펀치쓰리칼로리</strong><span>BOXROX</span></div><p>복싱은 무서운 운동이 아니다. 즐거운 운동이다.</p><small>11punch33@gmail.com · © 2026 ONE PUNCH 3 CALORIES</small></footer><a class="kakao-float" href="https://pf.kakao.com/_xmqxjxhxb/chat" target="_blank" rel="noreferrer" aria-label="카카오톡으로 상담하기"><b>talk</b><span>카카오톡 상담</span></a></main></body></html>
+      @media (max-width: 800px) {
+        .desktop-break {
+          display: none;
+        }
+        .site-header {
+          height: 64px;
+          padding: 0 14px;
+          color: var(--cream);
+          border-color: rgba(255, 255, 255, 0.16);
+        }
+        .brand strong {
+          font-size: 24px;
+        }
+        .site-header .brand-logo img {
+          width: 184px;
+        }
+        .site-header .brand-logo strong {
+          width: 184px;
+        }
+        .hero-brand .logo-light {
+          display: none;
+        }
+        .hero-brand .logo-dark {
+          display: block;
+        }
+        .site-header .brand span,
+        nav a:not(.nav-cta) {
+          display: none;
+        }
+        .nav-cta {
+          padding: 9px 13px;
+          border: 0;
+          border-radius: 999px;
+          background: var(--action);
+          color: #241f00;
+          font-size: 12px;
+        }
+        .hero {
+          min-height: 790px;
+          align-items: end;
+          padding: 310px 18px 34px;
+          color: var(--sage-black);
+          background: linear-gradient(
+            150deg,
+            #fffafc 0%,
+            #f5ecff 55%,
+            #eaf5ee 100%
+          );
+        }
+        .hero:after {
+          content: "";
+          position: absolute;
+          left: 18px;
+          right: 18px;
+          top: 79px;
+          height: 245px;
+          border-radius: 28px 28px 70px 28px;
+          border: 7px solid rgba(255, 255, 255, 0.9);
+          box-shadow: 0 18px 42px rgba(74, 92, 78, 0.16);
+          pointer-events: none;
+        }
+        .hero-bg {
+          inset: 79px 18px auto;
+          height: 245px;
+          border-radius: 28px 28px 70px 28px;
+          background: url("images/site-image-01.jpg") center 48% / cover;
+        }
+        .hero-content {
+          width: 100%;
+          margin: 0;
+          padding: 30px 4px 0;
+        }
+        .hero-brand {
+          margin-bottom: 14px;
+        }
+        .hero-brand span {
+          padding: 6px 9px;
+          border-color: rgba(74, 92, 78, 0.3);
+          font-size: 9px;
+        }
+        .eyebrow {
+          width: max-content;
+          padding: 8px 11px;
+          border-radius: 999px;
+          background: #fff;
+          color: var(--sage);
+          font-size: 10px;
+          letter-spacing: 0.13em;
+          box-shadow: 0 7px 18px rgba(74, 92, 78, 0.08);
+        }
+        .hero h1 {
+          max-width: 100%;
+          font-size: clamp(37px, 10.8vw, 49px);
+          line-height: 1.12;
+          letter-spacing: -0.065em;
+          margin: 17px 0 18px;
+        }
+        .hero h1 span,
+        .hero h1 em {
+          white-space: nowrap;
+        }
+        .hero h1 em {
+          color: var(--sage);
+        }
+        .hero-sub {
+          gap: 7px;
+          font-size: 15px;
+        }
+        .hero-sub b {
+          padding: 8px 11px;
+          border-radius: 12px;
+          background: rgba(255, 255, 255, 0.75);
+        }
+        .hero-sub i {
+          width: 26px;
+          height: 26px;
+          font-size: 14px;
+        }
+        .hero-proof {
+          margin: 24px 0 22px;
+          border-color: rgba(74, 92, 78, 0.2);
+        }
+        .hero-proof span {
+          padding: 11px 8px;
+          border-color: rgba(74, 92, 78, 0.16);
+          color: #5f6c63;
+          font-size: 10px;
+        }
+        .hero-proof b {
+          color: var(--sage-dark);
+          font-size: 14px;
+        }
+        .hero .primary-btn {
+          border-radius: 17px;
+          padding: 17px 20px;
+          background: var(--action);
+          color: #241f00;
+          font-size: 17px;
+          box-shadow: 0 13px 28px rgba(74, 92, 78, 0.18);
+        }
+        .hero .trust-row {
+          margin-top: 17px;
+          gap: 6px;
+        }
+        .hero .trust-row span {
+          padding: 7px 10px;
+          border-color: rgba(74, 92, 78, 0.25);
+          background: rgba(255, 255, 255, 0.48);
+          color: var(--sage);
+          font-size: 11px;
+        }
+        .hero-deco {
+          display: block;
+          font-weight: 900;
+        }
+        .hero-deco-one {
+          top: 91px;
+          left: 24px;
+          width: 38px;
+          height: 38px;
+          display: grid;
+          place-items: center;
+          border-radius: 50%;
+          background: #f3a9ae;
+          color: #fff;
+          transform: rotate(-8deg);
+        }
+        .hero-deco-two {
+          top: 286px;
+          right: 29px;
+          color: #fff;
+          font-size: 35px;
+          transform: rotate(10deg);
+        }
+        .hero-deco-three {
+          top: 300px;
+          left: 29px;
+          padding: 7px 10px;
+          border-radius: 9px;
+          background: var(--lavender);
+          color: var(--sage);
+          font-size: 11px;
+          letter-spacing: 0.08em;
+          transform: rotate(-4deg);
+        }
+        .vertical-label {
+          display: none;
+        }
+        .manifesto,
+        .program,
+        .results,
+        .reviews,
+        .community,
+        .instagram,
+        .faq,
+        .locations,
+        .start {
+          padding: 72px 18px;
+        }
+        .manifesto h2,
+        .section-heading h2,
+        .dash-copy h2,
+        .space-copy h2,
+        .start h2,
+        .founder h2,
+        .faq h2 {
+          font-size: clamp(32px, 9.2vw, 38px);
+          line-height: 1.24;
+          letter-spacing: -0.02em;
+          word-spacing: 0.14em;
+        }
+        .section-heading {
+          margin-bottom: 38px;
+        }
+        .section-heading h2 br,
+        .manifesto h2 br,
+        .dash-copy h2 br,
+        .space-copy h2 br,
+        .start h2 br,
+        .founder h2 br,
+        .faq h2 br {
+          display: none;
+        }
+        .system-visuals {
+          grid-template-columns: 1fr;
+          gap: 14px;
+          margin-top: 46px;
+        }
+        .system-tile {
+          padding: 18px;
+          border-radius: 22px;
+          box-shadow: 0 12px 30px rgba(34, 48, 38, 0.08);
+        }
+        .system-tile > svg {
+          max-height: 220px;
+        }
+        .tile-label b {
+          font-size: 24px;
+        }
+        .tile-label b small {
+          font-size: 10px;
+        }
+        .mini-dashboard {
+          margin-top: 20px;
+        }
+        .tile-result {
+          min-height: 68px;
+        }
+        .tile-result strong {
+          font-size: 52px;
+        }
+        .section-heading {
+          display: block;
+        }
+        .section-heading > p {
+          width: auto;
+        }
+        .step-grid,
+        .result-grid,
+        .review-grid,
+        .event-gallery,
+        .branch-grid,
+        .insta-grid {
+          grid-template-columns: 1fr;
+        }
+        .step-card {
+          min-height: 410px;
+          border-radius: 22px;
+        }
+        .step-card > img {
+          opacity: 0.94;
+          filter: saturate(0.92) contrast(1.03);
+        }
+        .step-card:after {
+          inset: 52% 0 0;
+        }
+        .prove-card {
+          min-height: 520px;
+        }
+        .prove-card:after {
+          inset: 63% 0 0;
+        }
+        .prove-ui {
+          inset: 0 0 178px;
+          padding: 14px;
+        }
+        .prove-main {
+          height: 69%;
+          border-radius: 11px;
+        }
+        .prove-tabs {
+          gap: 8px;
+          margin-top: 8px;
+        }
+        .prove-tabs span {
+          height: 78px;
+          border-radius: 9px;
+        }
+        .prove-live {
+          top: 22px;
+          right: 22px;
+        }
+        .dashboard {
+          grid-template-columns: 1fr;
+          padding: 85px 20px;
+        }
+        .live-card {
+          padding: 22px;
+          box-shadow: 12px 12px 0 rgba(43, 68, 49, 0.25);
+        }
+        .gauge {
+          min-height: 240px;
+        }
+        .gauge-ring {
+          width: 170px;
+          height: 170px;
+          border-width: 13px;
+        }
+        .gauge-ring strong {
+          font-size: 46px;
+        }
+        .gauge p b {
+          font-size: 48px;
+        }
+        .space {
+          grid-template-columns: 1fr;
+        }
+        .space-image {
+          height: 320px;
+        }
+        .space-copy {
+          padding: 70px 20px;
+        }
+        .event-gallery figure {
+          min-height: 330px;
+          border-radius: 22px;
+        }
+        .event-gallery .event-main {
+          min-height: 390px;
+        }
+        .community-line {
+          grid-template-columns: 1fr;
+          gap: 10px;
+          text-align: center;
+        }
+        .community-line i {
+          width: 44px;
+          margin: 0 auto;
+        }
+        .founder {
+          grid-template-columns: 1fr;
+        }
+        .founder-media {
+          min-height: 460px;
+        }
+        .founder-letter {
+          padding: 70px 20px;
+        }
+        .insta-intro {
+          display: block;
+        }
+        .insta-account {
+          margin-top: 32px;
+        }
+        .insta-grid {
+          gap: 18px;
+        }
+        .insta-grid a,
+        .insta-grid a:nth-child(1),
+        .insta-grid a:nth-child(2),
+        .insta-grid a:nth-child(3) {
+          transform: none;
+          aspect-ratio: 0.94;
+          border-width: 7px;
+          border-radius: 22px;
+        }
+        .mini-map {
+          height: 390px;
+          border-width: 7px;
+        }
+        .block-nw,
+        .block-sw {
+          width: 46%;
+        }
+        .block-nw {
+          padding: 12px 13px;
+        }
+        .block-nw b {
+          font-size: 16px;
+        }
+        .block-ne,
+        .block-se {
+          left: 67%;
+          width: 30%;
+          padding: 10px;
+        }
+        .block-ne b {
+          font-size: 14px;
+        }
+        .block-ne span {
+          font-size: 9px;
+        }
+        .block-sw {
+          gap: 6px;
+          padding: 10px;
+        }
+        .block-sw i {
+          width: 20px;
+          height: 20px;
+          box-shadow: inset 0 0 0 5px #c7d4c5;
+        }
+        .road-main {
+          top: 42%;
+          height: 78px;
+        }
+        .road-side {
+          left: 49%;
+          width: 66px;
+        }
+        .road-side span {
+          left: 40px;
+          font-size: 10px;
+        }
+        .map-crosswalk {
+          left: 45%;
+          top: 48%;
+          width: 56px;
+        }
+        .route-one {
+          left: 20%;
+          top: 69%;
+          width: 38%;
+        }
+        .route-two {
+          left: 57%;
+          top: 22%;
+          height: 47.5%;
+        }
+        .route-three {
+          left: 57%;
+          top: 21.5%;
+          width: 18%;
+        }
+        .map-pin {
+          left: 66%;
+          top: 7%;
+          padding: 10px 12px;
+          box-shadow: 5px 5px 0 var(--lavender);
+        }
+        .map-pin i {
+          width: 29px;
+          height: 29px;
+          font-size: 12px;
+        }
+        .map-pin b {
+          font-size: 17px;
+        }
+        .map-pin span {
+          font-size: 10px;
+        }
+        .map-exit {
+          left: 4%;
+          bottom: 8%;
+        }
+        .map-exit b {
+          width: 36px;
+          height: 36px;
+        }
+        .map-walk {
+          left: 21%;
+          top: 72%;
+        }
+        .step-one {
+          left: 17%;
+          top: 66%;
+        }
+        .step-two {
+          left: 53.5%;
+          top: 49%;
+        }
+        .step-three {
+          left: 72%;
+          top: 18.5%;
+        }
+        .kakao-float {
+          right: 12px;
+          bottom: 12px;
+          padding: 8px 13px 8px 8px;
+        }
+        .kakao-float b {
+          width: 34px;
+          height: 34px;
+        }
+        .review-photo {
+          height: 360px;
+        }
+        .branch-info {
+          padding: 28px 22px;
+        }
+        .map-frame {
+          height: 300px;
+        }
+        .branch-card h3 {
+          min-height: 0;
+        }
+        .branch-tab-list {
+          gap: 6px;
+          padding: 6px;
+          border-radius: 14px;
+        }
+        .branch-tab-list label {
+          min-height: 62px;
+          flex-direction: column;
+          gap: 2px;
+          padding: 10px 8px;
+          font-size: 18px;
+        }
+        .branch-tab-list label small {
+          font-size: 10px;
+        }
+        .branch-panels .branch-card {
+          grid-template-columns: 1fr;
+          min-height: 0;
+        }
+        .kakao-map-frame {
+          min-height: 360px;
+          border-width: 7px;
+        }
+        .kakao-map-frame iframe {
+          min-height: 346px;
+        }
+        .map-place-label {
+          min-width: 145px;
+          padding: 10px 14px 12px;
+        }
+        .map-place-label strong {
+          font-size: 18px;
+        }
+        .map-open {
+          right: 14px;
+          bottom: 14px;
+          padding: 11px 14px;
+          font-size: 12px;
+        }
+        .branch-card h3 {
+          margin-top: 16px;
+          font-size: 20px;
+        }
+        .branch-card dl {
+          margin: 20px 0 22px;
+        }
+        .branch-card dl div {
+          grid-template-columns: 78px 1fr;
+          padding: 13px 0;
+          font-size: 14px;
+        }
+        .branch-actions {
+          flex-direction: column;
+        }
+        .branch-actions .call-action {
+          min-width: 0;
+        }
+        footer {
+          grid-template-columns: 1fr;
+        }
+        footer .brand-logo img {
+          width: 235px;
+        }
+        footer .brand-logo strong {
+          width: 235px;
+        }
+        footer p {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "HealthClub",
+              "name": "원펀치쓰리칼로리 범계점",
+              "alternateName": "BOXROX",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층",
+                "addressLocality": "안양시",
+                "addressRegion": "경기도",
+                "addressCountry": "KR"
+              },
+              "telephone": "031-385-8288",
+              "email": "11punch33@gmail.com",
+              "openingHours": ["Mo-Fr 09:00-23:00", "Sa 09:00-16:00"]
+            },
+            {
+              "@type": "HealthClub",
+              "name": "원펀치쓰리칼로리 안양점",
+              "alternateName": "BOXROX",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "경기도 안양시 만안구 만안로 201 두하빌딩 3층",
+                "addressLocality": "안양시",
+                "addressRegion": "경기도",
+                "addressCountry": "KR"
+              },
+              "telephone": "031-385-9713",
+              "email": "11punch33@gmail.com",
+              "openingHours": ["Mo-Fr 09:00-23:00", "Sa 09:00-16:00"]
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "BOXROX는 어떤 운동인가요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과 하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "복싱을 한 번도 안 해봤는데 괜찮나요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을 안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지 않습니다."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "여자 혼자 등록해도 괜찮나요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음 오시는 날부터 수업이 끝날 때까지 코치가 안내합니다."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "칼로리를 돌려받는다는 게 무슨 뜻인가요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로 표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인 방법은 카카오톡 상담에서 안내합니다."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "가격은 얼마인가요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다. 운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을 설명드립니다."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "위치와 운영시간은 어떻게 되나요?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번 출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일 09:00–16:00이며 일요일과 공휴일은 쉽니다."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      </script>
+      <header class="site-header">
+        <a class="brand brand-logo" href="#top" aria-label="원펀치쓰리칼로리 홈"
+          ><strong>원펀치쓰리칼로리</strong><span>BOXROX</span></a
+        >
+        <nav aria-label="주요 메뉴">
+          <a href="#program">운동 방식</a><a href="#results">회원 변화</a
+          ><a href="#instagram">인스타그램</a><a href="#location">지점 안내</a
+          ><a
+            class="nav-cta"
+            href="https://pf.kakao.com/_xmqxjxhxb/chat"
+            target="_blank"
+            rel="noreferrer"
+            >카톡 상담</a
+          >
+        </nav>
+      </header>
+      <section class="hero" id="top">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-deco hero-deco-one" aria-hidden="true">✦</div>
+        <div class="hero-deco hero-deco-two" aria-hidden="true">♡</div>
+        <div class="hero-deco hero-deco-three" aria-hidden="true">MOVE!</div>
+        <div class="hero-content">
+          <div class="hero-brand">
+            <span>원펀치쓰리칼로리의 BOXROX 프로그램</span>
+          </div>
+          <p class="eyebrow">복싱과 하이록스로 완성하는 다이어트 운동</p>
+          <h1><span>운동시간 말고,</span><em>칼로리를 채워라.</em></h1>
+          <p class="hero-sub"><b>복싱 20분</b><i>+</i><b>하이록스 20분</b></p>
+          <div class="hero-proof" aria-label="원펀치 수업의 핵심 특징">
+            <span><b>40분</b> 코치와 함께</span
+            ><span><b>실시간</b> 심박·칼로리</span
+            ><span><b>700kcal</b> 미션 도전</span>
+          </div>
+          <a
+            class="primary-btn kakao-btn"
+            href="https://pf.kakao.com/_xmqxjxhxb/chat"
+            target="_blank"
+            rel="noreferrer"
+            >내 체력으로 가능한지 물어보기<span>→</span></a
+          >
+          <div class="trust-row">
+            <span>범계역 2번 출구</span><span>처음이어도 가능</span
+            ><span>스파링 없음</span>
+          </div>
+        </div>
+        <p class="vertical-label">MISSION 700</p>
+      </section>
+      <section class="manifesto">
+        <p class="section-tag">WHY BOXROX</p>
+        <h2>
+          <span class="headline-line">다이어트는 의지가 아니라</span
+          ><span class="headline-line accent-line"
+            >다시 오고 싶은 재미입니다.</span
+          >
+        </h2>
+        <p>
+          혼자 버티는 운동은 오래가지 않습니다. BOXROX는 오늘 할 일이 보이고,
+          함께 움직이며, 끝나면 결과가 남는 40분 그룹운동입니다.
+        </p>
+        <div
+          class="system-visuals"
+          aria-label="복싱, 하이록스, 심박수 결과 데이터로 구성된 BOXROX 시스템"
+        >
+          <article class="system-tile boxing-tile">
+            <div class="tile-label">
+              <span>01</span><b>복싱 <small>BOXING</small></b>
+            </div>
+            <svg
+              viewBox="0 0 360 230"
+              role="img"
+              aria-label="칼로리를 태우는 복싱 글러브"
+            >
+              <path
+                class="motion-line line-one"
+                d="M24 70 C77 55 105 61 135 80"
+              ></path>
+              <path
+                class="motion-line line-two"
+                d="M10 101 C69 94 91 99 124 111"
+              ></path>
+              <path
+                class="glove"
+                d="M153 52c17-22 54-25 78-8l43 31c17 12 22 36 12 54l-21 38c-8 15-25 23-42 20l-54-11c-25-5-41-30-34-55l8-29c4-15 2-28 10-40Z"
+              ></path>
+              <path class="glove-cuff" d="m139 133 59 39-28 43-63-42Z"></path>
+              <path
+                class="glove-detail"
+                d="M196 50c-7 24 1 47 24 67M241 61c-9 22-4 40 15 55"
+              ></path>
+              <circle class="spark" cx="303" cy="49" r="7"></circle>
+              <path
+                class="spark-stroke"
+                d="m311 27 7-13m13 29 16-5m-24 24 12 11"
+              ></path>
+            </svg>
+            <div class="tile-result">
+              <strong>20</strong><span>MIN<br />PUNCH</span><i>칼로리 점화</i>
+            </div>
+          </article>
+          <article class="system-tile hyrox-tile">
+            <div class="tile-label">
+              <span>02</span><b>하이록스 <small>HYROX</small></b>
+            </div>
+            <svg
+              viewBox="0 0 360 230"
+              role="img"
+              aria-label="전신 출력으로 슬레드를 미는 사람"
+            >
+              <circle class="head" cx="110" cy="47" r="21"></circle>
+              <path
+                class="body"
+                d="m105 74 38 28 31 15m-66-40-24 55 39 23m17-50-18 49 29 37m-61-55-25 45"
+              ></path>
+              <path
+                class="sled"
+                d="M176 116h100l13 71H160m14-71 16-25m86 25-8-28m-93 99h132"
+              ></path>
+              <path class="weight" d="M202 99h45l9 17h-63Z"></path>
+              <path class="floor-lines" d="M34 202h84m202 0h23"></path>
+              <path class="force force-one" d="m69 89-36 15"></path>
+              <path class="force force-two" d="m76 111-50 22"></path>
+            </svg>
+            <div class="tile-result">
+              <strong>20</strong><span>MIN<br />PUSH</span><i>전신 출력 상승</i>
+            </div>
+          </article>
+          <article class="system-tile data-tile">
+            <div class="tile-label">
+              <span>03</span><b>실시간 기록 <small>LIVE</small></b>
+            </div>
+            <div class="mini-dashboard">
+              <div class="heart-row">
+                <span class="live-dot">LIVE</span><b>MISSION 700</b>
+              </div>
+              <div class="heart-wave" aria-hidden="true">
+                <i></i
+                ><svg viewBox="0 0 300 70">
+                  <path
+                    d="M0 39h54l14-22 22 42 20-31 18 11h40l17-29 25 49 20-32 17 12h53"
+                  ></path>
+                </svg>
+              </div>
+              <div class="data-readout">
+                <div>
+                  <small>HEART RATE</small><strong>148</strong><span>BPM</span>
+                </div>
+                <div>
+                  <small>CALORIES</small><strong>483</strong><span>KCAL</span>
+                </div>
+              </div>
+              <div class="mission-bar"><i></i><b>69%</b></div>
+            </div>
+            <div class="tile-result">
+              <strong>700</strong><span>KCAL<br />MISSION</span
+              ><i>내 운동이 숫자로 보입니다</i>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="program" id="program">
+        <div class="section-heading">
+          <div>
+            <p class="section-tag">THE PROGRAM</p>
+            <h2>
+              <span class="headline-line">한 번의 수업이</span
+              ><span class="headline-line">하나의 미션이 됩니다.</span>
+            </h2>
+          </div>
+          <p>
+            복싱과 기능성 운동을 따로 배울 필요 없이, 코치의 안내에 따라 40분을
+            완성하세요.
+          </p>
+        </div>
+        <div class="step-grid">
+          <article class="step-card">
+            <img src="images/site-image-02.jpg" alt="" />
+            <div class="step-copy">
+              <span>01</span>
+              <h3>복싱 20분</h3>
+              <p>
+                리듬을 따라 움직이는 20분. 지루할 틈 없이 칼로리가 쌓이고 몸이
+                먼저 깨어납니다.
+              </p>
+            </div>
+          </article>
+          <article class="step-card">
+            <img src="images/site-image-03.jpg" alt="" />
+            <div class="step-copy">
+              <span>02</span>
+              <h3>하이록스 20분</h3>
+              <p>
+                움직임이 커질수록 전신 출력도 올라갑니다. 내 수준에 맞춰 무리
+                없이 충분히 태웁니다.
+              </p>
+            </div>
+          </article>
+          <article class="step-card prove-card">
+            <div class="prove-ui">
+              <div class="prove-main">
+                <img
+                  src="images/site-image-04.png"
+                  alt="회원별 심박수와 칼로리가 실시간으로 표시되는 화면"
+                />
+              </div>
+              <div class="prove-tabs" aria-label="BOXROX 기록 화면 종류">
+                <span
+                  ><img
+                    src="images/site-image-05.png"
+                    alt="누적 포인트 순위 화면"
+                  /><b>누적 포인트</b></span
+                ><span
+                  ><img
+                    src="images/site-image-06.png"
+                    alt="오늘의 최강자 화면"
+                  /><b>오늘의 최강자</b></span
+                >
+              </div>
+              <div class="prove-live"><i></i> ACTUAL LIVE UI</div>
+            </div>
+            <div class="step-copy">
+              <span>03</span>
+              <h3>숫자로 확인</h3>
+              <p>
+                심박·칼로리·포인트가 실시간으로 보입니다. 힘들었다는 느낌 대신,
+                오늘 해낸 숫자가 남습니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="dashboard">
+        <div class="dash-copy">
+          <p class="section-tag">실시간 운동 기록</p>
+          <h2>
+            <span class="headline-line">힘들었다는 느낌보다,</span
+            ><span class="headline-line">해냈다는 숫자가 남습니다.</span>
+          </h2>
+          <p>
+            심박이 페이스를 잡고, 칼로리가 쌓이고, 남은 숫자가 한 세트를 더
+            움직이게 합니다.
+          </p>
+          <ul>
+            <li>
+              <span>01</span><b>내 페이스를 놓치지 않게</b
+              ><small>심박이 움직일 때와 낮출 때를 알려줍니다.</small>
+            </li>
+            <li>
+              <span>02</span><b>움직인 만큼 정직하게</b
+              ><small>오늘 태운 칼로리와 쌓인 리워드가 보입니다.</small>
+            </li>
+            <li>
+              <span>03</span><b>끝까지 해내고 싶게</b
+              ><small>700에 가까워질수록 한 세트를 더 하게 됩니다.</small>
+            </li>
+          </ul>
+        </div>
+        <div class="live-card">
+          <div class="live-top">
+            <span>실시간</span><b>오늘의 700kcal 미션</b>
+          </div>
+          <div class="gauge">
+            <div class="gauge-ring"><strong>483</strong><span>KCAL</span></div>
+            <p><small>현재 심박수</small><b>148</b> BPM</p>
+          </div>
+          <div class="progress"><i></i></div>
+          <div class="dash-bottom">
+            <span>심박 구간 4</span><b>700kcal의 69% 달성</b>
+          </div>
+        </div>
+      </section>
+      <section class="results" id="results">
+        <div class="section-heading">
+          <div>
+            <p class="section-tag">REAL RESULTS</p>
+            <h2>몇 명의 기적이 아니라,<br />수업 안에 쌓이는 변화.</h2>
+          </div>
+          <p>
+            두 장의 대표 사례만 특별한 게 아닙니다. 벽을 채운 기록처럼, 꾸준히
+            나온 회원들의 변화가 계속 쌓이고 있습니다.
+          </p>
+        </div>
+        <div class="result-grid">
+          <figure>
+            <div class="result-photo">
+              <img
+                src="images/site-image-07.jpg"
+                alt="23kg 감량 회원의 변화"
+              /><b><small>AFTER</small>−23kg</b>
+            </div>
+            <figcaption>
+              <span>01</span>꾸준함으로 만든 변화 · 23kg 감량
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="result-photo">
+              <img
+                src="images/site-image-08.jpg"
+                alt="35kg 감량 회원의 변화"
+              /><b><small>AFTER</small>−35kg</b>
+            </div>
+            <figcaption>
+              <span>02</span>꾸준함으로 만든 변화 · 35kg 감량
+            </figcaption>
+          </figure>
+          <figure>
+            <div class="result-photo">
+              <img
+                src="images/site-image-09.jpg"
+                alt="센터에 쌓인 여러 회원의 변화 기록"
+              /><b>MANY MORE</b>
+            </div>
+            <figcaption><span>03</span>그리고 수업 안의 수많은 변화</figcaption>
+          </figure>
+        </div>
+        <p class="results-note">
+          보여드린 두 사례만의 이야기가 아닙니다. 이런 변화가 수업 안에서 계속
+          쌓이고 있습니다.
+        </p>
+      </section>
+      <section class="reviews">
+        <div class="section-heading">
+          <div>
+            <p class="section-tag">WHY THEY STAY</p>
+            <h2>리뷰에서 자꾸 보이는 말,<br />“벌써”</h2>
+          </div>
+          <p>
+            처음부터 운동을 좋아한 사람들이 아닙니다. 계속 나오다 보니 어느새
+            습관이 된 사람들입니다.
+          </p>
+        </div>
+        <div class="review-badges">
+          <span>“벌써 3개월째”</span><span>“2년째 다니고 있는데”</span
+          ><span>“몇 년째 꾸준히”</span>
+        </div>
+        <div class="review-grid">
+          <blockquote>
+            “땀 진짜 미친 듯이 나는데 스트레스 풀리고 운동효과 제대로임.
+            다이어트 목적이었는데 체력도 많이 올라서 만족!”<cite
+              >네이버 리뷰 원문</cite
+            >
+          </blockquote>
+          <blockquote>
+            “복싱 + 하이록스로 체지방 태우는데 효과적이에요. 쌤들이 친절하고
+            맞춤형 지도를 잘해주세요.”<cite>네이버 리뷰 원문</cite>
+          </blockquote>
+        </div>
+        <img
+          class="review-photo"
+          src="images/site-image-10.jpg"
+          alt="수업 후 함께 웃는 회원들"
+        />
+      </section>
+      <section class="space" id="space">
+        <div class="space-image">
+          <img
+            src="images/site-image-11.jpg"
+            alt="밝고 편안한 BOXROX 운동 공간"
+          />
+        </div>
+        <div class="space-copy">
+          <p class="section-tag">BEGINNER FIRST</p>
+          <h2>
+            <span class="headline-line">원펀치는 처음부터</span
+            ><span class="headline-line">그렇게 설계했습니다.</span>
+          </h2>
+          <p>
+            낡고 거친 체육관 분위기도, 맞아야 배우는 스파링도 없습니다. 밝은
+            공간에서 코치와 함께 내 페이스로 시작하세요.
+          </p>
+          <div class="pill-list">
+            <span>혼자 와도 어색하지 않게</span
+            ><span>처음이어도 헤매지 않게</span
+            ><span>땀 흘린 뒤 바로 일상으로</span>
+          </div>
+        </div>
+      </section>
+      <section class="community" id="community">
+        <div class="section-heading">
+          <div>
+            <p class="section-tag">BEYOND THE GYM</p>
+            <h2>센터 밖에서도,<br />함께 움직입니다.</h2>
+          </div>
+          <p>
+            운동을 오래 이어가게 만드는 건 의지만이 아닙니다. 함께 웃고 움직인
+            기억이 다음 출석을 기다리게 합니다.
+          </p>
+        </div>
+        <div class="event-gallery">
+          <figure class="event-main">
+            <img
+              src="images/site-image-12.jpg"
+              alt="BOXROX 회원들이 함께한 야간 체육대회"
+            />
+            <figcaption>
+              <span>SPORTS DAY</span><strong>회원들과 함께한 체육대회</strong>
+            </figcaption>
+          </figure>
+          <figure>
+            <img
+              src="images/site-image-13.jpg"
+              alt="BOXROX 회원들이 풋살장에서 함께하는 외부 활동"
+            />
+            <figcaption>
+              <span>OUTDOOR ACTIVITY</span
+              ><strong>수업 밖에서 이어지는 팀워크</strong>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="community-line">
+          <span>같이 시작하고</span><i></i><span>같이 땀 흘리고</span><i></i
+          ><span>같이 오래갑니다</span>
+        </div>
+      </section>
+      <section class="founder">
+        <div class="founder-media">
+          <div class="founder-scribble scribble-one">MOVE</div>
+          <div class="founder-scribble scribble-two">♡</div>
+          <img
+            src="images/site-image-14.png"
+            alt="원펀치쓰리칼로리 대표 이준우"
+          />
+          <p><b>이준우</b> · 원펀치쓰리칼로리 대표</p>
+        </div>
+        <div class="founder-letter">
+          <p class="section-tag">FROM THE FOUNDER</p>
+          <h2>
+            <span class="headline-line">운동이 싫은 사람을</span
+            ><span class="headline-line">습관까지 데려가는 일.</span>
+          </h2>
+          <p>
+            저는 복싱 선수였습니다. 하지만 원펀치는 치열한 복싱이나 스파링을
+            위한 곳이 아닙니다. 다이어트를 재미있게 이어가고 싶은 사람을 위해
+            만든 곳입니다.
+          </p>
+          <p>
+            심박수와 칼로리 리워드가 운동을 이어가는 데 힘이 되도록
+            만들었습니다. 그렇게 반복하다 보면 어느 날, 운동은 결심이 아니라
+            습관이 됩니다.
+          </p>
+          <strong
+            >운동이 싫은 사람을, 다시 오고 싶은 사람으로 만드는 것.<br />그
+            목적으로 원펀치를 만들었습니다.</strong
+          >
+        </div>
+      </section>
+      <section class="instagram" id="instagram">
+        <div class="insta-intro">
+          <div>
+            <p class="section-tag">FOLLOW THE ENERGY</p>
+            <h2>운동하는 순간도<br /><span>우리답게, 예쁘게.</span></h2>
+          </div>
+          <div class="insta-account">
+            <span class="insta-logo" aria-hidden="true">◎</span>
+            <p>
+              <b>@one.punch3</b
+              ><small>수업 분위기와 회원들의 오늘을 만나보세요.</small>
+            </p>
+          </div>
+        </div>
+        <div class="insta-grid">
+          <a
+            href="https://www.instagram.com/one.punch3"
+            target="_blank"
+            rel="noreferrer"
+            ><img
+              src="images/site-image-10.jpg?v=20260802"
+              alt="BOXROX 수업을 마치고 함께 웃는 회원들"
+            /><span>REAL CLASS</span></a
+          ><a
+            href="https://www.instagram.com/one.punch3"
+            target="_blank"
+            rel="noreferrer"
+            ><img
+              src="images/site-image-12.jpg?v=20260802"
+              alt="원펀치쓰리칼로리 회원들과 함께한 체육대회"
+            /><span>SPORTS DAY</span></a
+          ><a
+            href="https://www.instagram.com/one.punch3"
+            target="_blank"
+            rel="noreferrer"
+            ><img
+              src="images/site-image-13.jpg?v=20260802"
+              alt="BOXROX 회원들이 함께한 외부 활동"
+            /><span>TOGETHER</span></a
+          >
+        </div>
+        <a
+          class="insta-button"
+          href="https://www.instagram.com/one.punch3"
+          target="_blank"
+          rel="noreferrer"
+          ><span class="insta-logo">◎</span> Instagram 보러가기 <b>↗</b></a
+        >
+      </section>
+      <section class="faq" id="faq">
+        <p class="section-tag">FAQ</p>
+        <h2>궁금한 것부터 확인하세요.</h2>
+        <div class="faq-list">
+          <details>
+            <summary>BOXROX는 어떤 운동인가요?</summary>
+            <p>
+              복싱 20분과 기능성 운동 20분을 결합한 40분 그룹 운동입니다. 복싱과
+              하이록스를 따로 등록하지 않고 한 수업에서 함께 경험합니다.
+            </p>
+          </details>
+          <details>
+            <summary>복싱을 한 번도 안 해봤는데 괜찮나요?</summary>
+            <p>
+              회원 대부분이 운동 초보로 시작합니다. 코치가 미트와 샌드백 훈련을
+              안내하고 기능성 운동도 개인 수준에 맞춰 조절합니다. 스파링은 하지
+              않습니다.
+            </p>
+          </details>
+          <details>
+            <summary>여자 혼자 등록해도 괜찮나요?</summary>
+            <p>
+              네. 20~40대 여성 회원이 중심이며 여성 코치도 함께합니다. 처음
+              오시는 날부터 수업이 끝날 때까지 코치가 안내합니다.
+            </p>
+          </details>
+          <details>
+            <summary>칼로리를 돌려받는다는 게 무슨 뜻인가요?</summary>
+            <p>
+              수업 중 밴드가 심박수와 칼로리를 측정하고 화면에 실시간으로
+              표시합니다. 기록된 소모 칼로리는 리워드로 적립됩니다. 구체적인
+              방법은 카카오톡 상담에서 안내합니다.
+            </p>
+          </details>
+          <details>
+            <summary>가격은 얼마인가요?</summary>
+            <p>
+              현재 등록 가능한 프로그램과 조건은 카카오톡 상담에서 안내합니다.
+              운동 경험과 가능한 출석 횟수를 먼저 확인한 뒤 맞는 과정을
+              설명드립니다.
+            </p>
+          </details>
+          <details>
+            <summary>위치와 운영시간은 어떻게 되나요?</summary>
+            <p>
+              범계점은 범계역 2번 출구에서 도보 2분, 안양점은 안양역 1번
+              출구에서 도보 5분입니다. 두 지점 모두 평일 09:00–23:00, 토요일
+              09:00–16:00이며 일요일과 공휴일은 쉽니다.
+            </p>
+          </details>
+        </div>
+      </section>
+      <section class="locations" id="location">
+        <div class="section-heading">
+          <div>
+            <p class="section-tag">VISIT ONE PUNCH</p>
+            <h2>가까운 원펀치에서 시작하세요.</h2>
+          </div>
+          <p>범계점과 안양점의 위치·교통·운영시간을 확인하세요.</p>
+        </div>
+        <div class="branch-tabs">
+          <input type="radio" id="branch-0" name="branch" checked="" /><input
+            type="radio"
+            id="branch-1"
+            name="branch"
+          />
+          <div class="branch-tab-list" role="tablist" aria-label="지점 선택">
+            <label for="branch-0" role="tab"
+              >범계점<small>범계역 2번 출구</small></label
+            ><label for="branch-1" role="tab"
+              >안양점<small>안양역 1번 출구</small></label
+            >
+          </div>
+          <div class="branch-panels">
+            <article class="branch-card branch-panel-0">
+              <a
+                class="kakao-map-frame"
+                href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="범계점 카카오맵에서 보기"
+                ><iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=126.9498%2C37.3868%2C126.9612%2C37.3944&amp;layer=mapnik&amp;marker=37.3906%2C126.9555"
+                  title="범계점 위치 지도"
+                  loading="lazy"
+                  tabindex="-1"
+                ></iframe
+                ><span class="map-place-label"
+                  ><b>ONE PUNCH</b><strong>범계점</strong
+                  ><small>범계역 도보 2분</small></span
+                ><span class="map-open">카카오맵에서 보기 ↗</span></a
+              >
+              <div class="branch-info">
+                <p class="branch-name"><span>01</span>범계점</p>
+                <h3>경기도 안양시 동안구 호계동 1048번지 동아테마타운 9층</h3>
+                <dl>
+                  <div>
+                    <dt>대중교통</dt>
+                    <dd>4호선 범계역 2번 출구에서 직진 · 도보 2분</dd>
+                  </div>
+                  <div>
+                    <dt>운영시간</dt>
+                    <dd>
+                      평일 월–금 09:00–23:00<br />토요일 09:00–16:00 ·
+                      일요일/공휴일 휴무
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>전화번호</dt>
+                    <dd><a href="tel:031-385-8288">031-385-8288</a></dd>
+                  </div>
+                  <div>
+                    <dt>이메일</dt>
+                    <dd>
+                      <a href="mailto:11punch33@gmail.com"
+                        >11punch33@gmail.com</a
+                      >
+                    </dd>
+                  </div>
+                </dl>
+                <div class="branch-actions">
+                  <a
+                    class="map-action"
+                    href="https://map.kakao.com/?q=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%96%91%EC%8B%9C%20%EB%8F%99%EC%95%88%EA%B5%AC%20%ED%98%B8%EA%B3%84%EB%8F%99%201048%20%EB%8F%99%EC%95%84%ED%85%8C%EB%A7%88%ED%83%80%EC%9A%B4"
+                    target="_blank"
+                    rel="noreferrer"
+                    >카카오맵 길찾기 <span>↗</span></a
+                  ><a class="call-action" href="tel:031-385-8288">전화하기</a>
+                </div>
+              </div>
+            </article>
+            <article class="branch-card branch-panel-1">
+              <a
+                class="kakao-map-frame"
+                href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="안양점 카카오맵에서 보기"
+                ><iframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=126.9174%2C37.3953%2C126.9289%2C37.4030&amp;layer=mapnik&amp;marker=37.399159%2C126.923157"
+                  title="안양점 위치 지도"
+                  loading="lazy"
+                  tabindex="-1"
+                ></iframe
+                ><span class="map-place-label"
+                  ><b>ONE PUNCH</b><strong>안양점</strong
+                  ><small>안양역 도보 5분</small></span
+                ><span class="map-open">카카오맵에서 보기 ↗</span></a
+              >
+              <div class="branch-info">
+                <p class="branch-name"><span>02</span>안양점</p>
+                <h3>경기도 안양시 만안구 만안로 201 두하빌딩 3층</h3>
+                <dl>
+                  <div>
+                    <dt>대중교통</dt>
+                    <dd>1호선 안양역 1번 출구 · 도보 5분</dd>
+                  </div>
+                  <div>
+                    <dt>운영시간</dt>
+                    <dd>
+                      평일 월–금 09:00–23:00<br />토요일 09:00–16:00 ·
+                      일요일/공휴일 휴무
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>전화번호</dt>
+                    <dd><a href="tel:031-385-9713">031-385-9713</a></dd>
+                  </div>
+                </dl>
+                <div class="branch-actions">
+                  <a
+                    class="map-action"
+                    href="https://map.kakao.com/?urlX=483220&amp;urlY=1083190&amp;q=%EA%B2%BD%EA%B8%B0+%EC%95%88%EC%96%91%EC%8B%9C+%EB%A7%8C%EC%95%88%EA%B5%AC+%EB%A7%8C%EC%95%88%EB%A1%9C+201"
+                    target="_blank"
+                    rel="noreferrer"
+                    >카카오맵 길찾기 <span>↗</span></a
+                  ><a class="call-action" href="tel:031-385-9713">전화하기</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="start" id="start">
+        <p class="section-tag">START BOXROX</p>
+        <h2>
+          <span class="headline-line">운동을 좋아해야</span
+          ><span class="headline-line">살이 빠지는 건 아닙니다.</span
+          ><span class="headline-line start-answer"
+            >재미있게 빼고 싶다면, 원펀치가 맞습니다.</span
+          >
+        </h2>
+        <p>
+          복싱·하이록스를 처음 해도 괜찮은지,<br class="desktop-break" />
+          심박 리워드는 어떻게 쌓이는지 편하게 물어보세요.
+        </p>
+        <a
+          class="primary-btn kakao-btn"
+          href="https://pf.kakao.com/_xmqxjxhxb/chat"
+          target="_blank"
+          rel="noreferrer"
+          >내 체력으로 가능한지 물어보기<span>→</span></a
+        >
+        <p class="contact">범계점·안양점 상담으로 바로 연결됩니다.</p>
+      </section>
+      <footer>
+        <div class="brand brand-logo">
+          <strong>원펀치쓰리칼로리</strong><span>BOXROX</span>
+        </div>
+        <p>복싱은 무서운 운동이 아니다. 즐거운 운동이다.</p>
+        <small>11punch33@gmail.com · © 2026 ONE PUNCH 3 CALORIES</small>
+      </footer>
+      <a
+        class="kakao-float"
+        href="https://pf.kakao.com/_xmqxjxhxb/chat"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="카카오톡으로 상담하기"
+        ><b>talk</b><span>카카오톡 상담</span></a
+      >
+    </main>
+  </body>
+</html>
