@@ -4,6 +4,47 @@
     <!-- ONEPUNCH UPDATE 2026-08-02: Instagram cards 2-3 embedded to prevent broken image paths -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- ONE PUNCH staff browsers can disable their own GA4 traffic. -->
+    <script>
+      (function () {
+        var measurementId = "G-6XJ2EDPS4Z";
+        var storageKey = "onepunch_ga_staff_mode";
+        var parameterName = "_op_staff";
+        var parameters = new URLSearchParams(window.location.search);
+        var requestedMode = parameters.get(parameterName);
+
+        try {
+          if (requestedMode === "1") {
+            window.localStorage.setItem(storageKey, "1");
+          } else if (requestedMode === "0") {
+            window.localStorage.removeItem(storageKey);
+          }
+
+          window["ga-disable-" + measurementId] =
+            window.localStorage.getItem(storageKey) === "1";
+          window.ONEPUNCH_STAFF_MODE = window["ga-disable-" + measurementId];
+        } catch (error) {
+          window.ONEPUNCH_STAFF_MODE = false;
+        }
+
+        if (requestedMode === "1" || requestedMode === "0") {
+          parameters.delete(parameterName);
+          var cleanQuery = parameters.toString();
+          var cleanUrl =
+            window.location.pathname +
+            (cleanQuery ? "?" + cleanQuery : "") +
+            window.location.hash;
+          window.history.replaceState({}, "", cleanUrl);
+          window.setTimeout(function () {
+            window.alert(
+              requestedMode === "1"
+                ? "직원 제외 모드가 켜졌습니다. 이 브라우저의 방문은 GA4에 기록되지 않습니다."
+                : "직원 제외 모드가 해제되었습니다. 이 브라우저의 방문이 다시 GA4에 기록됩니다."
+            );
+          }, 0);
+        }
+      })();
+    </script>
     <!-- Google Analytics 4: ONE PUNCH website measurement -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XJ2EDPS4Z"></script>
     <script>
