@@ -4,6 +4,16 @@
     <!-- ONEPUNCH UPDATE 2026-08-02: Instagram cards 2-3 embedded to prevent broken image paths -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Analytics 4: ONE PUNCH website measurement -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6XJ2EDPS4Z"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-6XJ2EDPS4Z", { send_page_view: true });
+    </script>
     <link rel="preload" href="images/site-image-02.jpg" as="image" />
     <link rel="preload" href="images/site-image-03.jpg" as="image" />
     <link rel="preload" href="images/site-image-04.png" as="image" />
@@ -249,6 +259,13 @@
         margin-bottom: 3px;
         color: var(--cream);
         font-size: 18px;
+      }
+      .hero-note {
+        max-width: 620px;
+        margin: -18px 0 27px;
+        color: rgba(244, 240, 231, 0.78);
+        font-size: 12px;
+        line-height: 1.6;
       }
       .primary-btn {
         display: flex;
@@ -2068,6 +2085,11 @@
           color: var(--sage-dark);
           font-size: 14px;
         }
+        .hero-note {
+          margin: -12px 0 18px;
+          color: #667269;
+          font-size: 10px;
+        }
         .hero .primary-btn {
           border-radius: 17px;
           padding: 17px 20px;
@@ -2638,6 +2660,10 @@
             ><span><b>실시간</b> 심박·칼로리</span
             ><span><b>700kcal</b> 미션 도전</span>
           </div>
+          <p class="hero-note">
+            700kcal은 의무가 아닌 미션입니다. 처음이라도 개인 체력과 심박에
+            맞춰 강도를 조절합니다.
+          </p>
           <a
             class="primary-btn kakao-btn"
             href="https://pf.kakao.com/_xmqxjxhxb/chat"
@@ -2652,7 +2678,7 @@
         </div>
         <p class="vertical-label">MISSION 700</p>
       </section>
-      <section class="manifesto">
+      <section class="manifesto" id="why-boxrox">
         <p class="section-tag">WHY BOXROX</p>
         <h2>
           <span class="headline-line">다이어트는 의지가 아니라</span
@@ -2774,8 +2800,8 @@
             </h2>
           </div>
           <p>
-            복싱과 기능성 운동을 따로 배울 필요 없이, 코치의 안내에 따라 40분을
-            완성하세요.
+            복싱과 밀고·당기고·달리는 하이록스를 한 수업에서. 코치의 안내에
+            따라 내 체력만큼 40분을 완성하세요.
           </p>
         </div>
         <div class="step-grid">
@@ -2796,8 +2822,8 @@
               <span>02</span>
               <h3>하이록스 20분</h3>
               <p>
-                움직임이 커질수록 전신 출력도 올라갑니다. 내 수준에 맞춰 무리
-                없이 충분히 태웁니다.
+                밀고, 당기고, 뛰는 전신 운동을 내 수준에 맞춰 진행합니다. 무리할
+                필요 없이 내 페이스만큼 충분히 태웁니다.
               </p>
             </div>
           </article>
@@ -2835,7 +2861,7 @@
           </article>
         </div>
       </section>
-      <section class="dashboard">
+      <section class="dashboard" id="live-record">
         <div class="dash-copy">
           <p class="section-tag">실시간 운동 기록</p>
           <h2>
@@ -2924,7 +2950,7 @@
           쌓이고 있습니다.
         </p>
       </section>
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="section-heading">
           <div>
             <p class="section-tag">WHY THEY STAY</p>
@@ -3018,7 +3044,7 @@
           ><span>같이 오래갑니다</span>
         </div>
       </section>
-      <section class="founder">
+      <section class="founder" id="founder">
         <div class="founder-media">
           <div class="founder-scribble scribble-one">MOVE</div>
           <div class="founder-scribble scribble-two">♡</div>
@@ -3319,6 +3345,129 @@
         aria-label="카카오톡으로 상담하기"
         ><b>talk</b><span>카카오톡 상담</span></a
       >
+      <script>
+        (function () {
+          "use strict";
+
+          function cleanText(value) {
+            return (value || "").replace(/\s+/g, " ").trim().slice(0, 100);
+          }
+
+          function sectionName(element) {
+            if (!element) return "unknown";
+            if (element.closest(".site-header")) return "header";
+            if (element.closest(".kakao-float")) return "floating";
+            var section = element.closest("section[id]");
+            return section ? section.id : "other";
+          }
+
+          function branchName(element) {
+            if (element && element.closest(".branch-panel-0")) return "bumgye";
+            if (element && element.closest(".branch-panel-1")) return "anyang";
+            return "not_applicable";
+          }
+
+          function track(eventName, parameters) {
+            if (typeof window.gtag !== "function") return;
+            window.gtag("event", eventName, Object.assign({
+              page_section: "unknown"
+            }, parameters || {}));
+          }
+
+          document.addEventListener("click", function (event) {
+            var link = event.target.closest("a[href]");
+            if (!link) return;
+
+            var href = link.getAttribute("href") || "";
+            var location = sectionName(link);
+            var label = cleanText(link.textContent || link.getAttribute("aria-label"));
+
+            if (href.indexOf("pf.kakao.com") !== -1) {
+              track("kakao_click", {
+                page_section: location,
+                link_text: label
+              });
+            } else if (href.indexOf("map.kakao.com") !== -1) {
+              track("map_click", {
+                page_section: location,
+                branch: branchName(link),
+                link_text: label
+              });
+            } else if (href.indexOf("tel:") === 0) {
+              track("phone_click", {
+                page_section: location,
+                branch: branchName(link)
+              });
+            } else if (href.indexOf("instagram.com") !== -1) {
+              track("instagram_click", {
+                page_section: location,
+                link_text: label
+              });
+            } else if (href.charAt(0) === "#") {
+              track("navigation_click", {
+                page_section: location,
+                destination_section: href.slice(1) || "top",
+                link_text: label
+              });
+            }
+          });
+
+          document.querySelectorAll(".faq details").forEach(function (item, index) {
+            item.addEventListener("toggle", function () {
+              if (!item.open) return;
+              var summary = item.querySelector("summary");
+              track("faq_open", {
+                page_section: "faq",
+                faq_index: index + 1,
+                faq_question: cleanText(summary && summary.textContent)
+              });
+            });
+          });
+
+          document.querySelectorAll('input[name="branch"]').forEach(function (input) {
+            input.addEventListener("change", function () {
+              if (!input.checked) return;
+              track("branch_select", {
+                page_section: "location",
+                branch: input.id === "branch-0" ? "bumgye" : "anyang"
+              });
+            });
+          });
+
+          var viewedSections = new Set();
+          var sectionObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              var id = entry.target.id;
+              if (!entry.isIntersecting || viewedSections.has(id)) return;
+              viewedSections.add(id);
+              track("section_view", { page_section: id });
+            });
+          }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+
+          document.querySelectorAll("section[id]").forEach(function (section) {
+            sectionObserver.observe(section);
+          });
+
+          var sentDepths = new Set();
+          function measureScrollDepth() {
+            var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollable <= 0) return;
+            var percent = Math.round((window.scrollY / scrollable) * 100);
+            [25, 50, 75, 90].forEach(function (depth) {
+              if (percent >= depth && !sentDepths.has(depth)) {
+                sentDepths.add(depth);
+                track("scroll_depth", {
+                  page_section: "page",
+                  percent_scrolled: depth
+                });
+              }
+            });
+          }
+
+          window.addEventListener("scroll", measureScrollDepth, { passive: true });
+          measureScrollDepth();
+        })();
+      </script>
     </main>
   </body>
 </html>
