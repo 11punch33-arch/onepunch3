@@ -1924,32 +1924,290 @@
       }
 
       .start {
-        padding: 120px 20px;
-        text-align: center;
-        background: #18271d;
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        padding: clamp(86px, 10vw, 138px) 20px;
+        background:
+          radial-gradient(circle at 88% 12%, rgba(201, 184, 232, 0.22), transparent 30%),
+          radial-gradient(circle at 8% 94%, rgba(122, 161, 130, 0.14), transparent 28%),
+          #18271d;
         color: var(--cream);
       }
-      .start > p:not(.section-tag, .contact) {
-        color: #c7cec6;
-        max-width: 700px;
+      .start:before,
+      .start:after {
+        position: absolute;
+        z-index: -1;
+        border: 1px solid rgba(201, 184, 232, 0.17);
+        border-radius: 50%;
+        content: "";
+      }
+      .start:before {
+        right: -220px;
+        top: -310px;
+        width: 640px;
+        height: 640px;
+      }
+      .start:after {
+        bottom: -340px;
+        left: -180px;
+        width: 540px;
+        height: 540px;
+      }
+      .start-inner {
+        max-width: 1080px;
         margin: 0 auto;
-        line-height: 1.8;
+        text-align: center;
+      }
+      .start .section-tag {
+        margin-bottom: 22px;
+        color: var(--lavender);
+      }
+      .start h2 {
+        max-width: 850px;
+        margin: 0 auto;
+        font-size: clamp(42px, 6vw, 78px);
+        line-height: 1.04;
+        letter-spacing: -0.075em;
+      }
+      .start h2 .start-accent {
+        display: block;
+        color: var(--lavender);
+      }
+      .return-prize {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        margin: 31px auto 28px;
+      }
+      .return-prize > span {
+        color: #c8d2c9;
+        font-size: 17px;
+        font-weight: 800;
+        letter-spacing: -0.03em;
+      }
+      .return-prize strong {
+        display: inline-flex;
+        align-items: baseline;
+        gap: 2px;
+        color: #fae100;
+        font-size: clamp(56px, 9.3vw, 106px);
+        line-height: 0.94;
+        letter-spacing: -0.09em;
+      }
+      .return-prize em {
+        color: var(--cream);
+        font-size: 0.35em;
+        font-style: normal;
+        font-weight: 900;
+      }
+      .return-prize small {
+        color: var(--cream);
+        font-size: 14px;
+        font-weight: 750;
+        letter-spacing: 0.16em;
+      }
+      .return-cap {
+        margin: 9px 0 0;
+        color: rgba(244, 240, 231, 0.68);
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 0.04em;
+      }
+      .return-formula {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(8px, 2.2vw, 22px);
+        max-width: 760px;
+        margin: 0 auto 18px;
+        padding: 26px clamp(16px, 4vw, 42px);
+        border: 1px solid rgba(244, 240, 231, 0.2);
+        border-radius: 22px;
+        background: rgba(10, 27, 16, 0.72);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+      }
+      .return-formula-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+      }
+      .return-formula-item strong {
+        color: #fff;
+        font-size: clamp(25px, 4.5vw, 48px);
+        line-height: 1;
+        letter-spacing: -0.07em;
+        white-space: nowrap;
+      }
+      .return-formula-item strong small {
+        margin-left: 2px;
+        color: var(--lavender);
+        font-size: 0.48em;
+        letter-spacing: -0.03em;
+      }
+      .return-formula-item span {
+        margin-top: 8px;
+        color: #c9d3cb;
+        font-size: 12px;
+        font-weight: 750;
+        letter-spacing: 0.02em;
+        white-space: nowrap;
+      }
+      .return-formula-item:last-child strong {
+        color: var(--lavender);
+      }
+      .return-formula-symbol {
+        color: #fae100;
+        font-size: clamp(24px, 4vw, 38px);
+        font-style: normal;
+        font-weight: 800;
+        line-height: 1;
+      }
+      .return-log {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 25px clamp(15px, 3vw, 28px) 23px;
+        border: 1px solid rgba(244, 240, 231, 0.2);
+        border-radius: 22px;
+        background: linear-gradient(145deg, rgba(47, 67, 53, 0.86), rgba(15, 34, 22, 0.95));
+        text-align: left;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+      }
+      .return-log-head,
+      .return-log-total {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .return-log-kicker {
+        margin: 0;
+        color: var(--lavender);
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+      }
+      .return-log-head p:last-child {
+        margin: 0;
+        color: #d7e0d8;
+        font-size: 13px;
+        font-weight: 750;
+      }
+      .return-log-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 8px;
+        margin: 18px 0 20px;
+      }
+      .return-log-item {
+        min-height: 65px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 9px 8px;
+        border: 1px solid rgba(244, 240, 231, 0.13);
+        border-radius: 11px;
+        background: rgba(7, 22, 13, 0.38);
+      }
+      .return-log-item small {
+        color: #adbaaf;
+        font-size: 10px;
+        font-weight: 750;
+        letter-spacing: 0.06em;
+      }
+      .return-log-item strong {
+        margin-top: 4px;
+        color: #fff;
+        font-size: clamp(12px, 1.7vw, 15px);
+        letter-spacing: -0.04em;
+      }
+      .return-log-item.current {
+        border-color: rgba(201, 184, 232, 0.92);
+        background: var(--lavender);
+      }
+      .return-log-item.current small,
+      .return-log-item.current strong {
+        color: var(--sage-black);
+      }
+      .return-log-item.empty {
+        align-items: center;
+        justify-content: center;
+        border-style: dashed;
+        background: transparent;
+      }
+      .return-log-item.empty span {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: rgba(244, 240, 231, 0.36);
+      }
+      .return-log-total {
+        padding-top: 16px;
+        border-top: 1px solid rgba(244, 240, 231, 0.16);
+      }
+      .return-log-total p {
+        margin: 0;
+        color: #cbd4cc;
+        font-size: 13px;
+        font-weight: 750;
+      }
+      .return-log-total strong {
+        display: block;
+        margin-top: 4px;
+        color: #fae100;
+        font-size: clamp(25px, 4vw, 35px);
+        line-height: 1;
+        letter-spacing: -0.06em;
+      }
+      .return-log-total span {
+        color: var(--lavender);
+        font-size: 12px;
+        font-weight: 800;
+        white-space: nowrap;
+      }
+      .return-qualifier {
+        margin: 19px 0 0;
+        color: var(--lavender);
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
       }
       .start .primary-btn {
-        margin: 48px auto 26px;
+        min-width: min(100%, 460px);
+        margin: 38px auto 18px;
         text-align: left;
       }
       .kakao-btn {
         background: #fae100;
         color: #3c1e1e;
       }
-      .contact {
-        font-size: 13px;
-        letter-spacing: 0.08em;
+      .return-faq {
+        max-width: 700px;
+        margin: 28px auto 0;
+        padding: 20px 22px;
+        border-top: 1px solid rgba(244, 240, 231, 0.19);
+        color: #cbd4cc;
+        text-align: left;
+        font-size: 14px;
+        line-height: 1.7;
       }
-      .start-answer {
-        color: var(--lavender);
-        margin-top: 0.16em;
+      .return-faq strong {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--cream);
+        font-size: 15px;
+      }
+      .return-faq p {
+        margin: 0;
+      }
+      .return-terms {
+        margin: 17px auto 0;
+        color: rgba(203, 212, 204, 0.68);
+        font-size: 11px;
+        line-height: 1.65;
       }
 
       footer {
@@ -2560,6 +2818,108 @@
         }
         .branch-actions .call-action {
           min-width: 0;
+        }
+        .start {
+          padding: 82px 18px 76px;
+        }
+        .start h2 {
+          font-size: clamp(38px, 10.4vw, 54px);
+          line-height: 1.08;
+          letter-spacing: -0.085em;
+        }
+        .return-prize {
+          margin: 29px auto 26px;
+        }
+        .return-prize > span {
+          font-size: 15px;
+        }
+        .return-prize strong {
+          font-size: clamp(52px, 15vw, 76px);
+        }
+        .return-prize em {
+          font-size: 0.35em;
+        }
+        .return-prize small {
+          font-size: 12px;
+        }
+        .return-cap {
+          margin-top: 7px;
+          font-size: 11px;
+        }
+        .return-formula {
+          gap: 5px;
+          margin-bottom: 13px;
+          padding: 21px 10px;
+          border-radius: 17px;
+        }
+        .return-formula-item strong {
+          font-size: clamp(20px, 7.2vw, 28px);
+        }
+        .return-formula-item span {
+          margin-top: 7px;
+          font-size: 9px;
+        }
+        .return-formula-symbol {
+          font-size: 20px;
+        }
+        .return-log {
+          padding: 19px 12px 18px;
+          border-radius: 17px;
+        }
+        .return-log-head {
+          gap: 8px;
+        }
+        .return-log-kicker {
+          font-size: 9px;
+        }
+        .return-log-head p:last-child {
+          font-size: 11px;
+        }
+        .return-log-grid {
+          gap: 5px;
+          margin: 15px 0 16px;
+        }
+        .return-log-item {
+          min-height: 55px;
+          padding: 7px 5px;
+          border-radius: 9px;
+        }
+        .return-log-item small {
+          font-size: 8px;
+        }
+        .return-log-item strong {
+          margin-top: 3px;
+          font-size: 10px;
+        }
+        .return-log-total {
+          gap: 10px;
+          padding-top: 13px;
+        }
+        .return-log-total p {
+          font-size: 11px;
+        }
+        .return-log-total strong {
+          font-size: 27px;
+        }
+        .return-log-total span {
+          font-size: 10px;
+        }
+        .return-qualifier {
+          margin-top: 15px;
+          font-size: 12px;
+        }
+        .start .primary-btn {
+          width: 100%;
+          min-width: 0;
+          margin-top: 31px;
+        }
+        .return-faq {
+          margin-top: 23px;
+          padding: 17px 4px 0;
+          font-size: 13px;
+        }
+        .return-faq strong {
+          font-size: 14px;
         }
         footer {
           grid-template-columns: 1fr;
@@ -3218,6 +3578,84 @@
           </details>
         </div>
       </section>
+      <section class="start" id="start" aria-labelledby="calorie-return-title">
+        <div class="start-inner">
+          <p class="section-tag">FIRST 10 · CALORIE RETURN</p>
+          <h2 id="calorie-return-title">
+            태운 칼로리가<span class="start-accent">현금으로 돌아옵니다.</span>
+          </h2>
+
+          <div class="return-prize" aria-label="첫 10회 합산 최대 5만 원 현금 리턴">
+            <span>첫 10회 합산 최대</span>
+            <strong>50,000<em>원</em></strong>
+            <small>현금 리턴</small>
+            <p class="return-cap">첫 10회 누적 칼로리 × 10원 · 최대 5만 원</p>
+          </div>
+
+          <div class="return-formula" aria-label="원펀치 40분 운동의 칼로리 리턴 계산 예시">
+            <div class="return-formula-item">
+              <strong>500<small>kcal</small></strong>
+              <span>40분 평균 소모</span>
+            </div>
+            <i class="return-formula-symbol" aria-hidden="true">×</i>
+            <div class="return-formula-item">
+              <strong>10<small>원</small></strong>
+              <span>1kcal당</span>
+            </div>
+            <i class="return-formula-symbol" aria-hidden="true">=</i>
+            <div class="return-formula-item">
+              <strong>5,000<small>원</small></strong>
+              <span>1회 리턴 예시</span>
+            </div>
+          </div>
+
+          <div class="return-log" aria-label="칼로리 리턴 기록 예시">
+            <div class="return-log-head">
+              <p class="return-log-kicker">RETURN LOG</p>
+              <p>예시 · 6번째 운동</p>
+            </div>
+            <div class="return-log-grid" aria-label="첫 10회 칼로리 리턴 예시">
+              <div class="return-log-item"><small>01</small><strong>5,120원</strong></div>
+              <div class="return-log-item"><small>02</small><strong>4,670원</strong></div>
+              <div class="return-log-item"><small>03</small><strong>5,300원</strong></div>
+              <div class="return-log-item"><small>04</small><strong>4,950원</strong></div>
+              <div class="return-log-item"><small>05</small><strong>5,210원</strong></div>
+              <div class="return-log-item current"><small>06</small><strong>4,830원</strong></div>
+              <div class="return-log-item empty" aria-label="7번째 운동 기록 예정"><span></span></div>
+              <div class="return-log-item empty" aria-label="8번째 운동 기록 예정"><span></span></div>
+              <div class="return-log-item empty" aria-label="9번째 운동 기록 예정"><span></span></div>
+              <div class="return-log-item empty" aria-label="10번째 운동 기록 예정"><span></span></div>
+            </div>
+            <div class="return-log-total">
+              <div>
+                <p>현재 누적 리턴</p>
+                <strong>30,080원</strong>
+              </div>
+              <span>10회 중 6회</span>
+            </div>
+          </div>
+
+          <p class="return-qualifier">3개월 신규 등록 혜택</p>
+          <a
+            class="primary-btn kakao-btn"
+            href="https://pf.kakao.com/_xmqxjxhxb/chat"
+            target="_blank"
+            rel="noreferrer"
+            data-promo="first_10_calorie_return"
+            aria-label="카카오로 칼로리 리턴 신청하기"
+            >카카오로 칼로리 리턴 신청하기<span>→</span></a
+          >
+
+          <div class="return-faq">
+            <strong>Q. 칼로리 리턴은 어떻게 받나요?</strong>
+            <p>
+              신규 등록 후 첫 4주 동안 심박수로 기록된 운동 칼로리 1kcal당 10원씩 쌓이며,
+              첫 10회 합산 최대 5만 원을 계좌로 한 번에 입금해 드립니다.
+            </p>
+          </div>
+          <p class="return-terms">첫 10회 합산 최대 5만 원 · 세부 적용 기준은 카카오 상담에서 안내합니다.</p>
+        </div>
+      </section>
       <section class="locations" id="location">
         <div class="section-heading">
           <div>
@@ -3349,28 +3787,6 @@
           </div>
         </div>
       </section>
-      <section class="start" id="start">
-        <p class="section-tag">START BOXROX</p>
-        <h2>
-          <span class="headline-line">운동을 좋아해야</span
-          ><span class="headline-line">살이 빠지는 건 아닙니다.</span
-          ><span class="headline-line start-answer"
-            >재미있게 빼고 싶다면, 원펀치가 맞습니다.</span
-          >
-        </h2>
-        <p>
-          복싱·하이록스를 처음 해도 괜찮은지,<br class="desktop-break" />
-          심박 리워드는 어떻게 쌓이는지 편하게 물어보세요.
-        </p>
-        <a
-          class="primary-btn kakao-btn"
-          href="https://pf.kakao.com/_xmqxjxhxb/chat"
-          target="_blank"
-          rel="noreferrer"
-          >내 체력으로 가능한지 물어보기<span>→</span></a
-        >
-        <p class="contact">범계점·안양점 상담으로 바로 연결됩니다.</p>
-      </section>
       <footer>
         <div class="brand brand-logo">
           <strong>원펀치쓰리칼로리</strong><span>BOXROX</span>
@@ -3424,10 +3840,14 @@
             var label = cleanText(link.textContent || link.getAttribute("aria-label"));
 
             if (href.indexOf("pf.kakao.com") !== -1) {
-              track("kakao_click", {
+              var kakaoParameters = {
                 page_section: location,
                 link_text: label
-              });
+              };
+              if (link.dataset.promo) {
+                kakaoParameters.promotion = link.dataset.promo;
+              }
+              track("kakao_click", kakaoParameters);
             } else if (href.indexOf("map.kakao.com") !== -1) {
               track("map_click", {
                 page_section: location,
