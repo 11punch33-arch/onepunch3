@@ -254,12 +254,19 @@ a.float.track:hover>.btn{background-color:#F5DB00!important;border-color:#F5DB00
 .coaches .coach img{height:192px}
 }
 
+
+/* iPhone: autoplay is not guaranteed, even when video and poster are available. */
+.hero-play-button{appearance:none;display:inline-flex;align-items:center;gap:7px;padding:10px 15px;border:1px solid rgba(255,255,255,.77);border-radius:999px;background:rgba(24,16,33,.53);color:#fff;font-weight:850;font-size:13px;cursor:pointer;backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);white-space:nowrap}
+.hero-play-button[hidden],.hero-video-status[hidden]{display:none!important}
+.hero-play-button:focus-visible{outline:3px solid #C9B8E8;outline-offset:3px}
+.hero-video-status{max-width:520px;margin:9px 0 0;padding:9px 12px;border-radius:12px;background:rgba(18,12,25,.72);color:#fff;font-size:12px;line-height:1.45}
+@media(max-width:600px){.hero-play-button{font-size:12px;padding:9px 12px}.hero-video-status{font-size:11px}}
 </style>
 </head>
 <body>
 <header class="top"><div class="wrap nav"><a class="brand" href="#top" aria-label="원펀치쓰리칼로리 홈"><img src="assets/logo.webp" alt="원펀치쓰리칼로리 로고" onload="this.nextElementSibling.style.display='none'" onerror="this.style.display='none';this.nextElementSibling.style.display='inline'"><span class="brand-name">원펀치쓰리칼로리</span></a><a class="btn track" data-pos="top" data-type="consult" href="https://pf.kakao.com/_xmqxjxhxb/chat">상담하기</a></div></header>
 <main>
-<section class="hero" id="top"><div class="hero-media"><video autoplay muted loop playsinline webkit-playsinline preload="metadata" poster="assets/hero-poster.webp" src="assets/hero.mp4" aria-label="원펀치 실제 수업 영상"></video></div><div class="wrap hero-copy"><h1>그룹 복싱.<br>미트는 1:1.</h1><p class="hero-sub">처음이어도, 맞지 않고 배웁니다.</p><div class="hero-prices" aria-label="3주 10회 첫 등록 프로그램 가격"><a href="#intro-offer" class="hero-price"><span>혼자 · 3주 10회</span><strong>79,000원</strong></a><a href="#intro-offer" class="hero-price hero-price-friends"><span>둘이 · 3주 각 10회</span><strong>총 99,000원</strong></a></div><div class="cta-group"><a class="btn track" data-pos="hero" data-type="fitness" href="https://pf.kakao.com/_xmqxjxhxb/chat">내 체력으로 가능한지 물어보기 →</a><a class="hero-detail-link" href="#intro-offer">상품 조건 보기 ↓</a></div><p class="hero-meta">복싱 20분 + HYROX 20분 <span aria-hidden="true">·</span> 스파링 없음</p></div></section>
+<section class="hero" id="top"><div class="hero-media"><video autoplay muted loop playsinline webkit-playsinline preload="auto" poster="assets/hero-poster.webp" src="assets/hero.mp4" aria-label="원펀치 실제 수업 영상"></video></div><div class="wrap hero-copy"><h1>그룹 복싱.<br>미트는 1:1.</h1><p class="hero-sub">처음이어도, 맞지 않고 배웁니다.</p><div class="hero-prices" aria-label="3주 10회 첫 등록 프로그램 가격"><a href="#intro-offer" class="hero-price"><span>혼자 · 3주 10회</span><strong>79,000원</strong></a><a href="#intro-offer" class="hero-price hero-price-friends"><span>둘이 · 3주 각 10회</span><strong>총 99,000원</strong></a></div><div class="cta-group"><a class="btn track" data-pos="hero" data-type="fitness" href="https://pf.kakao.com/_xmqxjxhxb/chat">내 체력으로 가능한지 물어보기 →</a><a class="hero-detail-link" href="#intro-offer">상품 조건 보기 ↓</a><button type="button" class="hero-play-button" id="hero-play-button" hidden aria-label="첫 화면 수업 영상 재생">▶ 영상 재생</button></div><p class="hero-video-status" id="hero-video-status" hidden role="status" aria-live="polite"></p><p class="hero-meta">복싱 20분 + HYROX 20분 <span aria-hidden="true">·</span> 스파링 없음</p></div></section>
 <section class="journey" aria-label="40분 수업 흐름"><div class="wrap journey-inner"><div class="journey-label">40분, 이렇게 운동해요</div><div class="journey-track"><div class="journey-step"><span>복싱 20분</span></div><div class="journey-arrow">→</div><div class="journey-step"><span>HYROX 20분</span></div><div class="journey-arrow">→</div><div class="journey-step"><span>심박·칼로리 확인</span></div></div></div></section>
 <section class="step white"><div class="wrap"><div class="step-head"><div class="step-number"><strong>STEP 1</strong><span>수업 시작 · BOXING 20 MIN</span></div><div class="step-copy"><div class="eyebrow">수업이 이렇게 시작됩니다</div><h2 class="title">처음 20분은<br>복싱입니다.</h2><p class="bodycopy">수업이 시작되면 먼저 복싱 20분이 진행됩니다. 첫날부터 코치가 자세를 보고, 바로 고치고, 직접 미트를 받아줍니다. 그룹수업이어도 샌드백만 치다 끝나지 않습니다.</p><div class="boxing-note"><span>첫날부터 코치 미트</span><span>맞지 않고 배우는 복싱</span><span>초보 강도 조절</span></div></div></div><div class="photo-pair"><div class="photo-card"><img src="assets/DSC05169.webp" alt="코치가 회원의 자세를 직접 지도하는 복싱 수업"><div class="photo-label">자세를 보고</div></div><div class="photo-card"><img src="assets/mitt-action.webp" alt="회원이 코치 미트를 치는 실제 수업"><div class="photo-label">직접 미트를 치고</div></div></div></div></section>
 <section class="step black"><div class="wrap"><div class="step-head"><div class="step-number"><strong>STEP 2</strong><span>이어서 · HYROX 20 MIN</span></div><div class="step-copy"><div class="eyebrow">복싱 다음 20분</div><h2 class="title">그다음 20분은<br>HYROX입니다.</h2><p class="bodycopy">복싱 20분이 끝나면 바로 HYROX 20분이 이어집니다. 슬레드·SkiErg·로잉·러닝으로 장면이 계속 바뀌어 지루할 틈 없이 움직입니다.</p><div class="hyrox-proof"><span>러닝·슬레드·로잉을 결합한 HYROX 방식</span></div></div></div><div class="hyrox-grid"><article class="move-card"><img src="assets/DSC05250.webp" alt="슬레드 밀기"><div class="move-word">밀고.<small>Sled Push</small></div></article><article class="move-card"><img src="assets/DSC05329.webp" alt="스키에르그"><div class="move-word">당기고.<small>SkiErg</small></div></article><article class="move-card"><img src="assets/DSC05402.webp" alt="로잉 운동"><div class="move-word">젓고.<small>Row</small></div></article><article class="move-card"><img src="assets/DSC05466.webp" alt="무동력 트레드밀 러닝"><div class="move-word">뛰고.<small>Run</small></div></article></div><div class="hyrox-explain"><b>HYROX가 뭐예요?</b><p>러닝과 슬레드·스키에르그·로잉 등 여러 종목을 결합한 글로벌 피트니스 레이스입니다. 원펀치에서는 대회 기록 경쟁보다, 초보도 따라올 수 있게 강도를 조절해 20분 수업으로 진행합니다.</p></div></div></section>
@@ -279,16 +286,91 @@ a.float.track:hover>.btn{background-color:#F5DB00!important;border-color:#F5DB00
 <footer class="site-footer"><div class="footer-wrap"><div class="footer-brand"><img src="assets/logo.webp" alt="원펀치쓰리칼로리 로고" onerror="this.style.display='none'"><span>ONE PUNCH THREE CALORIES</span></div><div class="footer-info"><p><b>범계점</b> 경기도 안양시 동안구 호계동 1048 동아테마타운 9층 · 031-385-8288</p><p><b>안양점</b> 경기도 안양시 만안구 만안로 201 두하빌딩 3층 · 031-385-9713</p><p>대표 이준우 · 사업자등록번호 626-93-00162</p></div></div></footer>
 <script>
 (function(){
- var v=document.querySelector('.hero-media video');
- if(!v)return;
- var wrap=v.closest('.hero-media');
- v.muted=true;
- v.setAttribute('muted','');
- v.setAttribute('playsinline','');
- v.addEventListener('playing',function(){wrap.classList.add('video-playing')});
- v.addEventListener('pause',function(){wrap.classList.remove('video-playing')});
- v.addEventListener('error',function(){wrap.classList.remove('video-playing');console.warn('원펀치: assets/hero.mp4를 찾거나 재생할 수 없습니다. 기존 영상 파일의 서버 경로를 확인하세요.')});
- var attempt=v.play();if(attempt&&typeof attempt.catch==='function')attempt.catch(function(){wrap.classList.remove('video-playing')});
+  var video=document.querySelector('.hero-media video');
+  var button=document.getElementById('hero-play-button');
+  var status=document.getElementById('hero-video-status');
+  if(!video||!button||!status)return;
+  var wrapper=video.closest('.hero-media');
+  var waitingTimer;
+  var manualAttempt=false;
+  var blocked=false;
+
+  video.muted=true;
+  video.defaultMuted=true;
+  video.playsInline=true;
+  video.setAttribute('muted','');
+  video.setAttribute('playsinline','');
+  video.setAttribute('webkit-playsinline','');
+  video.setAttribute('autoplay','');
+  video.setAttribute('loop','');
+
+  function showManual(message){
+    if(!video.paused && video.readyState>=2)return;
+    button.hidden=false;
+    if(message){status.textContent=message;status.hidden=false;}
+  }
+  function showPlaying(){
+    blocked=false;
+    button.hidden=true;
+    status.hidden=true;
+    status.textContent='';
+    wrapper.classList.add('video-playing');
+  }
+  function retryPlayback(userTriggered){
+    if(userTriggered){manualAttempt=true;status.hidden=true;button.disabled=true;button.textContent='재생 중…';}
+    var playResult;
+    try {playResult=video.play();}
+    catch(e){handleFailure(userTriggered,e);return;}
+    if(playResult && typeof playResult.then==='function'){
+      playResult.then(function(){
+        button.disabled=false;
+        button.textContent='▶ 영상 재생';
+        if(!video.paused)showPlaying();
+      }).catch(function(e){handleFailure(userTriggered,e)});
+    } else {
+      button.disabled=false;button.textContent='▶ 영상 재생';
+    }
+  }
+  function handleFailure(userTriggered,error){
+    blocked=true;
+    button.disabled=false;
+    button.textContent='▶ 영상 재생';
+    wrapper.classList.remove('video-playing');
+    if(userTriggered){
+      if(video.error || (error && error.name==='NotSupportedError')){
+        showManual('영상 형식 또는 서버 연결을 확인해야 합니다. 아이폰용 H.264 MP4가 필요할 수 있어요.');
+      } else {
+        showManual('아이폰 설정에서 저전력 모드를 끈 뒤 재생 버튼을 다시 눌러주세요.');
+      }
+    } else {
+      showManual();
+    }
+  }
+  video.addEventListener('playing',showPlaying);
+  video.addEventListener('pause',function(){
+    wrapper.classList.remove('video-playing');
+    if(!document.hidden)showManual();
+  });
+  video.addEventListener('error',function(){
+    handleFailure(false,video.error);
+    console.warn('원펀치 영상 오류: assets/hero.mp4, iOS용 코덱 또는 서버 응답 확인 필요');
+  });
+  video.addEventListener('stalled',function(){if(video.paused)showManual()});
+  button.addEventListener('click',function(){
+    if(video.error){video.load();}
+    retryPlayback(true); // direct user gesture: required on iPhone in Low Power Mode
+  });
+
+  // Show a real play affordance if autoplay does not start promptly.
+  waitingTimer=setTimeout(function(){if(video.paused || video.readyState<2)showManual()},1400);
+  // Re-entering the tab may pause a background video on mobile Safari.
+  document.addEventListener('visibilitychange',function(){
+    if(!document.hidden && video.paused && !blocked)retryPlayback(false);
+  });
+  window.addEventListener('pageshow',function(){
+    if(video.paused && !blocked)retryPlayback(false);
+  });
+  retryPlayback(false);
 })();
 </script>
 <script>
