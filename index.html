@@ -261,6 +261,10 @@ a.float.track:hover>.btn{background-color:#F5DB00!important;border-color:#F5DB00
 .hero-play-button:focus-visible{outline:3px solid #C9B8E8;outline-offset:3px}
 .hero-video-status{max-width:520px;margin:9px 0 0;padding:9px 12px;border-radius:12px;background:rgba(18,12,25,.72);color:#fff;font-size:12px;line-height:1.45}
 @media(max-width:600px){.hero-play-button{font-size:12px;padding:9px 12px}.hero-video-status{font-size:11px}}
+
+/* Video needs to fill the hero in both normal sites and embedded previews. */
+.hero-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-media.video-playing video{opacity:1!important}
 </style>
 </head>
 <body>
@@ -286,91 +290,112 @@ a.float.track:hover>.btn{background-color:#F5DB00!important;border-color:#F5DB00
 <footer class="site-footer"><div class="footer-wrap"><div class="footer-brand"><img src="assets/logo.webp" alt="원펀치쓰리칼로리 로고" onerror="this.style.display='none'"><span>ONE PUNCH THREE CALORIES</span></div><div class="footer-info"><p><b>범계점</b> 경기도 안양시 동안구 호계동 1048 동아테마타운 9층 · 031-385-8288</p><p><b>안양점</b> 경기도 안양시 만안구 만안로 201 두하빌딩 3층 · 031-385-9713</p><p>대표 이준우 · 사업자등록번호 626-93-00162</p></div></div></footer>
 <script>
 (function(){
-  var video=document.querySelector('.hero-media video');
-  var button=document.getElementById('hero-play-button');
-  var status=document.getElementById('hero-video-status');
-  if(!video||!button||!status)return;
-  var wrapper=video.closest('.hero-media');
-  var waitingTimer;
-  var manualAttempt=false;
-  var blocked=false;
-
-  video.muted=true;
-  video.defaultMuted=true;
-  video.playsInline=true;
+  'use strict';
+  const video = document.querySelector('.hero-media video');
+  const button = document.getElementById('hero-play-button');
+  const status = document.getElementById('hero-video-status');
+  if (!video || !button || !status) return;
+  const wrapper = video.closest('.hero-media');
+  // Source 1 works on the live website; source 2 also works in previews where remote
+  // media URLs are allowed. The same real class video is used, never a substitute clip.
+  const sources = ['assets/hero.mp4','https://onepunch3.com/assets/hero.mp4'];
+  let sourceIndex = 0, lastProgress = 0, started = false, sourceExhausted = false;
+  let retryTimer = null;
+  const debug = new URLSearchParams(location.search).has('video_debug');
+  const buttonLabel = '▶ 수업 영상 재생';
+  video.muted = true;
+  video.defaultMuted = true;
+  video.playsInline = true;
   video.setAttribute('muted','');
   video.setAttribute('playsinline','');
   video.setAttribute('webkit-playsinline','');
   video.setAttribute('autoplay','');
   video.setAttribute('loop','');
+  video.setAttribute('preload','auto');
 
-  function showManual(message){
-    if(!video.paused && video.readyState>=2)return;
-    button.hidden=false;
-    if(message){status.textContent=message;status.hidden=false;}
+  function diagnostics(reason){
+    if (!debug) return;
+    status.hidden = false;
+    status.textContent = '영상 진단: '+reason+' / 출처: '+video.currentSrc+
+      ' / 오류: '+(video.error ? video.error.code : '없음')+
+      ' / 준비: '+video.readyState+' / 일시정지: '+video.paused;
   }
-  function showPlaying(){
-    blocked=false;
-    button.hidden=true;
-    status.hidden=true;
-    status.textContent='';
+  function manual(message){
+    if (!video.paused && video.readyState >= 2) return;
+    button.hidden = false;
+    button.disabled = false;
+    button.textContent = buttonLabel;
+    if (message){ status.hidden = false; status.textContent = message; }
+  }
+  function playing(){
+    started = true;
+    sourceExhausted = false;
     wrapper.classList.add('video-playing');
+    button.hidden = true;
+    status.hidden = true;
+    lastProgress = video.currentTime;
+    diagnostics('재생 성공');
   }
-  function retryPlayback(userTriggered){
-    if(userTriggered){manualAttempt=true;status.hidden=true;button.disabled=true;button.textContent='재생 중…';}
-    var playResult;
-    try {playResult=video.play();}
-    catch(e){handleFailure(userTriggered,e);return;}
-    if(playResult && typeof playResult.then==='function'){
-      playResult.then(function(){
-        button.disabled=false;
-        button.textContent='▶ 영상 재생';
-        if(!video.paused)showPlaying();
-      }).catch(function(e){handleFailure(userTriggered,e)});
-    } else {
-      button.disabled=false;button.textContent='▶ 영상 재생';
+  function switchSource(){
+    if (sourceIndex >= sources.length-1) {
+      sourceExhausted = true;
+      manual('영상이 연결되지 않았어요. 영상 파일 또는 형식을 확인해 주세요.');
+      diagnostics('영상 경로/코덱 오류');
+      return false;
     }
+    sourceIndex += 1;
+    video.src = sources[sourceIndex];
+    video.load();
+    playVideo(false);
+    return true;
   }
-  function handleFailure(userTriggered,error){
-    blocked=true;
-    button.disabled=false;
-    button.textContent='▶ 영상 재생';
+  function failure(error,gesture){
     wrapper.classList.remove('video-playing');
-    if(userTriggered){
-      if(video.error || (error && error.name==='NotSupportedError')){
-        showManual('영상 형식 또는 서버 연결을 확인해야 합니다. 아이폰용 H.264 MP4가 필요할 수 있어요.');
-      } else {
-        showManual('아이폰 설정에서 저전력 모드를 끈 뒤 재생 버튼을 다시 눌러주세요.');
-      }
-    } else {
-      showManual();
+    if (error && (error.name === 'NotSupportedError' || error.name === 'NotFoundError')) {
+      if (switchSource()) return;
+    }
+    if (gesture) {
+      manual(sourceExhausted ? '영상 파일을 불러오지 못했습니다. MP4 파일을 확인해 주세요.' : '자동재생이 제한됐습니다. ▶ 버튼을 눌러 재생해 주세요.');
+    } else manual();
+    diagnostics(error ? error.name : '재생 대기');
+  }
+  function playVideo(gesture){
+    if (gesture){ button.hidden = false; button.disabled = true; button.textContent = '재생 중…'; }
+    let p;
+    try {p = video.play();}
+    catch(e){failure(e,gesture);return;}
+    if (p && typeof p.then === 'function') {
+      p.then(function(){if(!video.paused)playing();})
+       .catch(function(e){failure(e,gesture);});
     }
   }
-  video.addEventListener('playing',showPlaying);
+  video.addEventListener('playing',playing);
+  video.addEventListener('timeupdate',function(){lastProgress=video.currentTime;});
   video.addEventListener('pause',function(){
     wrapper.classList.remove('video-playing');
-    if(!document.hidden)showManual();
+    if (!document.hidden) manual();
   });
   video.addEventListener('error',function(){
-    handleFailure(false,video.error);
-    console.warn('원펀치 영상 오류: assets/hero.mp4, iOS용 코덱 또는 서버 응답 확인 필요');
+    wrapper.classList.remove('video-playing');
+    if (!switchSource()) diagnostics('MP4 없음/호환 오류');
   });
-  video.addEventListener('stalled',function(){if(video.paused)showManual()});
+  video.addEventListener('stalled',function(){if(video.paused)manual();});
   button.addEventListener('click',function(){
-    if(video.error){video.load();}
-    retryPlayback(true); // direct user gesture: required on iPhone in Low Power Mode
+    // A direct click grants Safari a user gesture to begin playback.
+    if(video.error && sourceExhausted){sourceIndex=0;sourceExhausted=false;video.src=sources[0];video.load();}
+    playVideo(true);
   });
-
-  // Show a real play affordance if autoplay does not start promptly.
-  waitingTimer=setTimeout(function(){if(video.paused || video.readyState<2)showManual()},1400);
-  // Re-entering the tab may pause a background video on mobile Safari.
+  // Delayed manual control for Low Power Mode, iOS data-saving or browser previews.
+  retryTimer=setTimeout(function(){
+    if(video.paused || video.readyState < 2) manual();
+  },1200);
   document.addEventListener('visibilitychange',function(){
-    if(!document.hidden && video.paused && !blocked)retryPlayback(false);
+    if(!document.hidden && video.paused && !sourceExhausted) playVideo(false);
   });
   window.addEventListener('pageshow',function(){
-    if(video.paused && !blocked)retryPlayback(false);
+    if(video.paused && !sourceExhausted) playVideo(false);
   });
-  retryPlayback(false);
+  playVideo(false);
 })();
 </script>
 <script>
